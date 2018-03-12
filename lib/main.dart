@@ -15,7 +15,6 @@ class mainTab extends StatefulWidget {
 
 class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin{
 
-  
   TabController controller;
   @override
   void initState() {
@@ -34,17 +33,24 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin{
     return new Scaffold(
        appBar: new AppBar(
            title: new Text("Pages"),
-           backgroundColor: Colors.deepOrange,
-           bottom: new TabBar(
-             controller: controller,
-             tabs: <Tab>[
-               new Tab(icon: new Icon(Icons.home)),
-               new Tab(icon: new Icon(Icons.explore)),
-               new Tab(icon: new Icon(Icons.search)),
-               new Tab(icon: new Icon(Icons.account_box)),
-             ],
-           ),
+           backgroundColor: Colors.transparent,
+
        ),
+       bottomNavigationBar: new Material(
+         color: Colors.green,
+
+         child: new TabBar(
+           controller: controller,
+           tabs: <Tab>[
+             new Tab(icon: new Icon(Icons.home)),
+             new Tab(icon: new Icon(Icons.explore)),
+             new Tab(icon: new Icon(Icons.search)),
+             new Tab(icon: new Icon(Icons.account_box)),
+           ],
+         ) ,
+       ),
+
+
         body: new TabBarView(
             controller: controller,
             children: <Widget>[
