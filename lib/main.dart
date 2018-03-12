@@ -1,6 +1,63 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Screen/AboutScreen.dart';
+import 'package:flutter_sandbox/Screen/ExploreScreen.dart';
+import 'package:flutter_sandbox/Screen/HomeScreen.dart';
+import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(new MaterialApp(
+  home: new mainTab(),
+));
+
+class mainTab extends StatefulWidget {
+  @override
+  _mainTabState createState() => new _mainTabState();
+}
+
+class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin{
+
+  
+  TabController controller;
+  @override
+  void initState() {
+    super.initState();
+    controller = new TabController(length: 4, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+        super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+       appBar: new AppBar(
+           title: new Text("Pages"),
+           backgroundColor: Colors.deepOrange,
+           bottom: new TabBar(
+             controller: controller,
+             tabs: <Tab>[
+               new Tab(icon: new Icon(Icons.home)),
+               new Tab(icon: new Icon(Icons.explore)),
+               new Tab(icon: new Icon(Icons.search)),
+               new Tab(icon: new Icon(Icons.account_box)),
+             ],
+           ),
+       ),
+        body: new TabBarView(
+            controller: controller,
+            children: <Widget>[
+          new AboutScreen(),
+          new ExploreScreen(),
+          new HomeScreen(),
+          new UncoverScreen()
+
+        ]),
+    );
+  }
+}
+
 
 
 class MyApp extends StatelessWidget {
@@ -44,12 +101,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return new Scaffold(
         appBar: new AppBar(
           // Here we take the value from the MyHomePage object that was created by
@@ -110,12 +161,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
 
-        
-        floatingActionButton: new FloatingActionButton(
-            onPressed: _incrementCounter,
-            tooltip: 'Increment',
-            child: new Icon(Icons.add_a_photo)
-        )
+
+
     );
   }
 }
