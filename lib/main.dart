@@ -25,6 +25,8 @@ class mainTab extends StatefulWidget {
 }
 
 class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
+
+
   @override
   Widget build(BuildContext context) {
     return new WillPopScope(
@@ -39,7 +41,8 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
 
             items: const <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
-                icon: const Icon(CupertinoIcons.home),
+                icon: const Icon(CupertinoIcons.info),
+                //icon: const IconData(0xe901, fontFamily: 'icomoon'),
                 title: const Text('Home'),
               ),
               const BottomNavigationBarItem(
