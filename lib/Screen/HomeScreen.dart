@@ -19,7 +19,22 @@ class HomeScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: null /* add child content content here */,
+        child: new Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: new Center(
+                child:
+                new Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    new Image.asset('assets/home/Logo.png'),
+                  ],
+                )
+
+
+
+            ),
+        )
       ),
     ); //End of Container
   }

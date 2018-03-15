@@ -41,8 +41,8 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
 
             items: const <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
-                icon: const Icon(CupertinoIcons.info),
-                //icon: const IconData(0xe901, fontFamily: 'icomoon'),
+                //icon: const Icon(CupertinoIcons.info),
+                icon: const Icon(const IconData(0xe901, fontFamily: 'icomoon')),
                 title: const Text('Home'),
               ),
               const BottomNavigationBarItem(
@@ -54,7 +54,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 title: const Text('Uncover'),
               ),
               const BottomNavigationBarItem(
-                icon: const Icon(CupertinoIcons.ellipsis),
+                icon: const Icon(CupertinoIcons.profile_circled),
                 title: const Text('About'),
               ),
             ],
