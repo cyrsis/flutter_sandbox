@@ -11,6 +11,7 @@ dependencies:
   transparent_image: "^0.1.0"
   cached_network_image: "^0.3.0"
   rxdart: "^0.16.0+1"
+  url_launcher: ^2.0.2
 
 
 dev_dependencies:

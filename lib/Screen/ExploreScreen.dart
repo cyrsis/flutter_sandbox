@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Widgets/WhiteCard.dart';
 
 
 class ExploreScreen extends StatelessWidget {
@@ -20,6 +21,7 @@ class ExploreScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(20.0),
                   child: new Image.asset('assets/explore/TinderCard.png'),
                 ),
+
                 ]
           )
           ]

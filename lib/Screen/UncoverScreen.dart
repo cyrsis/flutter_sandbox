@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' ;
+import 'package:flutter_sandbox/Widgets/WhiteCard.dart';
 
 
 class UncoverScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class UncoverScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: null /* add child content content here */,
+        child: new WhiteCard(),
       ),
     ); //End of Container
   }
