@@ -3,11 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/ExploreScreen.dart';
 import 'package:flutter_sandbox/Screen/HomeScreen.dart';
+import 'package:flutter_sandbox/Screen/ProfileScreen.dart';
+import 'package:flutter_sandbox/Screen/TestScreen.dart';
 import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:async';
 import 'dart:math' as math;
-
 import 'package:flutter_sandbox/Widgets/LoginForm.dart';
 
 void main() =>
@@ -43,7 +44,6 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
 
             items: const <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
-                //icon: const Icon(CupertinoIcons.info),
                 icon: const Icon(const IconData(0xe901, fontFamily: 'icomoon')),
                 title: const Text('Home'),
               ),
@@ -73,7 +73,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new HomeScreen();
+                      return new TestScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
@@ -82,7 +82,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                       return new UncoverScreen();
                       break;
                     case 3:
-                      return new AboutScreen();
+                      return new ProfileScreen();
                       break;
                     default:
                   }

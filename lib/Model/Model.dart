@@ -1,6 +1,4 @@
 class Movie {
-
-
   final String bannerUrl;
   final String posterUrl;
   final String title;
