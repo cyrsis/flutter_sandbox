@@ -73,7 +73,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new TestScreen();
+                      return new HomeScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
@@ -82,7 +82,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                       return new UncoverScreen();
                       break;
                     case 3:
-                      return new ProfileScreen();
+                      return new TestScreen();
                       break;
                     default:
                   }

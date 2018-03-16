@@ -43,10 +43,10 @@ flutter:
   - assets/explore/Background.png
   - assets/explore/Title.png
   - assets/explore/TinderCard.png
-  - assets/images/emma-watson.jpg
-  - assets/images/microphone.png
-  - assets/images/wallet.png
-  - assets/images/joystick.png
+  - assets/profile/emma-watson.jpg
+  - assets/profile/microphone.png
+  - assets/profile/wallet.png
+  - assets/profile/joystick.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -74,6 +74,12 @@ flutter:
        - asset: assets/fonts/timeburnernormal.ttf
        - asset: assets/fonts/timeburnerbold.ttf
          weight: 700
+   - family: Poppins
+     fonts:
+       - asset: assets/fonts/Poppins-SemiBold.ttf
+         weight: 600
+       - asset: assets/fonts/Poppins-Regular.ttf
+         weight: 400
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

@@ -17,7 +17,6 @@ class _LoginFormState extends State<LoginForm> {
 
     if (form.validate()) {
       form.save();
-
       // Email & password matched our validation rules
       // and are saved to _email and _password fields.
       _performLogin();

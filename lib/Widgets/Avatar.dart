@@ -24,7 +24,7 @@ class Avator extends StatelessWidget {
           width: 70.0, height: 60.0,
           decoration: new BoxDecoration(
             image: new DecorationImage(
-                image: new AssetImage("assets/images/emma-watson.jpg"),
+                image: new AssetImage("assets/profile/emma-watson.jpg"),
                 fit: BoxFit.cover),
             borderRadius: new BorderRadius.all(new Radius.circular(20.0)),
             boxShadow: <BoxShadow>[

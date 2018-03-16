@@ -13,8 +13,8 @@ class ProfileScreen extends StatelessWidget {
         padding: const EdgeInsets.all(0.0),
         children: <Widget>[
           new ProfileHeader(profile),
-          new QuickActions(),
-          new MainMenu(),
+          new QuickAction(),
+          new ListMenu(),
         ],
       ),
     );

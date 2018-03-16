@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Fonts/ProfileFronts.dart';
 import 'package:flutter_sandbox/Icons/Icons.dart';
 import 'package:flutter_sandbox/Model/Profile.dart';
+import 'package:flutter_sandbox/Widgets/Avatar.dart';
+import 'package:flutter_sandbox/Widgets/VerticalDivider.dart';
 
 class ProfileHeader extends StatelessWidget {
 
@@ -74,8 +76,8 @@ class ProfileHeader extends StatelessWidget {
                   child: _buildTitle(),
                 ),
                 new Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
-                  child: _buildAvatar(),
+                  padding: const EdgeInsets.only(bottom: 15.0),
+                  child: new Avator(profile),
                 ),
                 _buildFollowerStats()
               ],
@@ -110,54 +112,15 @@ class ProfileHeader extends StatelessWidget {
             letterSpacing: 1.0));
   }
 
-  /// The avatar consists of the profile image, the users name and location
-  Widget _buildAvatar() {
-    final mainTextStyle = new TextStyle(fontFamily: ProfileFontsName.TimeBurner,
-        color: Colors.white,
-        fontWeight: FontWeight.w700,
-        fontSize: 20.0);
-    final subTextStyle = new TextStyle(
-        fontFamily: ProfileFontsName.TimeBurner,
-        fontSize: 16.0,
-        color: Colors.white70,
-        fontWeight: FontWeight.w700);
-
-    return new Row(
-      children: <Widget>[
-        new Container(
-          width: 70.0, height: 60.0,
-          decoration: new BoxDecoration(
-            image: new DecorationImage(
-                image: new AssetImage("assets/images/emma-watson.jpg"),
-                fit: BoxFit.cover),
-            borderRadius: new BorderRadius.all(new Radius.circular(20.0)),
-            boxShadow: <BoxShadow>[
-              new BoxShadow(
-                  color: Colors.black26, blurRadius: 5.0, spreadRadius: 1.0),
-            ],
-          ),
-        ),
-        new Padding(padding: const EdgeInsets.only(right: 20.0)),
-        new Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            new Text(profile.fullName, style: mainTextStyle),
-            new Text(profile.location, style: subTextStyle),
-          ],
-        ),
-      ],
-    );
-  }
-
   Widget _buildFollowerStats() {
     return new Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         _buildFollowerStat("Followers", profile.numberOfFollowersString),
-        _buildVerticalDivider(),
+        new VerticalDivider(),
         _buildFollowerStat("Following", profile.numberFollowingString),
-        _buildVerticalDivider(),
+        new VerticalDivider(),
         _buildFollowerStat("Total Likes", profile.totalLikesString),
       ],
     );
@@ -180,15 +143,6 @@ class ProfileHeader extends StatelessWidget {
         new Text(title, style: titleStyle),
         new Text(value, style: valueStyle),
       ],
-    );
-  }
-
-  Widget _buildVerticalDivider() {
-    return new Container(
-      height: 30.0,
-      width: 1.0,
-      color: Colors.white30,
-      margin: const EdgeInsets.only(left: 10.0, right: 10.0),
     );
   }
 }

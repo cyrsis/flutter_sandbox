@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-
 import 'package:flutter_sandbox/Fonts/ProfileFronts.dart';
-
-
 /// QuickActions represents the horizontal list of rectangular buttons below the header
-class QuickActions extends StatelessWidget {
+class QuickAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -47,13 +44,13 @@ class QuickActions extends StatelessWidget {
             children: <Widget>[
               _buildAction(
                   "Live\nBroadcast", () {}, Colors.blue, blueGradient,
-                  new AssetImage("assets/images/microphone.png")),
+                  new AssetImage("assets/profile/microphone.png")),
               _buildAction(
                   "My\nWallet", () {}, Colors.purple, purpleGraient,
-                  new AssetImage("assets/images/wallet.png")),
+                  new AssetImage("assets/profile/wallet.png")),
               _buildAction(
                   "Game\nCenter", () {}, Colors.red, redGradient,
-                  new AssetImage("assets/images/joystick.png")),
+                  new AssetImage("assets/profile/joystick.png")),
             ]
         ),
       ),
@@ -104,7 +101,7 @@ class QuickActions extends StatelessWidget {
                         height: 90.0,
                         image: backgroundImage != null
                             ? backgroundImage
-                            : new AssetImage("assets/images/microphone.png"),
+                            : new AssetImage("assets/profile/microphone.png"),
                       ),
                     ),
                   ),
