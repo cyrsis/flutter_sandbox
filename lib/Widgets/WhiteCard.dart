@@ -13,7 +13,7 @@ class WhiteCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             new Icon(Icons.warning, size: 128.0, color: textStyle.color),
-            new Text("Text", style: textStyle),
+            new Text("Here is the new Card", style: textStyle),
           ],
         ),
       ),

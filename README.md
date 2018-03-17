@@ -4,6 +4,9 @@ A new Flutter application.
 
 ## Getting Started
 
+March 11, 2018 2:56 pm
+This thing is just like C# , Thank you Google
+
 For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
 
