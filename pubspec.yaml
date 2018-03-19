@@ -13,6 +13,10 @@ dependencies:
   cached_network_image: "^0.3.0"
   rxdart: "^0.16.0+1"
   url_launcher: ^2.0.2
+  redux: "^2.1.1"
+  flutter_redux: "^0.3.5"
+  cloud_firestore: "^0.2.10"
+  redux_epics: "^0.8.0"
 
 
 dev_dependencies:
@@ -47,6 +51,12 @@ flutter:
   - assets/profile/microphone.png
   - assets/profile/wallet.png
   - assets/profile/joystick.png
+  - assets/landing/banks.png
+  - assets/landing/hotels.png
+  - assets/landing/key.png
+  - assets/landing/shopping_cart.png
+  - assets/landing/stores.png
+  - assets/landing/wallet.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -80,6 +90,12 @@ flutter:
          weight: 600
        - asset: assets/fonts/Poppins-Regular.ttf
          weight: 400
+   - family: FlamanteRoma
+     fonts:
+       - asset: assets/fonts/Flamante-Roma-Medium.ttf
+       - asset: assets/fonts/Flamante-Roma-MediumItalic.ttf
+         style: italic
+
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
