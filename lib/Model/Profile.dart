@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Util/Functions.dart';
+
 class Profile {
   String firstName;
   String lastName;
@@ -7,9 +8,8 @@ class Profile {
   int numberOfFollowers;
   int numberFollowing;
   int totalLikes;
-   
-  String get fullName => "$firstName $lastName";
 
+  String get fullName => "$firstName $lastName";
 
   String get numberOfFollowersString => funabbreviatedCount(numberOfFollowers);
 
@@ -28,6 +28,7 @@ Profile getProfile() {
     ..numberFollowing = 924
     ..totalLikes = 1700;
 }
+
 class ProfileColors {
   static final Color primaryColor = new Color(0xFF9A10FF);
 }

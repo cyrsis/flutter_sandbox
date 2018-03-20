@@ -57,6 +57,7 @@ flutter:
   - assets/landing/shopping_cart.png
   - assets/landing/stores.png
   - assets/landing/wallet.png
+  - assets/iamges/flutter-mark-square-64.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
