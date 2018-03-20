@@ -7,4 +7,5 @@ class AppTheme {
       primaryColor: Colors.lightBlue[800],
       accentColor: Colors.cyan[600]
   );
+
 }

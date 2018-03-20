@@ -3,6 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_sandbox/Styles/AppImage.dart';
 
+class TwoViewExample extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Flutter View',
+      theme: new ThemeData(
+        primarySwatch: Colors.grey,
+      ),
+      home: new TwoViews(),
+    );
+  }
+}
 class TwoViews extends StatefulWidget {
   @override
   _TowViewsState createState() => new _TowViewsState();

@@ -1,5 +1,5 @@
 class ProfileFontsName {
-  static final String TimeBurner = "Timeburner";
+  static final String ProfileFonts = "Timeburner";
 }
 
 class AppFontsName {

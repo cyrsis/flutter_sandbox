@@ -6,12 +6,12 @@ class Avator extends StatelessWidget {
   final Profile profile;
   Avator(this.profile);
 
-  final mainTextStyle = new TextStyle(fontFamily: ProfileFontsName.TimeBurner,
+  final mainTextStyle = new TextStyle(fontFamily: ProfileFontsName.ProfileFonts,
       color: Colors.white,
       fontWeight: FontWeight.w700,
       fontSize: 20.0);
   final subTextStyle = new TextStyle(
-      fontFamily: ProfileFontsName.TimeBurner,
+      fontFamily: ProfileFontsName.ProfileFonts,
       fontSize: 16.0,
       color: Colors.white70,
       fontWeight: FontWeight.w700);

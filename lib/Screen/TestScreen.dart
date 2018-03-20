@@ -23,6 +23,7 @@ class TestScreen extends StatelessWidget {
         child: new ListView(
           children: <Widget>[
             new CustomAppBar("Great App"),
+
             new Padding(
               padding: const EdgeInsets.all(20.0),
               child: new Avator(profile),

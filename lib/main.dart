@@ -5,10 +5,12 @@ import 'package:flutter_sandbox/Redux/MiddleWare.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AppBarBottomSample.dart';
 import 'package:flutter_sandbox/Screen/BasicAppBarSample.dart';
+import 'package:flutter_sandbox/Screen/ChartScreen.dart';
 import 'package:flutter_sandbox/Screen/ExpansionTileSample.dart';
 import 'package:flutter_sandbox/Screen/ExploreScreen.dart';
 import 'package:flutter_sandbox/Screen/HomeScreen.dart';
 import 'package:flutter_sandbox/Screen/ProfileScreen.dart';
+import 'package:flutter_sandbox/Screen/QRScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
 import 'package:flutter_sandbox/Screen/TabbedAppBarSample%20.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
@@ -20,6 +22,7 @@ import 'package:flutter_sandbox/Styles/AppTheme.dart';
 import 'dart:async';
 import 'dart:math' as math;
 import 'package:flutter_sandbox/Widgets/LoginForm.dart';
+import 'package:flutter_sandbox/Widgets/custom_render_box.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_epics/redux_epics.dart';
 import 'package:flutter_sandbox/Redux/AppStateReducer.dart';
@@ -85,7 +88,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new TwoViews();
+                      return new ChartScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
