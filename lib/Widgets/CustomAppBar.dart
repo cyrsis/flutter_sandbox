@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/Styles/AppTextStyle.dart';
+import 'package:flutter_sandbox/Styles/AppStyle.dart';
 
 class CustomAppBar extends StatelessWidget {
 
