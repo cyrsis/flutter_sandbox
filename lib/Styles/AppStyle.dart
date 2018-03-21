@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
 class AppStyle {
-      
+
   static final TextStyle AppBarTextStyle = const TextStyle(
       color: Colors.white,
       fontFamily: 'Poppins',
