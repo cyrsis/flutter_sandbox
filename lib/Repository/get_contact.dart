@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:flutter_sandbox/Model/Contact.dart';
+import 'package:flutter_sandbox/Models/Contact.dart';
 import 'package:flutter_sandbox/Repository/ContactRepo.dart';
 import 'package:flutter_sandbox/Util/FetchDataException.dart';
 import 'package:http/http.dart' as http;

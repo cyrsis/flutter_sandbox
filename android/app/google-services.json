@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "131066976727",
+    "firebase_url": "https://memchat-58529.firebaseio.com",
+    "project_id": "memchat-58529",
+    "storage_bucket": "memchat-58529.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131066976727:android:9ff633e8a753606b",
+        "android_client_info": {
+          "package_name": "com.onpaper.fluttersandbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131066976727-0ia6qscq8j5t7getg3676pl5ruuks743.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onpaper.fluttersandbox",
+            "certificate_hash": "c864263f8f501e9f6502cb0610c2a1a22c79225e"
+          }
+        },
+        {
+          "client_id": "131066976727-0m7cd0939tp11l4pdeuvcaph8dq012b2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-5pv1z2IANq4ig5bQj-LeqiIpVTfed4M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131066976727-0m7cd0939tp11l4pdeuvcaph8dq012b2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Fonts/ProfileFronts.dart';
-import 'package:flutter_sandbox/Model/Profile.dart';
+import 'package:flutter_sandbox/Models/Profile.dart';
 
 class Avator extends StatelessWidget {
   final Profile profile;

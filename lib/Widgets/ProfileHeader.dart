@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Fonts/ProfileFronts.dart';
 import 'package:flutter_sandbox/Icons/Icons.dart';
-import 'package:flutter_sandbox/Model/Profile.dart';
+import 'package:flutter_sandbox/Models/Profile.dart';
 import 'package:flutter_sandbox/Widgets/Avatar.dart';
 import 'package:flutter_sandbox/Widgets/VerticalDivider.dart';
 
