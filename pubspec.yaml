@@ -12,13 +12,13 @@ dependencies:
   transparent_image: "^0.1.0"
   cached_network_image: "^0.3.0"
   rxdart: "^0.16.0+1"
-  url_launcher: ^2.0.2
+  url_launcher: "^3.0.0"
   redux: "^2.1.1"
   flutter_redux: "^0.3.5"
   cloud_firestore: "^0.2.12"
-  redux_epics: "^0.8.0"
   qr_flutter: "^1.0.0"
-  firebase_auth: 0.4.7
+  redux_epics: "^0.8.0"
+
 
 
 
@@ -61,6 +61,16 @@ flutter:
   - assets/landing/stores.png
   - assets/landing/wallet.png
   - assets/images/flutter-mark-square-64.png
+  - assets/images/coffee_header.jpeg
+  - assets/data/sample.json
+  - assets/images/profile_header_background.png
+  - assets/images/portfolio_1.jpeg
+  - assets/images/portfolio_2.jpeg
+  - assets/images/portfolio_3.jpeg
+  - assets/images/portfolio_4.jpeg
+  - assets/images/portfolio_5.jpeg
+  - assets/images/portfolio_6.jpeg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

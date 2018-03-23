@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Widgets/CustomTouch.dart';
+import 'package:flutter_sandbox/Widgets/DropDown.dart';
 import 'package:flutter_sandbox/Widgets/IOSprogressindic.dart';
 import 'package:flutter_sandbox/Widgets/InkWallButton.dart';
 import 'package:flutter_sandbox/Widgets/WhiteCard.dart';
@@ -28,13 +29,8 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     new Image.asset('assets/home/Logo.png'),
-                    new Padding(
-                      padding: const EdgeInsets.only(top: 15.0),
-                      child: new Text('春 画'),
-                    ),
-                    new Text('Shunga'),
                   ],
-                  
+
                 )
 
 

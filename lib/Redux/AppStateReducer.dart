@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_sandbox/Redux/Action.dart';
 import 'package:flutter_sandbox/Redux/AppState.dart';
 import 'package:redux/redux.dart';
-import 'package:redux_epics/redux_epics.dart';
+
 import 'package:rxdart/rxdart.dart';
 
 

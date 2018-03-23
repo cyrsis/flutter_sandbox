@@ -7,4 +7,6 @@ export 'Avatar.dart';
 export 'QuickAction.dart';
 export 'CustomAppBar.dart';
 export 'custom_render_box.dart';
+export 'TipCalculator.dart';
+export 'FriendDetailsHeader.dart';
 
