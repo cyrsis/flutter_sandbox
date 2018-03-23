@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_sandbox/Redux/AppState.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
+import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
+import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
 import 'package:flutter_sandbox/Screen/TabTopScreen.dart';
@@ -72,6 +74,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
               ),
               const BottomNavigationBarItem(
                 icon: const Icon(CupertinoIcons.profile_circled),
+
                 title: const Text('Uncover'),
               ),
               const BottomNavigationBarItem(
@@ -96,7 +99,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new HomeScreen();
+                      return new TestScreen();
                       break;
                     case 1:
                       return new ExploreScreen();

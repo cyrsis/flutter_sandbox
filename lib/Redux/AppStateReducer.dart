@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_sandbox/Redux/Action.dart';
 import 'package:flutter_sandbox/Redux/AppState.dart';
 import 'package:redux/redux.dart';

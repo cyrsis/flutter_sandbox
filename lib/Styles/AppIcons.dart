@@ -20,3 +20,4 @@ class LineAwesomeIcons {
   static final IconData thumbsUp = new IconData(0xf33f, fontFamily: fontFamily);
   static final IconData bookmark = new IconData(0xf14f, fontFamily: fontFamily);
 }
+

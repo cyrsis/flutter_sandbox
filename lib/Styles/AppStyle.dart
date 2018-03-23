@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Fonts/ProfileFronts.dart';
 
 class AppStyle {
 
@@ -30,6 +31,11 @@ class AppStyle {
       stops: [0.0, 0.6],
       tileMode: TileMode.clamp
   );
+
+  static get MainTextStyle => new TextStyle(fontFamily: AppFrontsName.ProfileFonts,
+      color: Colors.white,
+      fontWeight: FontWeight.w700,
+      fontSize: 20.0);
 
 
 }

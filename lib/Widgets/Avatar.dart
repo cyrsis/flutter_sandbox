@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Fonts/ProfileFronts.dart';
 import 'package:flutter_sandbox/Models/Profile.dart';
+import 'package:flutter_sandbox/Styles/AppStyle.dart';
 
 class Avator extends StatelessWidget {
   final Profile profile;
   Avator(this.profile);
 
-  final mainTextStyle = new TextStyle(fontFamily: AppFrontsName.ProfileFonts,
-      color: Colors.white,
-      fontWeight: FontWeight.w700,
-      fontSize: 20.0);
+
+  final mainTextStyle = AppStyle.MainTextStyle;
   final subTextStyle = new TextStyle(
       fontFamily: AppFrontsName.ProfileFonts,
       fontSize: 16.0,

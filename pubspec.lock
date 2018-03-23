@@ -57,13 +57,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.2+1"
-  cloud_firestore:
-    dependency: "direct main"
-    description:
-      name: cloud_firestore
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.12"
   collection:
     dependency: transitive
     description:
@@ -123,6 +116,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fluttery:
+    dependency: "direct main"
+    description:
+      name: fluttery
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.5"
   font_awesome_flutter:
     dependency: "direct main"
     description:

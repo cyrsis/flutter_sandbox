@@ -10,6 +10,7 @@ import 'package:flutter_sandbox/Widgets/LoadJson.dart';
 import 'package:flutter_sandbox/Widgets/TipCalculator.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_sandbox/Widgets/QuickAction.dart';
+import 'package:fluttery/framing.dart';
 
 class TestScreen extends StatelessWidget {
   final profile = getProfile();
@@ -25,7 +26,36 @@ class TestScreen extends StatelessWidget {
                 fit: BoxFit.cover,),
             ),
           ),
-          new ClipPathImage()
+          new ClipPathImage(),
+          new RandomColorBlock(
+            width: double.INFINITY,
+            child: new Center(
+              child: new Container(
+                padding: const EdgeInsets.all(15.0),
+                color: Colors.white,
+                child: new Text(
+                    'Really can be hot reload?'
+                ),
+              ),
+            ),
+          ),
+
+
+          new RandomColorBlock(
+            width: double.INFINITY,
+            child: new AspectRatio(
+              aspectRatio: 1.0,
+              child: new Center(
+                child: new Container(
+                  padding: const EdgeInsets.all(15.0),
+                  color: Colors.white,
+                  child: new Text(
+                      'Random colors live across hot reloads.'
+                  ),
+                ),
+              ),
+            ),
+          ),
         ]
     );
   }
