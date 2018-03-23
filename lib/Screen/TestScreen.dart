@@ -22,16 +22,11 @@ class TestScreen extends StatelessWidget {
               image: new DecorationImage(
                 image: new AssetImage("assets/home/background.png"),
                 fit: BoxFit.cover,
-
               ),
             ),
-            child: new ListView(
-
-              children: <Widget>[
-
-                new LoadJson(),
-
-              ],
+            child: new ListView(children: <Widget>[
+            
+            ]
             )
         )
     );

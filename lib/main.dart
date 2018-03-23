@@ -13,6 +13,7 @@ import 'package:flutter_sandbox/Screen/ProfileScreen.dart';
 import 'package:flutter_sandbox/Screen/QRScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
+import 'package:flutter_sandbox/Screen/StepperScreen.dart';
 import 'package:flutter_sandbox/Screen/TabbedAppBarSample%20.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
 import 'package:flutter_sandbox/Screen/TwoViews.dart';
@@ -93,7 +94,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new GetJsonScreen();
+                      return new StepperScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
@@ -102,7 +103,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                       return new UncoverScreen();
                       break;
                     case 3:
-                      return new TestScreen();
+                      return new AboutScreen();
                       break;
                     default:
                   }
