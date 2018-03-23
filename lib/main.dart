@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_sandbox/Redux/AppState.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
+import 'package:flutter_sandbox/Screen/AnimationControllerOutputScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
@@ -99,7 +100,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new TestScreen();
+                      return new AnimationControllerOutputScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
