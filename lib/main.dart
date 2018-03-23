@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_sandbox/Redux/AppState.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
+import 'package:flutter_sandbox/Screen/TabTopScreen.dart';
 import 'package:flutter_sandbox/Screen/AppBarBottomSample.dart';
 import 'package:flutter_sandbox/Screen/BasicAppBarSample.dart';
 import 'package:flutter_sandbox/Screen/ChartScreen.dart';
@@ -94,7 +95,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new StepperScreen();
+                      return new TabTopScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
