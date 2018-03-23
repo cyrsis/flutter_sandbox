@@ -96,7 +96,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new FriendsScreen();
+                      return new HomeScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
