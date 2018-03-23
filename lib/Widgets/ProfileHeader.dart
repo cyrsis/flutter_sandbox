@@ -105,7 +105,7 @@ class ProfileHeader extends StatelessWidget {
   Widget _buildTitle() {
     return new Text("Profile",
         style: new TextStyle(
-            fontFamily: ProfileFontsName.ProfileFonts,
+            fontFamily: AppFrontsName.ProfileFonts,
             fontWeight: FontWeight.w700,
             color: Colors.white,
             fontSize: 40.0,
@@ -129,10 +129,10 @@ class ProfileHeader extends StatelessWidget {
   Widget _buildFollowerStat(String title, String value) {
     final titleStyle = new TextStyle(
         fontSize: 16.0,
-        fontFamily: ProfileFontsName.ProfileFonts,
+        fontFamily: AppFrontsName.ProfileFonts,
         color: Colors.white);
     final valueStyle = new TextStyle(
-        fontFamily: ProfileFontsName.ProfileFonts,
+        fontFamily: AppFrontsName.ProfileFonts,
         fontSize: 18.0,
         fontWeight: FontWeight.w700,
         color: Colors.white);

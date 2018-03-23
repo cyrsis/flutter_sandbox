@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class InkWallBUtton extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     // The InkWell Wraps our custom flat button Widget
     return new InkWell(
-      // When the user taps the button, show a snackbar
       onTap: () {
         Scaffold.of(context).showSnackBar(new SnackBar(
           content: new Text('Tap'),
@@ -17,4 +17,5 @@ class InkWallBUtton extends StatelessWidget {
       ),
     );
   }
+
 }

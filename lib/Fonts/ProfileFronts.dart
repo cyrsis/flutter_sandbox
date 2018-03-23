@@ -1,10 +1,9 @@
-class ProfileFontsName {
+class AppFrontsName {
   static final String ProfileFonts = "Timeburner";
+  static final String Poppins = "Poppins";
+
 }
 
-class AppFontsName {
-  static final String Poppins = "Poppins";
-}
 
 
 

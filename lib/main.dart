@@ -7,9 +7,11 @@ import 'package:flutter_sandbox/Screen/BasicAppBarSample.dart';
 import 'package:flutter_sandbox/Screen/ChartScreen.dart';
 import 'package:flutter_sandbox/Screen/ExpansionTileSample.dart';
 import 'package:flutter_sandbox/Screen/ExploreScreen.dart';
+import 'package:flutter_sandbox/Screen/GetJsonScreen.dart';
 import 'package:flutter_sandbox/Screen/HomeScreen.dart';
 import 'package:flutter_sandbox/Screen/ProfileScreen.dart';
 import 'package:flutter_sandbox/Screen/QRScreen.dart';
+import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
 import 'package:flutter_sandbox/Screen/TabbedAppBarSample%20.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
@@ -50,6 +52,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
         onWillPop: () => new Future<bool>.value(true),
 
         child: new CupertinoTabScaffold(
+
           tabBar: new CupertinoTabBar(
             backgroundColor: Colors.transparent,
               activeColor: const Color(0xFF615147),
@@ -83,10 +86,14 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
 
               ),
               child: new CupertinoTabView(
+                routes: <String, WidgetBuilder>{
+                  // Set named routes
+                  RouteScreen.routeName: (BuildContext context) => new RouteScreen(),
+                },
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new AboutScreen();
+                      return new GetJsonScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
