@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_sandbox/Redux/AppState.dart';
-import 'package:flutter_sandbox/Redux/MiddleWare.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AppBarBottomSample.dart';
 import 'package:flutter_sandbox/Screen/BasicAppBarSample.dart';
@@ -24,7 +23,6 @@ import 'dart:math' as math;
 import 'package:flutter_sandbox/Widgets/LoginForm.dart';
 import 'package:flutter_sandbox/Widgets/custom_render_box.dart';
 import 'package:redux/redux.dart';
-import 'package:redux_epics/redux_epics.dart';
 import 'package:flutter_sandbox/Redux/AppStateReducer.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -88,7 +86,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new ChartScreen();
+                      return new AboutScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
