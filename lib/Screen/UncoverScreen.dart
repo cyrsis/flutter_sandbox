@@ -20,16 +20,25 @@ class UncoverScreen extends StatelessWidget {
         new Padding(
           padding: const EdgeInsets.only(top: 50.0,left: 10.0,right: 10.0),
 
-          child: new Row(children: <Widget>[
-            new Image.asset(AppImage.uncover_orgin_card),
+          child: new Row(
+
+              children: <Widget>[
+
             new Padding(
-              padding: const EdgeInsets.only(left: 8.0),
-              child: new Image.asset(AppImage.uncover_tecnique_card),
+              padding: const EdgeInsets.only(top: 5.0,left: 10.0),
+              child: new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  new Image.asset(AppImage.uncover_tecnique_card),
+                  new Image.asset(AppImage.uncover_orgin_card),
+                ],
+              ),
             ),
+
           ]),
         ),
         new Padding(
-          padding: const EdgeInsets.only(top: 10.0,left: 10.0),
+          padding: const EdgeInsets.only(top: 10.0),
           child: new Row(children: <Widget>[
             new Image.asset(AppImage.uncover_evolution_card),
             new Image.asset(AppImage.uncover_trivia_Card),
