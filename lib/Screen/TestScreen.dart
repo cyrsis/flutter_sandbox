@@ -20,15 +20,7 @@ class TestScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Stack(
         children: <Widget>[
-          new Container(
-            decoration: new BoxDecoration(
-              image: new DecorationImage(
-                image: new AssetImage("assets/home/background.png"),
-                fit: BoxFit.cover,),
-            ),
-          ),
-          new ClipPathImage(),
-          new DesignCard()
+          new Text('Whatever', softWrap: true,),
 
         ]
     );
