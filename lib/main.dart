@@ -7,6 +7,7 @@ import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
+import 'package:flutter_sandbox/Screen/StackScreen.dart';
 import 'package:flutter_sandbox/Screen/TabTopScreen.dart';
 import 'package:flutter_sandbox/Screen/BasicAppBarSample.dart';
 import 'package:flutter_sandbox/Screen/ChartScreen.dart';
@@ -101,7 +102,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new HomeScreen();
+                      return new StackScreen();
                       break;
                     case 1:
                       return new ExploreScreen();
