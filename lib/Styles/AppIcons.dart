@@ -21,3 +21,21 @@ class LineAwesomeIcons {
   static final IconData bookmark = new IconData(0xf14f, fontFamily: fontFamily);
 }
 
+class AppIcons {
+  static const fontFamily = "iconmoon";
+
+  static const IconData TabBarHome= const IconData(0xe906, fontFamily: 'icomoon');
+  static const IconData TabBarExplore= const IconData(0xe902, fontFamily: 'icomoon');
+  static const IconData TabBarUncover= const IconData(0xe905, fontFamily: 'icomoon');
+  static const IconData TabBarAbout= const IconData(0xe907, fontFamily: 'icomoon');
+
+
+
+  static final IconData bell = new IconData(0xf141, fontFamily: fontFamily);
+  static final IconData home = new IconData(0xf237, fontFamily: fontFamily);
+  static final IconData user = new IconData(0xf364, fontFamily: fontFamily);
+  static final IconData thumbsUp = new IconData(0xf33f, fontFamily: fontFamily);
+  static final IconData bookmark = new IconData(0xf14f, fontFamily: fontFamily);
+
+
+}

@@ -4,6 +4,7 @@ import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Widgets/Avatar.dart';
 import 'package:flutter_sandbox/Widgets/ClipPathImage.dart';
 import 'package:flutter_sandbox/Widgets/CustomAppBar.dart';
+import 'package:flutter_sandbox/Widgets/DesignCard.dart';
 import 'package:flutter_sandbox/Widgets/DropDown.dart';
 import 'package:flutter_sandbox/Widgets/ListMenu.dart';
 import 'package:flutter_sandbox/Widgets/LoadJson.dart';
@@ -27,35 +28,8 @@ class TestScreen extends StatelessWidget {
             ),
           ),
           new ClipPathImage(),
-          new RandomColorBlock(
-            width: double.INFINITY,
-            child: new Center(
-              child: new Container(
-                padding: const EdgeInsets.all(15.0),
-                color: Colors.white,
-                child: new Text(
-                    'Really can be hot reload?'
-                ),
-              ),
-            ),
-          ),
+          new DesignCard()
 
-
-          new RandomColorBlock(
-            width: double.INFINITY,
-            child: new AspectRatio(
-              aspectRatio: 1.0,
-              child: new Center(
-                child: new Container(
-                  padding: const EdgeInsets.all(15.0),
-                  color: Colors.white,
-                  child: new Text(
-                      'Random colors live across hot reloads.'
-                  ),
-                ),
-              ),
-            ),
-          ),
         ]
     );
   }

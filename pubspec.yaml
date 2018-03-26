@@ -51,6 +51,12 @@ flutter:
   - assets/explore/Background.png
   - assets/explore/Title.png
   - assets/explore/TinderCard.png
+  - assets/uncover/background_uncover.png
+  - assets/uncover/uncover_evolution_card.png
+  - assets/uncover/uncover_origin_card.png
+  - assets/uncover/uncover_tecnique_card.png
+  - assets/uncover/uncover_trivia_card.png
+  - assets/uncover/title.png
   - assets/profile/emma-watson.jpg
   - assets/profile/microphone.png
   - assets/profile/wallet.png

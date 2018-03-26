@@ -25,6 +25,7 @@ import 'package:flutter_sandbox/Screen/TwoViews.dart';
 import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_sandbox/Screen/AnimatedListSample.dart';
+import 'package:flutter_sandbox/Styles/AppIcons.dart';
 import 'package:flutter_sandbox/Styles/AppTheme.dart';
 import 'dart:async';
 import 'dart:math' as math;
@@ -66,20 +67,20 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
 
             items: const <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
-                icon: const Icon(const IconData(0xe901, fontFamily: 'icomoon')),
+                icon: const Icon(AppIcons.TabBarHome),
                 title: const Text('Home'),
               ),
               const BottomNavigationBarItem(
-                icon: const Icon(CupertinoIcons.info),
+                icon: const Icon(AppIcons.TabBarExplore),
                 title: const Text('Explore'),
               ),
               const BottomNavigationBarItem(
-                icon: const Icon(CupertinoIcons.profile_circled),
+                icon: const Icon(AppIcons.TabBarUncover),
 
                 title: const Text('Uncover'),
               ),
               const BottomNavigationBarItem(
-                icon: const Icon(CupertinoIcons.profile_circled),
+                icon: const Icon(AppIcons.TabBarAbout),
                 title: const Text('About'),
               ),
             ],
@@ -100,7 +101,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new AnimationControllerOutputScreen();
+                      return new HomeScreen();
                       break;
                     case 1:
                       return new ExploreScreen();

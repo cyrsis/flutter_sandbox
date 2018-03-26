@@ -14,7 +14,7 @@ class StepperScreenState extends State<StepperScreen> {
       // Title of the Step
         title: new Text("Step 1"),
         // Content, it can be any widget here. Using basic Text for this example
-        content: new Text("Hello!"),
+        content: new Text("Give me something"),
         isActive: true),
     new Step(
         title: new Text("Step 2"),
@@ -44,10 +44,11 @@ class StepperScreenState extends State<StepperScreen> {
             currentStep: this.current_step,
             // List the steps you would like to have
             steps: my_steps,
+
             // Define the type of Stepper style
             // StepperType.horizontal :  Horizontal Style
             // StepperType.vertical   :  Vertical Style
-            type: StepperType.vertical,
+            type: StepperType.horizontal,
             // Know the step that is tapped
             onStepTapped: (step) {
               // On hitting step itself, change the state and jump to that step

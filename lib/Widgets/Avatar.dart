@@ -32,13 +32,15 @@ class Avator extends StatelessWidget {
             ],
           ),
         ),
-        new Padding(padding: const EdgeInsets.only(right: 20.0)),
-        new Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            new Text(profile.fullName, style: mainTextStyle),
-            new Text(profile.location, style: subTextStyle),
-          ],
+        new Padding(padding: const EdgeInsets.only(left: 40.0)),
+        new Center(
+          child: new Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              new Text(profile.fullName, style: mainTextStyle),
+              new Text(profile.location, style: subTextStyle),
+            ],
+          ),
         ),
       ],
     );

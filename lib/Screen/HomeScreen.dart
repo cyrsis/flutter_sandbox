@@ -29,6 +29,12 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     new Image.asset('assets/home/Logo.png'),
+                    new Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: new Text('春 画'),
+                    ),
+                    new Text('Shunga'),
+
                   ],
 
                 )
