@@ -41,7 +41,7 @@ void main() =>
       debugShowMaterialGrid: false,
       debugShowCheckedModeBanner: false,
       title: "Shunga",
-      theme: AppTheme.Apptheme,
+      theme: defaultTargetPlatform == TargetPlatform.iOS ?AppTheme.Apptheme : AppTheme.androidTheme,
       home: new mainTab(),
     ));
 
@@ -98,11 +98,12 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 routes: <String, WidgetBuilder>{
                   // Set named routes
                   RouteScreen.routeName: (BuildContext context) => new RouteScreen(),
+
                 },
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new StackScreen();
+                      return new TestScreen();
                       break;
                     case 1:
                       return new ExploreScreen();

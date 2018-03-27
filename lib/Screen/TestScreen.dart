@@ -20,9 +20,27 @@ class TestScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Stack(
         children: <Widget>[
-          new Text('Whatever', softWrap: true,),
+          new Column(
 
+              children: <Widget>[
+                new Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: null,
+                ),
+                new Text(
+                  'Whatever', softWrap: true, style: AppStyle.MainTextStyle,),
+                new Text(
+                  'Whatever', softWrap: true, style: AppStyle.MainTextStyle,),
+                new Text(
+                  'Whatever', softWrap: true, style: AppStyle.MainTextStyle,),
+                new Text(
+                  'Whatever', softWrap: true, style: AppStyle.MainTextStyle,),
+                new Text(
+                  'Whatever', softWrap: true, style: AppStyle.MainTextStyle,),
+              ]
+          )
         ]
     );
   }
+
 }
