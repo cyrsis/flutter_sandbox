@@ -18,6 +18,8 @@ dependencies:
   qr_flutter: "^1.0.0"
   redux_epics: "^0.8.0"
   fluttery: "^0.0.5"
+  flutter_webview_plugin: ^0.1.4
+  carousel: ^0.1.0
 
 
 

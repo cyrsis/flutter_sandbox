@@ -10,11 +10,10 @@ class AppTheme {
 
   static final ThemeData iosTheme = new ThemeData(
       primarySwatch: Colors.red,
-      brightness: Brightness.dark,
       primaryColor: Colors.grey[400],
+      primaryColorBrightness: Brightness.dark,
       accentColor: Colors.grey[600]);
 
   static final ThemeData androidTheme = new ThemeData(
-      primaryColor: Colors.blue[400],
       accentColor: Colors.cyan[600]);
 }

@@ -4,6 +4,9 @@ import 'package:flutter_sandbox/Redux/AppState.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationControllerOutputScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
+import 'package:flutter_sandbox/Screen/ButtonRowScreen.dart';
+import 'package:flutter_sandbox/Screen/ChatScreenSample.dart';
+import 'package:flutter_sandbox/Screen/ContactsDemo.dart';
 import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
@@ -35,7 +38,7 @@ import 'package:flutter_sandbox/Widgets/custom_render_box.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_sandbox/Redux/AppStateReducer.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 void main() =>
     runApp(new MaterialApp(
       debugShowMaterialGrid: false,
@@ -98,12 +101,20 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 routes: <String, WidgetBuilder>{
                   // Set named routes
                   RouteScreen.routeName: (BuildContext context) => new RouteScreen(),
-
-                },
+                  "/webview": (_)=> new WebviewScaffold(
+                    url: "https://www.google.com",
+                    appBar: new AppBar(
+                      title: new Text("WebView"),
+                    ),
+                    withJavascript: true,
+                    withLocalStorage: true,
+                    withZoom: true,
+                  )
+              },
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new TestScreen();
+                      return new HomeScreen();
                       break;
                     case 1:
                       return new ExploreScreen();

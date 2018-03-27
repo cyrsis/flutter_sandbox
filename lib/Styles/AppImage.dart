@@ -13,4 +13,11 @@ class AppImage {
   static final String uncover_orgin_card  ='assets/uncover/uncover_origin_card.png';
   static final String uncover_tecnique_card  ='assets/uncover/uncover_tecnique_card.png';
   static final String uncover_trivia_Card  ='assets/uncover/uncover_trivia_card.png';
+
+  static final String portfolio1='assets/images/portfolio_1.jpeg';
+  static final String portfolio2='assets/images/portfolio_2.jpeg';
+  static final String portfolio3='assets/images/portfolio_3.jpeg';
+  static final String portfolio4='assets/images/portfolio_4.jpeg';
+  static final String portfolio5='assets/images/portfolio_5.jpeg';
+  static final String portfolio6='assets/images/portfolio_6.jpeg';
 }
