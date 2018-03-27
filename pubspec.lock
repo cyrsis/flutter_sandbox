@@ -43,6 +43,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0"
+  carousel:
+    dependency: "direct main"
+    description:
+      name: carousel
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
   charcode:
     dependency: transitive
     description:
