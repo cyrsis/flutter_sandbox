@@ -37,5 +37,16 @@ class AppStyle {
       fontWeight: FontWeight.w700,
       fontSize: 20.0);
 
+  //css : font: 900 24px Georgia
+  static get greybox => new TextStyle(
+    fontSize: 24.0,
+    fontWeight: FontWeight.w900,
+    fontFamily: "Georgia",
+  );
+
+
+
+
+
 
 }

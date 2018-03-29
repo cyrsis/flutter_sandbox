@@ -21,16 +21,26 @@ class TestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new SizedBox(
-      height: 240.0,
-      child: new Carousel(
-        children: [
-          new NetworkImage(
-              'https://pbs.twimg.com/profile_images/760249570085314560/yCrkrbl3_400x400.jpg'),
-          new NetworkImage(
-              'https://webinerds.com/app/uploads/2017/11/d49396_d9c5d967608d4bc1bcf09c9574eb67c9-mv2.png')
-        ].map((netImage) => new Image(image: netImage)).toList(),
+    return new Container(
+      // grey box
+      child: new Center(
+        child: new Container(
+          // red box
+          child: new Text(
+            "Lorem ipsum dolor sit amet, consec etur",
+            style: AppStyle.MainTextStyle,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 2,
+          ),
+          decoration: new BoxDecoration(
+            color: Colors.red[400],
+          ),
+          padding: new EdgeInsets.all(16.0),
+        ),
       ),
+      width: 320.0,
+      height: 240.0,
+      color: Colors.grey[300],
     );
   }
 }
