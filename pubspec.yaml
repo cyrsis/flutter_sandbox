@@ -79,6 +79,12 @@ flutter:
   - assets/images/portfolio_4.jpeg
   - assets/images/portfolio_5.jpeg
   - assets/images/portfolio_6.jpeg
+  - assets/artistscreen/avatar.png
+  - assets/artistscreen/backdrop.png
+  - assets/artistscreen/video1_thumb.png
+  - assets/artistscreen/video4_thumb.png
+  - assets/artistscreen/video3_thumb.png
+  - assets/artistscreen/video2_thumb.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

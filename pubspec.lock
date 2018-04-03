@@ -129,7 +129,7 @@ packages:
       name: flutter_webview_plugin
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.4"
+    version: "0.1.5"
   fluttery:
     dependency: "direct main"
     description:
@@ -353,7 +353,7 @@ packages:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.16.0+2"
+    version: "0.16.6"
   shared_preferences:
     dependency: transitive
     description:

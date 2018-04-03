@@ -20,4 +20,11 @@ class AppImage {
   static final String portfolio4='assets/images/portfolio_4.jpeg';
   static final String portfolio5='assets/images/portfolio_5.jpeg';
   static final String portfolio6='assets/images/portfolio_6.jpeg';
+
+  static final String artist_avatar ='assets/artistscreen/avatar.png' ;
+  static final String artist_backdrop ='assets/artistscreen/backdrop.png';
+  static final String artist_video1_thumb ='assets/artistscreen/video1_thumb.png';
+  static final String artist_video4_thumb ='assets/artistscreen/video4_thumb.png';
+  static final String artist_video3_thumb ='assets/artistscreen/video3_thumb.png';
+  static final String artist_video2_thumb ='assets/artistscreen/video2_thumb.png';
 }
