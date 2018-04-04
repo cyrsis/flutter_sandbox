@@ -15,15 +15,21 @@ class UncoverScreen extends StatelessWidget {
           ),
         ),
       ),
-      new Column(
-          children: [
-        new Image.asset(AppImage.uncover_title),
-        new Padding(
-          padding: const EdgeInsets.only(top: 40.0),
+      new SingleChildScrollView(
+        child: new Column(
+            children: <Widget> [
+          new Image.asset(AppImage.uncover_title),
+          new Padding(
+            padding: const EdgeInsets.only(top: 40.0),
+          ),
+           new FourCards(),
+          new Padding(
+            padding: const EdgeInsets.only(top: 50.0),
+          ),
 
-        ),
-         new FourCards()
-      ]),
+
+        ]),
+      ),
 
 
 

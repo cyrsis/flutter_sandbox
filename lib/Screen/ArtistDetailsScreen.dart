@@ -37,6 +37,7 @@ class ArtistDetailsScreen extends StatelessWidget {
             child: _buildContent(),
           ),
         ),
+        
       ],
     );
   }
@@ -49,6 +50,10 @@ class ArtistDetailsScreen extends StatelessWidget {
           _buildAvatar(),
           _buildInfo(),
           _buildVideoScroller(),
+          new Padding(
+            padding: const EdgeInsets.only(top: 40.0),
+            child: null,
+          ),
         ],
       ),
     );
@@ -72,7 +77,7 @@ class ArtistDetailsScreen extends StatelessWidget {
         margin: const EdgeInsets.only(top: 32.0, left: 16.0),
         padding: const EdgeInsets.all(3.0),
         child: new ClipOval(
-          child: new Image.asset(AppImage.artist_avatar),
+          child: new Image.asset(artist.avatar),
         ),
       ),
     );
