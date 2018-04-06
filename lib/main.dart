@@ -118,7 +118,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                       return new ArtistsDetailsAnimator();
                       break;
                     case 1:
-                      return new ExploreScreen();
+                      return new TestScreen();
                       break;
                     case 2:
                       return new UncoverScreen();

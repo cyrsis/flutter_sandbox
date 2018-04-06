@@ -44,6 +44,16 @@ class AppStyle {
     fontFamily: "Georgia",
   );
 
+  static get AllBorder => new BoxDecoration(
+      border: new Border(
+          top: new BorderSide(width: 1.0, color: const Color(0xff999999)),
+          right:
+          new BorderSide(width: 1.0, color: const Color(0xff999999)),
+          bottom:
+          new BorderSide(width: 1.0, color: const Color(0xff999999)),
+          left: new BorderSide(
+              width: 1.0, color: const Color(0xff999999))));
+
 
 
 

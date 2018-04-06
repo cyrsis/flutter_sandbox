@@ -21,26 +21,35 @@ class TestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      // grey box
-      child: new Center(
-        child: new Container(
-          // red box
-          child: new Text(
-            "Lorem ipsum dolor sit amet, consec etur",
-            style: AppStyle.MainTextStyle,
-            overflow: TextOverflow.ellipsis,
-            maxLines: 2,
-          ),
-          decoration: new BoxDecoration(
-            color: Colors.red[400],
-          ),
-          padding: new EdgeInsets.all(16.0),
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("layout"),
+      ),
+      body: new Container(
+        margin: new EdgeInsets.only(top: 20.0),
+        height: 100.0,
+        padding: new EdgeInsets.only(left: 20.0, right: 20.0),
+        //给最外层添加padding
+        decoration: AppStyle.AllBorder,
+        child: new Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround, //子组件在主轴的排列方式为两端对齐
+          children: <Widget>[
+            new Text(
+              '央视网',
+            ),
+            new Text(
+              '2018-03-11',
+            ),
+            new Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                new Text('Design by Luca'),
+                new Text('Code  by Victor'),
+              ],
+            )
+          ],
         ),
       ),
-      width: 320.0,
-      height: 240.0,
-      color: Colors.grey[300],
     );
   }
 }
