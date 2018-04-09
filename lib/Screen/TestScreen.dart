@@ -21,6 +21,9 @@ class TestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size statusBarHeight = MediaQuery
+        .of(context)
+        .size;
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("layout"),

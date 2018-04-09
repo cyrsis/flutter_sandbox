@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_sandbox/Animation/ArtistsDetailsAnimator.dart';
 
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
+import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationControllerOutputScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/ButtonRowScreen.dart';
@@ -118,7 +119,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                       return new ArtistsDetailsAnimator();
                       break;
                     case 1:
-                      return new TestScreen();
+                      return new AnimatedIndicatorScreen();
                       break;
                     case 2:
                       return new UncoverScreen();
