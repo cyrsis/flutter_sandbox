@@ -1,25 +1,19 @@
-class IncrementCounterAction {}
+import 'package:flutter_sandbox/Models/ToDoItem.dart';
 
-class CounterDataPushedAction {}
+class RemoveItemAction {
+  final ToDoItem item;
 
-class RequestCounterDataEventsAction {}
-
-class CancelCounterDataEventsAction {}
-
-class CounterOnDataEventAction {
-  final int counter;
-
-  CounterOnDataEventAction(this.counter);
-
-  @override
-  String toString() => 'CounterOnDataEventAction{counter: $counter}';
+  RemoveItemAction(this.item);
 }
 
-class CounterOnErrorEventAction {
-  final dynamic error;
+class AddItemAction {
+  final ToDoItem item;
 
-  CounterOnErrorEventAction(this.error);
-
-  @override
-  String toString() => 'CounterOnErrorEventAction{error: $error}';
+  AddItemAction(this.item);
 }
+
+class DisplayListOnlyAction {}
+
+class DisplayListWithNewItemAction {}
+
+class SaveListAction {}

@@ -1,9 +1,18 @@
+import 'package:flutter_sandbox/Models/ToDoItem.dart';
+
 class AppState {
-  final int counter;
+  final List<ToDoItem> toDos;
+  final ListState listState;
 
-  AppState({
-    this.counter = 0,
-  });
+  AppState(this.toDos, this.listState);
 
-  AppState copyWith({int counter}) => new AppState(counter: counter ?? this.counter);
+  factory AppState.initial() {
+    return new AppState(new List.unmodifiable([]),ListState.listOnly);
+  }
+
 }
+
+enum ListState {
+  listOnly,ListWithNewItem
+}
+
