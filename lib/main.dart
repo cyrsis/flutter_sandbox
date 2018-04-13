@@ -8,6 +8,7 @@ import 'package:flutter_sandbox/Screen/AnimationControllerOutputScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/ButtonRowScreen.dart';
 import 'package:flutter_sandbox/Screen/ChatScreenSample.dart';
+import 'package:flutter_sandbox/Screen/ClockScreen.dart';
 import 'package:flutter_sandbox/Screen/ContactsDemo.dart';
 import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
@@ -57,7 +58,7 @@ void main() =>
     ));
 
 class mainTab extends StatefulWidget {
-  @override 
+  @override
   _mainTabState createState() => new _mainTabState();
 }
 
@@ -126,7 +127,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new QRScreen(); //Home
+                      return new ClockScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();

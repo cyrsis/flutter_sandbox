@@ -15,5 +15,6 @@ class AppTheme {
       accentColor: Colors.grey[600]);
 
   static final ThemeData androidTheme = new ThemeData(
+      primaryColor: Colors.white,
       accentColor: Colors.cyan[600]);
 }
