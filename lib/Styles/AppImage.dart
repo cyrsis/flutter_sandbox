@@ -1,4 +1,5 @@
 class AppImage {
+  static final String applogo ='assets/home/Logo.png';
   static final String landingbank= 'assets/landing/banks.png' ;
   static final String landinghotel= 'assets/landing/hotels.png';
   static final String landingkey= 'assets/landing/key.png';

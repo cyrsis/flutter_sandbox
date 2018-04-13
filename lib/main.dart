@@ -12,7 +12,10 @@ import 'package:flutter_sandbox/Screen/ContactsDemo.dart';
 import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
+import 'package:flutter_sandbox/Screen/SplashScreen.dart';
 import 'package:flutter_sandbox/Screen/StackScreen.dart';
+import 'package:flutter_sandbox/Screen/SwipScreenTest.dart';
+import 'package:flutter_sandbox/Screen/SwipeScreen.dart';
 import 'package:flutter_sandbox/Screen/TabTopScreen.dart';
 import 'package:flutter_sandbox/Screen/BasicAppBarSample.dart';
 import 'package:flutter_sandbox/Screen/ChartScreen.dart';
@@ -47,7 +50,10 @@ void main() =>
       debugShowCheckedModeBanner: false,
       title: "Shunga",
       theme: defaultTargetPlatform == TargetPlatform.iOS ?AppTheme.Apptheme : AppTheme.androidTheme,
-      home: new mainTab(),
+      home: new SplashScreen(),
+      routes: <String, WidgetBuilder>{
+        '/mainTab': (BuildContext context) => new mainTab()
+      },
     ));
 
 class mainTab extends StatefulWidget {
@@ -56,6 +62,10 @@ class mainTab extends StatefulWidget {
 }
 
 class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
+  static const String routeName = "/mainTab";
+
+
+
 
 
   @override
@@ -116,10 +126,10 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new ArtistsDetailsAnimator();
+                      return new QRScreen(); //Home
                       break;
                     case 1:
-                      return new AnimatedIndicatorScreen();
+                      return new SwipeScreenTest();
                       break;
                     case 2:
                       return new UncoverScreen();
