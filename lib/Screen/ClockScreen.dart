@@ -13,16 +13,12 @@ class ClockScreen extends StatelessWidget {
               width: double.infinity,
               decoration: new BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.black,
+                color: Colors.green[100],
                 boxShadow: [
-                  new BoxShadow(
-                    offset: new Offset(0.0, 5.0),
-                    blurRadius: 5.0,
-                  ),
                   new BoxShadow(
                     offset: new Offset(0.0, 0.5),
                     blurRadius: 5.0,
-                  )
+                  ),
                 ],
               ),
             )

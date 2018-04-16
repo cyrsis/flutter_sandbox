@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class DirectoryScreen extends StatelessWidget {
 
-  static final examples = [
+  static final routerspair = [
     {
       'title': 'Random Color Block',
       'route': '/randomColorBlock',
@@ -20,7 +20,7 @@ class DirectoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final listItems = examples.map((example) {
+    final listItems = routerspair.map((example) {
       return new Padding(
         padding: const EdgeInsets.all(8.0),
         child: new RaisedButton(

@@ -12,6 +12,7 @@ import 'package:flutter_sandbox/Screen/ClockScreen.dart';
 import 'package:flutter_sandbox/Screen/ContactsDemo.dart';
 import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
+import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
 import 'package:flutter_sandbox/Screen/SplashScreen.dart';
 import 'package:flutter_sandbox/Screen/StackScreen.dart';
@@ -127,7 +128,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new ClockScreen(); //Home
+                      return new LayOutScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();

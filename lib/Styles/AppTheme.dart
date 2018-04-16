@@ -4,17 +4,18 @@ class AppTheme {
   static final String Title = "MyApps";
 
   static final ThemeData Apptheme = new ThemeData(
-      brightness: Brightness.dark,
       primaryColor: Colors.lightBlue[800],
       accentColor: Colors.cyan[600]);
 
   static final ThemeData iosTheme = new ThemeData(
       primarySwatch: Colors.red,
       primaryColor: Colors.grey[400],
-      primaryColorBrightness: Brightness.dark,
-      accentColor: Colors.grey[600]);
+  );
+
+  static final ThemeData defaultAndroidTheme = new ThemeData.light();
 
   static final ThemeData androidTheme = new ThemeData(
-      primaryColor: Colors.white,
+    backgroundColor: Colors.white,
+      primaryColor: Colors.black,
       accentColor: Colors.cyan[600]);
 }

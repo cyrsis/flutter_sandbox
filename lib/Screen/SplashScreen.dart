@@ -10,8 +10,6 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
-
-
   startTime() async {
     return new Timer(new Duration(seconds: 2), (){Navigator.of(context).pushReplacementNamed('/mainTab');});
   }
@@ -20,7 +18,6 @@ class _SplashScreenState extends State<SplashScreen> {
     return new Scaffold(
       backgroundColor: const Color(0xFFDEA183),
       body: new Center(
-
         child: new Image.asset(AppImage.applogo),
       ),
     );
@@ -30,6 +27,12 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
         startTime();
-
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+
 }
