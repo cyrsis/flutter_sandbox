@@ -1,8 +1,16 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Fonts/ProfileFronts.dart';
+import 'package:flutter_sandbox/Styles/AppFont.dart';
+
 
 class AppStyle {
+
+  static final TextStyle SubTextStyle = const TextStyle(
+  fontFamily: "Timeburner",
+  fontSize: 16.0,
+  color: Colors.white70,
+  fontWeight: FontWeight.w700);
 
   static final TextStyle AppBarTextStyle = const TextStyle(
       color: Colors.white,

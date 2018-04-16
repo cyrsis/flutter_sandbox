@@ -9,6 +9,12 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/flutter_webview_plugin-0.1.5/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/flutter_webview_plugin-0.1.5/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/flutter_webview_plugin-0.1.5/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/flutter_webview_plugin-0.1.5/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/flutter_webview_plugin-0.1.5/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/flutter_webview_plugin-0.1.5/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/path_provider-0.3.1/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/path_provider-0.3.1/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/path_provider-0.3.1/build" />

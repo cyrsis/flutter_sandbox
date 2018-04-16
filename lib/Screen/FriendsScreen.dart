@@ -19,11 +19,11 @@ class _FriendsScreenState extends State<FriendsScreen> {
   }
 
   _loadFriends() async {
-    String response =
-    await createHttpClient().read('https://randomuser.me/api/?results=25');
+   // String response =
+    //await createHttpClient().read('https://randomuser.me/api/?results=25');
 
     setState(() {
-      _friends = Friend.allFromResponse(response);
+      //_friends = Friend.allFromResponse(response);
     });
   }
 
