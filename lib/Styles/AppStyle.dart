@@ -39,9 +39,13 @@ class AppStyle {
       stops: [0.0, 0.6],
       tileMode: TileMode.clamp
   );
+  static get BlackTextStyle => new TextStyle(fontFamily: AppFrontsName.ProfileFonts,
+      color: Colors.black,
+      fontWeight: FontWeight.w300,
+      fontSize: 20.0);
 
   static get MainTextStyle => new TextStyle(fontFamily: AppFrontsName.ProfileFonts,
-      color: Colors.white,
+      color: Colors.black,
       fontWeight: FontWeight.w700,
       fontSize: 20.0);
 
