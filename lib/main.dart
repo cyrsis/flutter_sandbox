@@ -12,6 +12,7 @@ import 'package:flutter_sandbox/Screen/ClockScreen.dart';
 import 'package:flutter_sandbox/Screen/ContactsDemo.dart';
 import 'package:flutter_sandbox/Screen/DeviceInfoScreen.dart';
 import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
+import 'package:flutter_sandbox/Screen/EpsonPosScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
 import 'package:flutter_sandbox/Screen/InternetConnectionScreen.dart';
 import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
@@ -57,7 +58,9 @@ void main() => runApp(new MaterialApp(
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.Apptheme
           : AppTheme.androidTheme,
-      home: new mainTab(),
+      home: new Scaffold(
+        backgroundColor: Colors.white,
+          body: new mainTab()),
       routes:   <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
       },
@@ -125,7 +128,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new TabTopScreen(); //Home
+                      return new EpsonPosScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();
