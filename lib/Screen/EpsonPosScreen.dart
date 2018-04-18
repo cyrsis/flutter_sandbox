@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Util/Epson.dart';
 
 class EpsonPosScreen extends StatefulWidget {
   @override
@@ -54,7 +55,7 @@ class EpsonPosScreenState extends State<EpsonPosScreen> {
                 elevation: 4.0,
                 splashColor: Colors.blueGrey,
                 onPressed: () {
-                  var epson = new Epson();
+                  var epson = new Epson("192.168.41.177","");
                   epson.connect();
 
                   // Perform some action
@@ -68,16 +69,7 @@ class EpsonPosScreenState extends State<EpsonPosScreen> {
   }
 }
 
-class Epson {
-  void connect() {
-    Socket.connect("192.168.41.177", 9100 , timeout: new Duration(seconds: 10)  ).then((socket) {
-      socket.write("Is this working right? ");
-      socket.write("\x0A \x0A \x1B@\x1DV1");
-      socket.close();
-    });
-  }
 
-}
 
 
 
