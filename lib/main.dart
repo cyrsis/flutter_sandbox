@@ -130,7 +130,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new GalleryScreen(); //Home
+                      return new EpsonPosScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();

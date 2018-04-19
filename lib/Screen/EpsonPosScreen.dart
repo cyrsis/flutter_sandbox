@@ -56,7 +56,10 @@ class EpsonPosScreenState extends State<EpsonPosScreen> {
                 splashColor: Colors.blueGrey,
                 onPressed: () {
                   var epson = new Epson("192.168.41.177","");
-                  epson.connect();
+
+                  epson.QRCode();
+                  epson.Cut();
+                  epson.write();
 
                   // Perform some action
                 },
