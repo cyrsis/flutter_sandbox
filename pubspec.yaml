@@ -87,6 +87,9 @@ flutter:
   - assets/artistscreen/video4_thumb.png
   - assets/artistscreen/video3_thumb.png
   - assets/artistscreen/video2_thumb.png
+  - assets/wallpaper/wallpaper1.jpg
+  - assets/wallpaper/wallpaper2.jpg
+  - assets/wallpaper/wallpaper3.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

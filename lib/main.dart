@@ -14,6 +14,7 @@ import 'package:flutter_sandbox/Screen/DeviceInfoScreen.dart';
 import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 import 'package:flutter_sandbox/Screen/EpsonPosScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
+import 'package:flutter_sandbox/Screen/GalleryScreen.dart';
 import 'package:flutter_sandbox/Screen/InternetConnectionScreen.dart';
 import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
@@ -59,6 +60,7 @@ void main() => runApp(new MaterialApp(
           ? AppTheme.Apptheme
           : AppTheme.androidTheme,
       home: new Scaffold(
+
         backgroundColor: Colors.white,
           body: new mainTab()),
       routes:   <String, WidgetBuilder>{
@@ -128,7 +130,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new EpsonPosScreen(); //Home
+                      return new GalleryScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();

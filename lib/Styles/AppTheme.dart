@@ -11,6 +11,7 @@ class AppTheme {
       primarySwatch: Colors.red,
       primaryColor: Colors.grey[400],
   );
+  static final ThemeData canvasTheme = new ThemeData(canvasColor: Colors.greenAccent);
 
   static final ThemeData defaultAndroidTheme = new ThemeData.light();
 
