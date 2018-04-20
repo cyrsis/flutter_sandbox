@@ -7,6 +7,7 @@ class QRScreen extends StatefulWidget {
   _QRScreenState createState() => new _QRScreenState();
 }
 
+
 class _QRScreenState extends State<QRScreen> {
 
   static const double _topSectionTopPadding = 50.0;

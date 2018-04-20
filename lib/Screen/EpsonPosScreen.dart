@@ -18,14 +18,11 @@ class EpsonPosScreenState extends State<EpsonPosScreen> {
     return new Container(
       child: new Center(
           child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
             children: <Widget>[
               new Text('Epson Command Testing'),
               new Text('Code  by Victor'),
-              new Padding(
-                padding: const EdgeInsets.all(20.0),
-              ),
               new RaisedButton(
                 child: const Text('m30'),
                 color: Theme
@@ -43,10 +40,7 @@ class EpsonPosScreenState extends State<EpsonPosScreen> {
                   // Perform some action
                 },
               ),
-              new Padding(
-                padding: const EdgeInsets.only(bottom: 15.0),
-                child: null,
-              ),
+
               new RaisedButton(
                 child: const Text('88V'),
                 color: Theme
@@ -58,9 +52,44 @@ class EpsonPosScreenState extends State<EpsonPosScreen> {
                   var epson = new Epson("192.168.41.177","");
 
                   epson.QRCode();
-                  epson.Cut();
+
                   epson.write();
 
+                  // Perform some action
+                },
+              ),
+              new RaisedButton(
+                child: const Text('Open Drawer'),
+                color: Theme
+                    .of(context)
+                    .accentColor,
+                elevation: 4.0,
+                splashColor: Colors.blueGrey,
+                onPressed: () {
+                   var epson2 = new Epson("192.168.41.177", "");
+                   epson2.OpenDrawer();
+                   print('Open Drawer call');
+                   epson2.write();
+                  // Perform some action
+                },
+              ),
+
+              new RaisedButton(
+                child: const Text('QRcode 2 Call'),
+                color: Theme
+                    .of(context)
+                    .accentColor,
+                elevation: 4.0,
+                splashColor: Colors.blueGrey,
+                onPressed: () {
+                  var epson3 = new Epson("192.168.41.166\m30", "");
+                  epson3.init();
+                  epson3.AddString("Hello World");
+                  epson3.LineFeed();
+                  epson3.BarCode();
+                  print('QRCODE3 Call');
+                  epson3.Cut();
+                  epson3.write();
                   // Perform some action
                 },
               ),
