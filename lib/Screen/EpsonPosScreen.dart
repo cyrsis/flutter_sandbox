@@ -82,11 +82,11 @@ class EpsonPosScreenState extends State<EpsonPosScreen> {
                 elevation: 4.0,
                 splashColor: Colors.blueGrey,
                 onPressed: () {
-                  var epson3 = new Epson("192.168.41.166\m30", "");
+                  var epson3 = new Epson("192.168.41.235", "");
                   epson3.init();
                   epson3.AddString("Hello World");
                   epson3.LineFeed();
-                  epson3.BarCode();
+                  epson3.QRCode3();
                   print('QRCODE3 Call');
                   epson3.Cut();
                   epson3.write();

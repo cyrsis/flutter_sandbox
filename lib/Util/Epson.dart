@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'dart:typed_data';
+import "package:hex/hex.dart";
 
 class Epson {
   String ip;
@@ -9,7 +10,7 @@ class Epson {
   Epson(this.ip, this.data) ;
 
   void init() {
-    data += "\x1B\x40 Printer Connected"; //Initialize printer
+    data += "\x1b \x40 Printer Connected"; //Initialize printer
   }
 
   void UsingBitValueTables() {
@@ -152,8 +153,15 @@ class Epson {
     data += "098765432198\x0A";
   }
 
-  void BiteTest(){
-    ByteData bytes = { \x1D, \x56, \x42, \x00 };
+  void BiteTest(){ //Not working
+    data += "0x1D 0x48 0x02";
+    data += "0x1d 0x6b 0x41 0x0C";
+    data += "098765432198 0x0A";
+  }
+
+  void Hex(){
+
+    data +=HEX.encode(const [1, 2, 3]);
   }
 
   void QRCode3() {
@@ -169,6 +177,8 @@ class Epson {
         "\x1D\x56\x42\x00";
 //    data += "\x1D\x28\x6B\x03\x00\x31\x51\x30";
 //    data +="\x1D\x56\x42\x00";
+
+    print(data);
   }
 
   void QRCode() {
