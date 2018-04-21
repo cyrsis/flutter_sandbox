@@ -6,6 +6,7 @@ import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationControllerOutputScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
+import 'package:flutter_sandbox/Screen/BatteryScreen.dart';
 import 'package:flutter_sandbox/Screen/ButtonRowScreen.dart';
 import 'package:flutter_sandbox/Screen/ChatScreenSample.dart';
 import 'package:flutter_sandbox/Screen/ClockScreen.dart';
@@ -17,7 +18,9 @@ import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
 import 'package:flutter_sandbox/Screen/GalleryScreen.dart';
 import 'package:flutter_sandbox/Screen/InternetConnectionScreen.dart';
 import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
+import 'package:flutter_sandbox/Screen/LifeCycleScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
+import 'package:flutter_sandbox/Screen/SilverAppBarScreen.dart';
 import 'package:flutter_sandbox/Screen/SplashScreen.dart';
 import 'package:flutter_sandbox/Screen/StackScreen.dart';
 import 'package:flutter_sandbox/Screen/SwipScreenTest.dart';
@@ -79,7 +82,8 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return new WillPopScope(
-        // Prevent swipe popping of this page. Use explicit exit buttons only.
+        // Prevent swipe popping of this page. Use explicit exit buttons on
+      // ly.
         onWillPop: () => new Future<bool>.value(true),
         child: new CupertinoTabScaffold(
           tabBar: new CupertinoTabBar(
@@ -130,7 +134,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new EpsonPosScreen(); //Home
+                      return new SilverAppBarScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();

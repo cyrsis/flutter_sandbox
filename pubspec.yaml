@@ -20,6 +20,7 @@ dependencies:
   fluttery: "^0.0.5"
   flutter_webview_plugin: "^0.1.4"
   carousel: "^0.1.0"
+  battery: "^0.2.0"
   connectivity: "^0.3.0"
   device_info: "^0.2.0"
   hex: "^0.1.1"
