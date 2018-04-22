@@ -66,6 +66,10 @@ class AppStyle {
           left: new BorderSide(
               width: 1.0, color: const Color(0xff999999))));
 
+  static get boldStyle => new TextStyle(fontWeight: FontWeight.bold);
+
+  static get greyText => new TextStyle(color: Colors.grey);
+
 
 
 
