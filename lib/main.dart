@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_sandbox/Animation/ArtistsDetailsAnimator.dart';
+import 'package:flutter_sandbox/Screen/APIScreen.dart';
 
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
@@ -134,7 +135,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new SilverAppBarScreen(); //Home
+                      return new APIScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();

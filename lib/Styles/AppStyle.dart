@@ -70,6 +70,12 @@ class AppStyle {
 
   static get greyText => new TextStyle(color: Colors.grey);
 
+  static get Black18 => new TextStyle(
+      fontSize: 18.0, color: Colors.black87);
+
+  static get Black87  => new TextStyle(
+      fontSize: 18.0, color: Colors.black87);
+
 
 
 
