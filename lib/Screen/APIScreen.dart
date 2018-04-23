@@ -11,6 +11,7 @@ class APIScreen extends StatefulWidget {
 }
 
 class APIScreenState extends State<APIScreen> {
+
   final String url = "https://swapi.co/api/starships";
   List data;
 
@@ -21,8 +22,8 @@ class APIScreenState extends State<APIScreen> {
     setState(() {
       var resBody = json.decode(res.body);
       data = resBody["results"];
+      print("Data :"+ data.toString());
     });
-
     return "Success!";
   }
 
@@ -40,37 +41,22 @@ class APIScreenState extends State<APIScreen> {
                   Card(
                     child: Container(
                         padding: EdgeInsets.all(15.0),
-                        child: Row(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            new Text("Name: "),
-                            new Text(data[index]["name"],
-                                style: AppStyle.Black18),
-                          ],
-                        )),
-                  ),
-                  Card(
-                    child: Container(
-                        padding: EdgeInsets.all(15.0),
-                        child: Row(
-                          children: <Widget>[
+                            new Text("Name :"),
+                            new Text(data[index]["name"]),
                             new Text("Model: "),
                             new Text(data[index]["model"],
-                                style: AppStyle.Black18
-                            ),
+                                style: AppStyle.Black18),
+                            new Text("Cargo Capacity :"),
+                            new Text(data[index]["cargo_capacity"]),
+
                           ],
                         )),
                   ),
-                  Card(
-                    child: Container(
-                        padding: EdgeInsets.all(15.0),
-                        child: Row(
-                          children: <Widget>[
-                            new Text("Cargo Capacity: "),
-                            new Text(data[index]["cargo_capacity"],
-                                style: AppStyle.Black87),
-                          ],
-                        )),
-                  ),
+
                 ],
               ),
             ),
