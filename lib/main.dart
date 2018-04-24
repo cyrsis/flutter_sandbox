@@ -24,6 +24,7 @@ import 'package:flutter_sandbox/Screen/LoginScreen.dart';
 import 'package:flutter_sandbox/Screen/SilverAppBarScreen.dart';
 import 'package:flutter_sandbox/Screen/SplashScreen.dart';
 import 'package:flutter_sandbox/Screen/StackScreen.dart';
+import 'package:flutter_sandbox/Screen/StreamScreens.dart';
 import 'package:flutter_sandbox/Screen/SwipScreenTest.dart';
 import 'package:flutter_sandbox/Screen/SwipeScreen.dart';
 import 'package:flutter_sandbox/Screen/TabTopScreen.dart';
@@ -135,7 +136,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new APIScreen(); //Home
+                      return new StreamScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();
