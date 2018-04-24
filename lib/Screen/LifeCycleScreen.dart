@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+//Working on the the state changes
+//1. with WidgetsBindingObserver
+//2.
+
 class LifeCycleScreen extends StatefulWidget {
   @override
   _LifeCycleScreenState createState() => new _LifeCycleScreenState();
