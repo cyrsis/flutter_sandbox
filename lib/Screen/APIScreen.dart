@@ -29,17 +29,17 @@ class APIScreenState extends State<APIScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new Scaffold(
       body: ListView.builder(
         itemCount: data == null ? 0 : data.length,
         itemBuilder: (BuildContext context, int index) {
           return new Container(
-            child: Center(
-              child: Column(
+            child: new Center(
+              child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Card(
-                    child: Container(
+                  new Card(
+                    child:new  Container(
                         padding: EdgeInsets.all(15.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
