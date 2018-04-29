@@ -5,6 +5,7 @@ import 'package:flutter_sandbox/Screen/APIScreen.dart';
 
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
+import 'package:flutter_sandbox/Screen/AnimationBasicScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationControllerOutputScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/BatteryScreen.dart';
@@ -136,7 +137,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new StreamScreen(); //Home
+                      return new AnimationBasicScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();
