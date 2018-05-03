@@ -1,34 +1,21 @@
-class Person {
-  String firstName;
-
-  Person.fromMe(Map data)
-  {
-    print("in fromMe");
-  }
-
-  Person.fromJson(Map data) {
-    print('in Person -1 ');
-  }
-}
-
-class Employee extends Person {
-  // Person does not have a default constructor;
-  // you must call super.fromJson(data).
-  Employee.fromJson(Map data) : super.fromMe(data) {
-    print('in Employee -2');
-  }
-}
+import 'dart:async';
 
 main() {
-  var emp = new Employee.fromJson({});
+  Future<int> a = new Future(() {
+    print('a');
+    return 1;
+  });
+  Future<int> b = new Future.error('Error occurred in b!');
+  Future<int> c = new Future(() {
+    print('c');
+    return 3;
+  });
+//  Future<int> d = new Future(() {
+//      print('d');
+//      return 4;
+//  });
+  Future<int> d = new Future(() { throw('Error occurred in d!'); });
 
-  // Prints:
-  // in Person
-  // in Employee
-  if (emp is Person) {
-    // Type check
-    emp.firstName = 'Bob';
-  }
-  print("${emp.firstName}");
-  (emp as Person).firstName = 'Bob';
+  Future.wait([a, b, c, d]).then((List<int> values) => print(values)).catchError(print);
+  print('happy end');
 }
