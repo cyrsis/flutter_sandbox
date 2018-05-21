@@ -11,3 +11,7 @@ packages
 
 /android/app/google-services.json
 /lib/Api/api_key.dart
+gen/
+lib/App/
+test.txt
+tst.txt
