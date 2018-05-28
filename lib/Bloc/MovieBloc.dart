@@ -14,4 +14,10 @@ class MovieBloc {
   Stream<String> get log => _log;
 
   Sink<String> get query => _query;
+
+  MovieBloc(this.api) {
+   // _results = _query;
+  }
+
+
 }

@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Models/Profile.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
@@ -30,29 +33,20 @@ class TestScreen extends StatelessWidget {
       ),
       body: new Container(
         margin: new EdgeInsets.only(top: 20.0),
-        height: 100.0,
+        height: 500.0,
         padding: new EdgeInsets.only(left: 20.0, right: 20.0),
         //给最外层添加padding
         decoration: AppStyle.AllBorder,
-        child: new Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround, //子组件在主轴的排列方式为两端对齐
-          children: <Widget>[
-            new Text(
-              '央视网',
-            ),
-            new Text(
-              '2018-03-11',
-            ),
-            new Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                new Text('Design by Luca'),
-                new Text('Code  by Victor'),
-              ],
-            )
-          ],
-        ),
+        child: new GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3, mainAxisSpacing: 25.0), itemBuilder: (BuildContext context,int index) {
+          return new GridTile(child: new Container());
+        }),
+
       ),
     );
   }
 }
+
+
+
