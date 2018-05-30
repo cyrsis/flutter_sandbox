@@ -27,22 +27,26 @@ class TestScreen extends StatelessWidget {
     final Size statusBarHeight = MediaQuery
         .of(context)
         .size;
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("layout"),
-      ),
-      body: new Container(
-        margin: new EdgeInsets.only(top: 20.0),
-        height: 500.0,
-        padding: new EdgeInsets.only(left: 20.0, right: 20.0),
-        //给最外层添加padding
-        decoration: AppStyle.AllBorder,
-        child: new GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, mainAxisSpacing: 25.0), itemBuilder: (BuildContext context,int index) {
-          return new GridTile(child: new Container());
-        }),
-
+    return new DefaultTabController(
+      length: 3,
+      child: new Scaffold(
+        appBar: new AppBar(
+          bottom: new TabBar(
+            tabs: [
+              new Tab(icon: new Icon(Icons.mail)),
+              new Tab(icon: new Icon(Icons.contacts)),
+              new Tab(icon: new Icon(Icons.info)),
+            ],
+          ),
+          title: new Text('Sample Tabs'),
+        ),
+        body: new TabBarView(
+          children: [
+            new Icon(Icons.directions_car),
+            new Icon(Icons.directions_transit),
+            new Icon(Icons.directions_bike),
+          ],
+        ),
       ),
     );
   }
