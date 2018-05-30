@@ -36,6 +36,7 @@ class TestScreen extends StatelessWidget {
               new Tab(icon: new Icon(Icons.mail)),
               new Tab(icon: new Icon(Icons.contacts)),
               new Tab(icon: new Icon(Icons.info)),
+
             ],
           ),
           title: new Text('Sample Tabs'),
