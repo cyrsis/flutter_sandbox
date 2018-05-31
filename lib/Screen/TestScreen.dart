@@ -28,15 +28,15 @@ class TestScreen extends StatelessWidget {
         .of(context)
         .size;
     return new DefaultTabController(
-      length: 3,
+      length: 4,
       child: new Scaffold(
         appBar: new AppBar(
           bottom: new TabBar(
             tabs: [
               new Tab(icon: new Icon(Icons.mail)),
               new Tab(icon: new Icon(Icons.contacts)),
-              new Tab(icon: new Icon(Icons.info)),
-
+              new Tab(icon: new Icon(Icons.accessibility_new)),
+              new Tab(icon: new Icon(Icons.account_balance_wallet)),
             ],
           ),
           title: new Text('Sample Tabs'),
@@ -46,6 +46,7 @@ class TestScreen extends StatelessWidget {
             new Icon(Icons.directions_car),
             new Icon(Icons.directions_transit),
             new Icon(Icons.directions_bike),
+            new Icon(Icons.adb),
           ],
         ),
       ),
