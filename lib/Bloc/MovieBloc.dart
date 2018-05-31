@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter_sandbox/Models/Movie.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -15,19 +16,8 @@ class MovieBloc {
   Sink<String> get query => _query;
 
   MovieBloc(this.api) {
-    _results = _query.distinct().asyncMap(api.get).asBroadcastStream();
-    //Stream allow multiple subs
-    
-    _log = Observable(results)
-    .withLatestFrom(_query.stream, (_, query) => 'Result for $query').asBroadcastStream();
-
+   // _results = _query;
   }
-
-  void dispose() {
-    _query.close();
-  }
-
-  
 
 
 }

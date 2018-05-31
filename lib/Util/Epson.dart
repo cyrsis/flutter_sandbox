@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'dart:typed_data';
@@ -10,7 +11,7 @@ class Epson {
   Epson(this.ip, this.data) ;
 
   void init() {
-    data += "\x1b \x40 Printer Connected"; //Initialize printer
+    data += "\x1B\x40 Printer Connected"; //Initialize printer
   }
 
   void UsingBitValueTables() {
@@ -182,33 +183,36 @@ class Epson {
   }
 
   void QRCode() {
-    PageMode();
-//            \\x1D, 0x28, 0x6B, 0xB7, 0x00, 0x31, 0x50, 0x30
-//    data += "\x1D\x28\x6B\xB7\x00\x31\x50\x30"; //storeQrcode
-//    data += BarcodeContent;
+    data ="";
 
-    //GS ( k <Function 165>    QR Code: Select the model
-    // 1D 28 6B 04 00 31 41 32 00
-    data += "\x1D\x28\x6B\x04\x00\x31\x41\x32\x00";
+    print("==QrCode Start");
+    //data += "\x1B\x40";
 
-    //GS ( k <Function 167>  QR Code: Set the size of module
-    //1D 28 6B 03 00 31 43 03
-    data += "\x1D\x28\x6B\x03\x00\x31\x43\x03";
 
-    //1D 28 6B 03 00 31 45 31
-    //GS ( k <Function 169>  QR Code: Select the error correction level
-    data += "\x1D\x28\x6B\x03\x00\x31\x45\x31";
+     //0x1D 0x28 0x6B 0xB7 0x00 0x31 0x50 0x30
+    data += "\x1B\x40";
+    data += "\x1D\x28\x6B\xB7\x00\x31\x50\x30";
 
-//    GS ( k <Function 180>  QR Code: Store the data in the symbol storage area
-    data += "\x1D\x28\x6B\x83\x00\x31\x50\x30\x41\x42\x31\x31\x32\x32\x33\x33\x34\x34\x31\x30\x32\x30\x39\x32\x36\x39" +
-        "\x39\x39\x39\x30\x30\x30\x30\x30\x31\x34\x35\x30\x30\x30\x30\x30\x31\x35\x34\x30\x39\x38\x37\x36\x35\x34" +
-        "\x33\x31\x32\x33\x34\x35\x36\x37\x38\x79\x64\x58\x5A\x74\x34\x4C\x41\x4E\x31\x55\x48\x4E\x2F\x6A\x31" +
-        "\x6A\x75\x56\x63\x52\x41\x3D\x3D\x3A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x3A\x34\x3A\x34" +
-        "\x3A\x31\x3A\xB0\xAE\xB9\x71\xA6\xC0\x3A\x31\x3A\x31\x30\x35\x3A\xA4\x66\xB8\x6E\x3A\x31\x3A\x32" +
-        "\x31\x30\x3A\xA4\xFB\xA5\xA4\x3A\x31\x3A\x32\x35";
+
+    //[0x1D][0x28][0x6B][0x03][0x00][0x31][0x45][0x33]
+    data += "123456789012345678901234567890" ;
+    data += "abcedfghijklmnopqrstuvwxyzabcd" ;
+    data += "123456789012345678901234567890" ;
+    data += "abcedfghijklmnopqrstuvwxyzabcd" ;
+    data += "123456789012345678901234567890" ;
+    data += "abcedfghijklmnopqrstuvwxyzabcd" ;
+
+    //0x1D 0x28 0x6B 0x03 0x00 0x31 0x51 0x30
+
+    data += "\x1D\x28\x6B\x03\x00\x31\x51\x30";
+
+    //[0x43][0x49][0x52][0x43][0x4C][0x45][0x4B][0x30][0x31][0x32][0x33][0x34][0x35][0x36][0x37][0x38][0x39][0x36][0x37][0x38][0x39]
+   // data += "\x43\x49\x52\0x43\x4C\x45\x4B\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39\x36\x37\x38\x39";
 
     // 1D 28 6B 03 00 31 51 30
-    data += "\x1D\x28\x6B\x03\x00\x31\x51\x30"; //print it out
+   // data += "\x1D\x28\x6B\x03\x00\x31\x51\x30"; //print it out
+
+    print("==QrCode End");
   }
 
   void QRCode2() {
@@ -230,11 +234,13 @@ class Epson {
 
   void write() {
     Socket
-        .connect(ip, 9100, timeout: new Duration(seconds: 2000))
+        .connect(ip, 9100)
         .then((socket) {
       socket.write(data);
-
+      print("Data send :");
+      print(UTF8.encode(data));
       socket.close();
-    });
+    }
+    );
   }
 }
