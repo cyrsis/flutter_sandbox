@@ -26,6 +26,7 @@ dependencies:
   connectivity: "^0.3.0"
   device_info: "^0.2.0"
   hex: "^0.1.1"
+  flutter_stream_friends: 0.8.0
 
 
 
