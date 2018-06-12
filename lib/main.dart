@@ -22,6 +22,7 @@ import 'package:flutter_sandbox/Screen/InternetConnectionScreen.dart';
 import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
 import 'package:flutter_sandbox/Screen/LifeCycleScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
+import 'package:flutter_sandbox/Screen/RowColScreen.dart';
 import 'package:flutter_sandbox/Screen/SilverAppBarScreen.dart';
 import 'package:flutter_sandbox/Screen/SplashScreen.dart';
 import 'package:flutter_sandbox/Screen/StackScreen.dart';
@@ -96,7 +97,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
             items: const <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
                 icon: const Icon(AppIcons.TabBarHome),
-                title: const Text('Home'),
+                title: const Text('Layout'),
               ),
               const BottomNavigationBarItem(
                 icon: const Icon(AppIcons.TabBarExplore),
@@ -137,7 +138,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new TestScreen(); //Home
+                      return new RowColScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();

@@ -16,7 +16,9 @@ class AppTheme {
   static final ThemeData defaultAndroidTheme = new ThemeData.light();
 
   static final ThemeData androidTheme = new ThemeData(
-    backgroundColor: Colors.black,
+      primarySwatch: Colors.green,
+      backgroundColor: Colors.black,
       scaffoldBackgroundColor: Colors.white,
-      accentColor: Colors.cyan[600]);
+      accentColor: Colors.cyan[600]
+  );
 }
