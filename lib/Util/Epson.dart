@@ -4,6 +4,9 @@ import 'dart:io';
 import 'dart:typed_data';
 import "package:hex/hex.dart";
 
+
+
+
 class Epson {
   String ip;
   String data;
