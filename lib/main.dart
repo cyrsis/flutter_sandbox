@@ -22,6 +22,7 @@ import 'package:flutter_sandbox/Screen/InternetConnectionScreen.dart';
 import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
 import 'package:flutter_sandbox/Screen/LifeCycleScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
+import 'package:flutter_sandbox/Screen/MaterialPageRevealScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColScreen.dart';
 import 'package:flutter_sandbox/Screen/SilverAppBarScreen.dart';
 import 'package:flutter_sandbox/Screen/SplashScreen.dart';
@@ -69,7 +70,8 @@ void main() => runApp(new MaterialApp(
       home: new Scaffold(
 
         backgroundColor: Colors.white,
-          body: new mainTab()),
+           body: new MaterialPageRevealScreen( )),
+          //body: new mainTab()),
       routes:   <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
       },

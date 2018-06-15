@@ -85,6 +85,11 @@ class AppStyle {
       decorationStyle: TextDecorationStyle.wavy
   );
 
+  static get MaterialPageTitleText  => new TextStyle(color: Colors.white, fontFamily: "FlamantaRoma", fontSize: 34.0);
+
+  static get BodyStyle   =>
+      new TextStyle(color: Colors.white, fontSize: 18.0);
+
 
 
 

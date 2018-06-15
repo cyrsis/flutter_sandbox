@@ -95,6 +95,15 @@ flutter:
   - assets/wallpaper/wallpaper1.jpg
   - assets/wallpaper/wallpaper2.jpg
   - assets/wallpaper/wallpaper3.jpg
+  - assets/materialpage/banks.png
+  - assets/materialpage/hotels.png
+  - assets/materialpage/key.old.png
+  - assets/materialpage/key.png
+  - assets/materialpage/shopping_cart.old.png
+  - assets/materialpage/shopping_cart.png
+  - assets/materialpage/stores.png
+  - assets/materialpage/wallet.old.png
+  - assets/materialpage/wallet.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -109,6 +118,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+   - family: FlamanteRoma
+     fonts:
+          - asset: assets/materialpage/fonts/Flamante-Roma-Medium.ttf
+          - asset: assets/materialpage/fonts/Flamante-Roma-MediumItalic.ttf
    - family: icomoon
      fonts:
        - asset: assets/fonts/icomoon.ttf
