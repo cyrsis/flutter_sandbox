@@ -20,27 +20,34 @@ class MaterialPage extends StatelessWidget {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
             //image
-            new Padding(
-              padding: const EdgeInsets.only(bottom: 25.0),
-              child: new Image.asset(model.heroAssetPath,
-                  width: 200.0, height: 200.0),
+            new Transform(
+              child: new Padding(
+                padding: const EdgeInsets.only(bottom: 25.0),
+                child: new Image.asset(model.heroAssetPath,
+                    width: 200.0, height: 200.0),
+              ), transform: new Matrix4.translationValues(0.0, 50.0*(1-percentVisible), 0.0),
             ),
 
             //Title
-            new Padding(
-              padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-              child: new Text(model.title, style: AppStyle.MaterialPageTitleText),
+            new Transform(
+              child: new Padding(
+                padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+                child: new Text(model.title, style: AppStyle.MaterialPageTitleText),
+              ), transform: new Matrix4.translationValues(0.0, 30.0*(1-percentVisible), 0.0),
             ),
 
             //Body
-            new Padding(
-              padding: const EdgeInsets.only(bottom: 75.0),
-              child: new Text(
-                model.body,
-                style: AppStyle.BodyStyle,
-                textAlign: TextAlign.center,
-              ),
+            new Transform(
+              child: new Padding(
+                padding: const EdgeInsets.only(bottom: 75.0),
+                child: new Text(
+                  model.body,
+                  style: AppStyle.BodyStyle,
+                  textAlign: TextAlign.center,
+                ),
+              ), transform: new Matrix4.translationValues(0.0, 30*(1-percentVisible), 0.0),
             ),
           ],
         ),

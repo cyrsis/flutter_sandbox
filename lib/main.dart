@@ -68,11 +68,9 @@ void main() => runApp(new MaterialApp(
           ? AppTheme.Apptheme
           : AppTheme.androidTheme,
       home: new Scaffold(
-
-        backgroundColor: Colors.white,
-           body: new MaterialPageRevealScreen( )),
-          //body: new mainTab()),
-      routes:   <String, WidgetBuilder>{
+          backgroundColor: Colors.white, body: new MaterialPageRevealScreen()),
+      //body: new mainTab()),
+      routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
       },
     ));
@@ -89,7 +87,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return new WillPopScope(
         // Prevent swipe popping of this page. Use explicit exit buttons on
-      // ly.
+        // ly.
         onWillPop: () => new Future<bool>.value(true),
         child: new CupertinoTabScaffold(
           tabBar: new CupertinoTabBar(
