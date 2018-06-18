@@ -10,7 +10,7 @@ class Avator extends StatelessWidget {
 
   final mainTextStyle = AppStyle.MainTextStyle;
   final subTextStyle = new TextStyle(
-      fontFamily: AppFrontsName.ProfileFonts,
+      fontFamily: AppFrontsName.profileFonts,
       fontSize: 16.0,
       color: Colors.white70,
       fontWeight: FontWeight.w700);

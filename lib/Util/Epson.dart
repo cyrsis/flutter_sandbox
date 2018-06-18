@@ -4,14 +4,11 @@ import 'dart:io';
 import 'dart:typed_data';
 import "package:hex/hex.dart";
 
-
-
-
 class Epson {
   String ip;
   String data;
 
-  Epson(this.ip, this.data) ;
+  Epson(this.ip, this.data);
 
   void init() {
     data += "\x1B\x40 Printer Connected"; //Initialize printer
@@ -53,15 +50,15 @@ class Epson {
     data += "\x0C"; //Print and return to standard mode (in page mode)
   }
 
-  void FB() {
+  void fB() {
     data += "\x1B\x4B";
   }
 
-  void REVON() {
+  void eVON() {
     data += "\x1D\0x42\0x01";
   }
 
-  void EnableSmoothMode() {
+  void enableSmoothMode() {
     //GS b n
     //Turn smoothing mode on/off
     data += "\x1D\x62\x01";
@@ -157,15 +154,15 @@ class Epson {
     data += "098765432198\x0A";
   }
 
-  void BiteTest(){ //Not working
+  void BiteTest() {
+    //Not working
     data += "0x1D 0x48 0x02";
     data += "0x1d 0x6b 0x41 0x0C";
     data += "098765432198 0x0A";
   }
 
-  void Hex(){
-
-    data +=HEX.encode(const [1, 2, 3]);
+  void Hex() {
+    data += HEX.encode(const [1, 2, 3]);
   }
 
   void QRCode3() {
@@ -186,34 +183,32 @@ class Epson {
   }
 
   void QRCode() {
-    data ="";
+    data = "";
 
     print("==QrCode Start");
     //data += "\x1B\x40";
 
-
-     //0x1D 0x28 0x6B 0xB7 0x00 0x31 0x50 0x30
+    //0x1D 0x28 0x6B 0xB7 0x00 0x31 0x50 0x30
     data += "\x1B\x40";
     data += "\x1D\x28\x6B\xB7\x00\x31\x50\x30";
 
-
     //[0x1D][0x28][0x6B][0x03][0x00][0x31][0x45][0x33]
-    data += "123456789012345678901234567890" ;
-    data += "abcedfghijklmnopqrstuvwxyzabcd" ;
-    data += "123456789012345678901234567890" ;
-    data += "abcedfghijklmnopqrstuvwxyzabcd" ;
-    data += "123456789012345678901234567890" ;
-    data += "abcedfghijklmnopqrstuvwxyzabcd" ;
+    data += "123456789012345678901234567890";
+    data += "abcedfghijklmnopqrstuvwxyzabcd";
+    data += "123456789012345678901234567890";
+    data += "abcedfghijklmnopqrstuvwxyzabcd";
+    data += "123456789012345678901234567890";
+    data += "abcedfghijklmnopqrstuvwxyzabcd";
 
     //0x1D 0x28 0x6B 0x03 0x00 0x31 0x51 0x30
 
     data += "\x1D\x28\x6B\x03\x00\x31\x51\x30";
 
     //[0x43][0x49][0x52][0x43][0x4C][0x45][0x4B][0x30][0x31][0x32][0x33][0x34][0x35][0x36][0x37][0x38][0x39][0x36][0x37][0x38][0x39]
-   // data += "\x43\x49\x52\0x43\x4C\x45\x4B\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39\x36\x37\x38\x39";
+    // data += "\x43\x49\x52\0x43\x4C\x45\x4B\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39\x36\x37\x38\x39";
 
     // 1D 28 6B 03 00 31 51 30
-   // data += "\x1D\x28\x6B\x03\x00\x31\x51\x30"; //print it out
+    // data += "\x1D\x28\x6B\x03\x00\x31\x51\x30"; //print it out
 
     print("==QrCode End");
   }
@@ -236,14 +231,11 @@ class Epson {
   }
 
   void write() {
-    Socket
-        .connect(ip, 9100)
-        .then((socket) {
+    Socket.connect(ip, 9100).then((socket) {
       socket.write(data);
       print("Data send :");
       print(UTF8.encode(data));
       socket.close();
-    }
-    );
+    });
   }
 }

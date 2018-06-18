@@ -3,6 +3,7 @@ import 'package:flutter_sandbox/Models/MaterialPageModel.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Widgets/MaterialPage.dart';
 import 'package:flutter_sandbox/Widgets/PageReveal.dart';
+import 'package:flutter_sandbox/Widgets/Page_indicator.dart';
 
 final pages = [
   new MaterialPageModel(
@@ -36,14 +37,14 @@ class _MaterialPageRevealScreenState extends State<MaterialPageRevealScreen> {
           model: pages[0],
           percentVisible: 1.0,
         ),
-
         new PageReveal(
-          revealpercent: 0.4,
+           revealpercent: 1.0,
           child: new MaterialPage(
             model: pages[1],
             percentVisible: 1.0,
           ),
         ),
+        new Page_indicator(),
       ]),
     );
   }

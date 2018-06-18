@@ -1,6 +1,6 @@
 import 'dart:io';
 
-InternetAddress HOST = InternetAddress.LOOPBACK_IP_V6;
+InternetAddress host = InternetAddress.loopbackIPv4;
 const PORT = 7654;
 
 void main() {
@@ -11,7 +11,7 @@ void main() {
   });
 // prints: Connected to: 173.194.65.101:80
 
-  Socket.connect(HOST, PORT).then((socket) {
+  Socket.connect(host, PORT).then((socket) {
     print(socket.runtimeType);
     // data to server:
     socket.write('Hello, World from a client!');

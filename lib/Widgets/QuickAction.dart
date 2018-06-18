@@ -63,7 +63,7 @@ class QuickAction extends StatelessWidget {
         color: Colors.white,
         fontWeight: FontWeight.w700,
         fontSize: 18.0,
-        fontFamily: AppFrontsName.ProfileFonts);
+        fontFamily: AppFrontsName.profileFonts);
 
     return new GestureDetector(
       onTap: action,

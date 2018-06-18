@@ -1,6 +1,6 @@
 class AppFrontsName {
-  static final String ProfileFonts = "Timeburner";
-  static final String Poppins = "Poppins";
+  static final String poppins = "Poppins";
+  static get profileFonts => "Poppins";
 
 }
 
