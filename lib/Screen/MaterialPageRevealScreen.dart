@@ -36,7 +36,9 @@ class _MaterialPageRevealScreenState extends State<MaterialPageRevealScreen> {
           model: pages[0],
           percentVisible: 1.0,
         ),
+
         new PageReveal(
+          revealpercent: 0.4,
           child: new MaterialPage(
             model: pages[1],
             percentVisible: 1.0,
