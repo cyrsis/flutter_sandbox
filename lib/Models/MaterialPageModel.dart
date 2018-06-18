@@ -6,7 +6,6 @@ class MaterialPageModel {
   final Color color;
   final String heroAssetPath;
   final String title;
-
   final String body;
   final String iconAssetPath;
 

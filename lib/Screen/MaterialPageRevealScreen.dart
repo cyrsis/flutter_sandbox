@@ -18,8 +18,11 @@ final pages = [
       'Banks - 1',
       'We carefully vertify all banks before adding them into the App',
       'assets/materialpage/wallet.png'),
-  new MaterialPageModel(Color(0xFF9B90BC), 'assets/materialpage/stores.png',
-      'Store -2 ', 'This is the body', 'null')
+  new MaterialPageModel(
+      Color(0xFF9B90BC),
+      'assets/materialpage/banks.png',
+      'Store -2 ',
+      'This is the body', 'assets/materialpage/wallet.png')
 ];
 
 class MaterialPageRevealScreen extends StatefulWidget {
@@ -38,13 +41,20 @@ class _MaterialPageRevealScreenState extends State<MaterialPageRevealScreen> {
           percentVisible: 1.0,
         ),
         new PageReveal(
-           revealpercent: 1.0,
+          revealpercent: 1.0,
           child: new MaterialPage(
             model: pages[1],
             percentVisible: 1.0,
           ),
         ),
-        new Page_indicator(),
+        new Page_indicator(
+          viewModel:
+              new PageIndicatorViewModel(
+                  pages,
+                  1,
+                  SlideDirection.lefToRight,
+                  0.5),
+        ),
       ]),
     );
   }

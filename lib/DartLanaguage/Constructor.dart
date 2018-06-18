@@ -1,29 +1,24 @@
-//main() {
-//  var point = new MyPoint.fact();
-//
-//
-//}
-//
-//class MyPoint {
-//
-//  final String name;
-//  int x;
-//  int y;
-//
-//  MyPoint(this.x, this.y);
-//
-//  MyPoint._internal();
-//
-//
-//
-//
-//  MyPoint.zero() :name = "zero " {
-//
-//  }
-//
-//  MyPoint.named(this.name, this.x, this.y);
-//
-//  MyPoint.fact();
-//
-//
-//}
+main() {
+  
+  var person = new Employee.fromJson({new Map():{
+  "12":12,
+  }
+
+  });
+}
+
+class Person {
+  String name;
+
+  Person.fromJson(Map data) {
+    print("In person");
+  }
+}
+
+class Employee extends Person {
+  Employee.fromJson(Map data) : super.fromJson(data)
+  {
+    print("I am employee ${data.toString()}");
+  }
+  
+}
