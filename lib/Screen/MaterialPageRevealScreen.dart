@@ -51,9 +51,9 @@ class _MaterialPageRevealScreenState extends State<MaterialPageRevealScreen> {
           viewModel:
               new PageIndicatorViewModel(
                   pages,
-                  1,
-                  SlideDirection.lefToRight,
-                  0.5),
+                  0,
+                  SlideDirection.none,
+                  0.0),
         ),
       ]),
     );
