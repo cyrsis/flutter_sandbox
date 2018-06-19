@@ -200,7 +200,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
           new FlatButton(
             child: new Row(
               children: <Widget>[
-                new Image.asset('images/ic_home.png', width: 15.0, height: 15.0),
+                new Image.asset('assets/restaurantanimation/ic_home.png', width: 15.0, height: 15.0),
                 new Container(width: 10.0),
                 new Text('Dashboard', style: new TextStyle(color: Colors.white.withOpacity(0.8)))
               ],
@@ -212,7 +212,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
           new FlatButton(
             child: new Row(
               children: <Widget>[
-                new Image.asset('images/ic_menu.png', width: 15.0, height: 15.0),
+                new Image.asset('assets/restaurantanimation/ic_menu.png', width: 15.0, height: 15.0),
                 new Container(width: 10.0),
                 new Text('Menus', style: new TextStyle(color: Colors.white.withOpacity(0.8)))
               ],
@@ -224,7 +224,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
           new FlatButton(
             child: new Row(
               children: <Widget>[
-                new Image.asset('images/ic_seat.png', width: 15.0, height: 15.0),
+                new Image.asset('assets/restaurantanimation/ic_seat.png', width: 15.0, height: 15.0),
                 new Container(width: 10.0),
                 new Text('Seats', style: new TextStyle(color: Colors.white.withOpacity(0.8)))
               ],
@@ -261,7 +261,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
               child: new RawMaterialButton(
                 onPressed: () => onBtnBottomMenuPressed(1),
                 child: new Image.asset(
-                  'images/ic_book.png',
+                  'assets/restaurantanimation/ic_book.png',
                   width: 40.0,
                   height: 40.0,
                 ),
@@ -280,7 +280,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
               child: new RawMaterialButton(
                 onPressed: () => onBtnBottomMenuPressed(2),
                 child: new Image.asset(
-                  'images/ic_add.png',
+                  'assets/restaurantanimation/ic_add.png',
                   width: 40.0,
                   height: 40.0,
                 ),
@@ -299,7 +299,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
               child: new RawMaterialButton(
                 onPressed: () => onBtnBottomMenuPressed(3),
                 child: new Image.asset(
-                  'images/ic_clock.png',
+                  'assets/restaurantanimation/ic_clock.png',
                   width: 40.0,
                   height: 40.0,
                 ),
@@ -318,7 +318,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
               child: new RawMaterialButton(
                 onPressed: onCancelPressed,
                 child: new Image.asset(
-                  'images/ic_cancel.png',
+                  'assets/restaurantanimation/ic_cancel.png',
                   width: 40.0,
                   height: 40.0,
                 ),
@@ -402,9 +402,9 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Image.asset('images/chair_top.png', width: 40.0, height: 20.0),
+                    new Image.asset('assets/restaurantanimation/chair_top.png', width: 40.0, height: 20.0),
                     new Expanded(child: new Container()),
-                    new Image.asset('images/chair_top.png', width: 40.0, height: 20.0),
+                    new Image.asset('assets/restaurantanimation/chair_top.png', width: 40.0, height: 20.0),
                   ],
                 ),
                 width: 90.0,
@@ -414,7 +414,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
               new Stack(
                 children: <Widget>[
                   new Image.asset(
-                    colorTable == 'green' ? 'images/table_big_green.png' : 'images/table_big_pink.png',
+                    colorTable == 'green' ? 'assets/restaurantanimation/table_big_green.png' : 'assets/restaurantanimation/table_big_pink.png',
                     width: 120.0,
                     height: 60.0,
                     fit: BoxFit.contain,
@@ -455,9 +455,9 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Image.asset('images/chair_bottom.png', width: 40.0, height: 20.0),
+                    new Image.asset('assets/restaurantanimation/chair_bottom.png', width: 40.0, height: 20.0),
                     new Expanded(child: new Container()),
-                    new Image.asset('images/chair_bottom.png', width: 40.0, height: 20.0),
+                    new Image.asset('assets/restaurantanimation/chair_bottom.png', width: 40.0, height: 20.0),
                   ],
                 ),
                 width: 90.0,
@@ -489,14 +489,14 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               new Image.asset(
-                'images/chair_top.png',
+                'assets/restaurantanimation/chair_top.png',
                 width: 40.0,
                 height: 20.0,
               ),
               new Stack(
                 children: <Widget>[
                   new Image.asset(
-                    colorTable == 'green' ? 'images/table_small_green.png' : 'images/table_small_yellow.png',
+                    colorTable == 'green' ? 'assets/restaurantanimation/table_small_green.png' : 'assets/restaurantanimation/table_small_yellow.png',
                     width: 70.0,
                     height: 50.0,
                     fit: BoxFit.contain,
@@ -533,7 +533,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
                 ],
               ),
               new Image.asset(
-                'images/chair_bottom.png',
+                'assets/restaurantanimation/schair_bottom.png',
                 width: 40.0,
                 height: 20.0,
               ),

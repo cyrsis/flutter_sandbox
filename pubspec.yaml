@@ -30,8 +30,6 @@ dependencies:
 
 
 
-
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -104,6 +102,58 @@ flutter:
   - assets/materialpage/stores.png
   - assets/materialpage/wallet.old.png
   - assets/materialpage/wallet.png
+  - assets/restaurantanimation/angry.gif
+  - assets/restaurantanimation/bg_uit.jpg
+  - assets/restaurantanimation/chair_bottom.png
+  - assets/restaurantanimation/chair_top.png
+  - assets/restaurantanimation/chicken.png
+  - assets/restaurantanimation/clap.png
+  - assets/restaurantanimation/clap_border.png
+  - assets/restaurantanimation/curry.png
+  - assets/restaurantanimation/duck.png
+  - assets/restaurantanimation/flan.png
+  - assets/restaurantanimation/haha.gif
+  - assets/restaurantanimation/ic_add.png
+  - assets/restaurantanimation/ic_add_circle.png
+  - assets/restaurantanimation/ic_avatar.png
+  - assets/restaurantanimation/ic_book.png
+  - assets/restaurantanimation/ic_cake.png
+  - assets/restaurantanimation/ic_camera.png
+  - assets/restaurantanimation/ic_cancel.png
+  - assets/restaurantanimation/ic_car.png
+  - assets/restaurantanimation/ic_clock.png
+  - assets/restaurantanimation/ic_coffee.png
+  - assets/restaurantanimation/ic_cook.png
+  - assets/restaurantanimation/ic_home.png
+  - assets/restaurantanimation/ic_jupiter.png
+  - assets/restaurantanimation/ic_like.png
+  - assets/restaurantanimation/ic_like_fill.png
+  - assets/restaurantanimation/ic_mars.png
+  - assets/restaurantanimation/ic_menu.png
+  - assets/restaurantanimation/ic_mercury.png
+  - assets/restaurantanimation/ic_moon.png
+  - assets/restaurantanimation/ic_neptune.png
+  - assets/restaurantanimation/ic_red_circle.png
+  - assets/restaurantanimation/ic_remove_circle.png
+  - assets/restaurantanimation/ic_restaurant.png
+  - assets/restaurantanimation/ic_saturn.png
+  - assets/restaurantanimation/ic_seat.png
+  - assets/restaurantanimation/ic_uranus.png
+  - assets/restaurantanimation/ic_venus.png
+  - assets/restaurantanimation/ic_white_circle.png
+  - assets/restaurantanimation/like.gif
+  - assets/restaurantanimation/logo_uit.png
+  - assets/restaurantanimation/love.gif
+  - assets/restaurantanimation/pizza.png
+  - assets/restaurantanimation/sad.gif
+  - assets/restaurantanimation/salad.png
+  - assets/restaurantanimation/shadow_white.png
+  - assets/restaurantanimation/sparkles.png
+  - assets/restaurantanimation/table_big_green.png
+  - assets/restaurantanimation/table_big_pink.png
+  - assets/restaurantanimation/table_small_green.png
+  - assets/restaurantanimation/table_small_yellow.png
+  - assets/restaurantanimation/wow.gif
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
