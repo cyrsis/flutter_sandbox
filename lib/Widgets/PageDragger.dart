@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Models/SlideDirection.dart';
 import 'package:flutter_sandbox/Models/SlideUpdate.dart';
+
 
 class PageDragger extends StatefulWidget {
   final bool canDragLeftToRight;
@@ -18,6 +20,10 @@ class _PageDraggerState extends State<PageDragger> {
 
    static const FULL_TRANSACTION_PX =300.0;
 
+  Offset dragStart;
+
+  SlideDirection slideDirection;
+
 
 
   @override
@@ -30,9 +36,20 @@ class _PageDraggerState extends State<PageDragger> {
   }
 
   void _onDragStart(DragStartDetails details) {
-  }
 
+    dragStart = details.globalPosition;
+  }
+  //Trying to figure out the logic for drag left or drag right
   void _onDragUpdate(DragUpdateDetails details) {
+    if (dragStart != null) {
+      final newPosition = details.globalPosition;
+      final dx=dragStart.dx-newPosition.dx;
+      if ( dx >0.0 && widget.canDragRightToLeft ) {
+        slideDirection = SlideDirection.rightToLeft;
+      }
+    }
+
+
   }
 
   void _onDragEnd(DragEndDetails details) {
