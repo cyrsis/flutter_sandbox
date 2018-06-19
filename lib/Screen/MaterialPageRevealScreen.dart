@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Models/MaterialPageModel.dart';
+import 'package:flutter_sandbox/Models/PageIndicatorViewModel.dart';
+import 'package:flutter_sandbox/Models/SlideDirection.dart';
 import 'package:flutter_sandbox/Repository/pages.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Widgets/MaterialPage.dart';
