@@ -6,6 +6,5 @@ class OrderItem {
   String icon;
   int id;
 
-  OrderItem(this.id,this.item, this.category, this.qty, this.price, this.icon );
-
+  OrderItem(this.id, this.item, this.category, this.qty, this.price, this.icon);
 }

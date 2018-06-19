@@ -23,6 +23,7 @@ import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
 import 'package:flutter_sandbox/Screen/LifeCycleScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
 import 'package:flutter_sandbox/Screen/MaterialPageRevealScreen.dart';
+import 'package:flutter_sandbox/Screen/RestaruarntAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColScreen.dart';
 import 'package:flutter_sandbox/Screen/SilverAppBarScreen.dart';
 import 'package:flutter_sandbox/Screen/SplashScreen.dart';
@@ -69,7 +70,7 @@ void main() => runApp(new MaterialApp(
           : AppTheme.androidTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new TestScreen()),
+          body: new RestaurantAnimationScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
