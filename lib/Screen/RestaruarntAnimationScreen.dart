@@ -533,7 +533,7 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
                 ],
               ),
               new Image.asset(
-                'assets/restaurantanimation/schair_bottom.png',
+                'assets/restaurantanimation/chair_bottom.png',
                 width: 40.0,
                 height: 20.0,
               ),

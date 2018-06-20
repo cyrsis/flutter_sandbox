@@ -5,6 +5,7 @@ import 'package:flutter_sandbox/Screen/APIScreen.dart';
 
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
+import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationBasicScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationControllerOutputScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
@@ -70,7 +71,7 @@ void main() => runApp(new MaterialApp(
           : AppTheme.androidTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new RestaurantAnimationScreen()),
+          body: new mainTab()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
@@ -140,7 +141,7 @@ class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
                 builder: (BuildContext context) {
                   switch (index) {
                     case 0:
-                      return new RowColScreen(); //Home
+                      return new AnimatedSizeScreen(); //Home
                       break;
                     case 1:
                       return new SwipeScreenTest();
