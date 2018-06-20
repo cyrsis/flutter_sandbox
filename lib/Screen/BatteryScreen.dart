@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:battery/battery.dart';
-import 'package:flutter_sandbox/Styles/AppStyle.dart';
 class BatteryScreen extends StatefulWidget {
   @override
   _BatteryScreenState createState() => new _BatteryScreenState();

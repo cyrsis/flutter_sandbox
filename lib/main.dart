@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_sandbox/Animation/ArtistsDetailsAnimator.dart';
-import 'package:flutter_sandbox/Screen/APIScreen.dart';
 
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
@@ -19,6 +18,7 @@ import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 import 'package:flutter_sandbox/Screen/EpsonPosScreen.dart';
 import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
 import 'package:flutter_sandbox/Screen/GalleryScreen.dart';
+import 'package:flutter_sandbox/Screen/HiddenDrawerScreen.dart';
 import 'package:flutter_sandbox/Screen/InternetConnectionScreen.dart';
 import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
 import 'package:flutter_sandbox/Screen/LifeCycleScreen.dart';
@@ -68,10 +68,10 @@ void main() => runApp(new MaterialApp(
       title: "Shunga",
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.Apptheme
-          : AppTheme.androidTheme,
+          : AppTheme.hiddendrawerTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new MaterialPageRevealScreen()),
+          body: new HiddenDrawerScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

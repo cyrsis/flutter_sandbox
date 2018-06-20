@@ -6,8 +6,8 @@ class Todo {
 }
 
 class Tryout {
-  final String Title;
+  final String title;
   final String description;
-  Tryout(this.Title, this.description);
+  Tryout(this.title, this.description);
   
 }

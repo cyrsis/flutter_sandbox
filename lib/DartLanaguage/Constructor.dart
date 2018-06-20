@@ -1,6 +1,6 @@
 main() {
   
-  var person = new Employee.fromJson({new Map():{
+  Employee person = new Employee.fromJson({new Map():{
   "12":12,
   }
 

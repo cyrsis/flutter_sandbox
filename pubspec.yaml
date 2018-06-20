@@ -154,6 +154,14 @@ flutter:
   - assets/restaurantanimation/table_small_green.png
   - assets/restaurantanimation/table_small_yellow.png
   - assets/restaurantanimation/wow.gif
+  - assets/hiddenmenu/dark_grunge_bk.jpg
+  - assets/hiddenmenu/eggs_in_skillet.jpg
+  - assets/hiddenmenu/other_screen_bk.jpg
+  - assets/hiddenmenu/other_screen_card_photo.jpg
+  - assets/hiddenmenu/spoons_of_spices.jpg
+  - assets/hiddenmenu/steak_on_cooktop.jpg
+  - assets/hiddenmenu/wood_bk.jpg
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -168,6 +176,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+   - family: bebas-neue
+     fonts:
+          - asset: assets/hiddenmenu/BebasNeue-Regular.ttf
+
    - family: FlamanteRoma
      fonts:
           - asset: assets/materialpage/fonts/Flamante-Roma-Medium.ttf

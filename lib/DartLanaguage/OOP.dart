@@ -6,7 +6,6 @@ main() {
 class Chair extends Thing {
   Chair(String name, int age): super(name,age);
 
-  // TODO: implement color
   @override
   String get color => "Blue";
 }

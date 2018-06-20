@@ -16,9 +16,14 @@ class AppTheme {
   static final ThemeData defaultAndroidTheme = new ThemeData.light();
 
   static final ThemeData androidTheme = new ThemeData(
-      primarySwatch: Colors.green,
       backgroundColor: Colors.black,
       scaffoldBackgroundColor: Colors.white,
       accentColor: Colors.cyan[600]
   );
+
+  static final ThemeData hiddendrawerTheme = new ThemeData(
+    primarySwatch: Colors.brown,
+  );
 }
+
+

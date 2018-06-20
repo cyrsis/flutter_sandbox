@@ -111,6 +111,9 @@ class AppStyle {
   static get BodyStyle   =>
       new TextStyle(color: Colors.white, fontSize: 18.0);
 
+  static get hiddendrawerTitle  =>
+      new TextStyle( fontFamily: "bebas-neue", fontSize: 23.0);
+
 
 
 

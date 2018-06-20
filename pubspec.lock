@@ -124,7 +124,7 @@ packages:
       name: flutter_redux
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.1"
+    version: "0.5.2"
   flutter_stream_friends:
     dependency: "direct main"
     description:
