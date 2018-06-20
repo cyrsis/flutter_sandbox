@@ -71,7 +71,7 @@ void main() => runApp(new MaterialApp(
           : AppTheme.androidTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new mainTab()),
+          body: new MaterialPageRevealScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

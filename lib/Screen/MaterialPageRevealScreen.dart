@@ -5,6 +5,7 @@ import 'package:flutter_sandbox/Models/SlideDirection.dart';
 import 'package:flutter_sandbox/Repository/pages.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Widgets/MaterialPage.dart';
+import 'package:flutter_sandbox/Widgets/PageDragger.dart';
 import 'package:flutter_sandbox/Widgets/PageReveal.dart';
 import 'package:flutter_sandbox/Widgets/Page_indicator.dart';
 
@@ -32,13 +33,15 @@ class _MaterialPageRevealScreenState extends State<MaterialPageRevealScreen> {
           ),
         ),
         new Page_indicator(
-          viewModel:
-              new PageIndicatorViewModel(
-                  pages,
-                  1,
-                  SlideDirection.lefToRight,
-                  1.0),
+            viewModel:
+            new PageIndicatorViewModel(
+                pages,
+                1,
+                SlideDirection.lefToRight,
+                1.0),
+
         ),
+        new PageDragger(),
       ]),
     );
   }
