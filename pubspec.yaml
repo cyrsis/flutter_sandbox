@@ -176,6 +176,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+
    - family: bebas-neue
      fonts:
           - asset: assets/hiddenmenu/BebasNeue-Regular.ttf
@@ -209,6 +210,7 @@ flutter:
        - asset: assets/fonts/Flamante-Roma-Medium.ttf
        - asset: assets/fonts/Flamante-Roma-MediumItalic.ttf
          style: italic
+
 
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

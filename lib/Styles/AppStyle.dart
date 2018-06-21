@@ -114,6 +114,15 @@ class AppStyle {
   static get hiddendrawerTitle  =>
       new TextStyle( fontFamily: "bebas-neue", fontSize: 23.0);
 
+  static get RestaruantCardTitle =>
+      new TextStyle(color: Colors.black26, fontFamily: "mermaid", fontSize: 22.0);
+
+  static get RestaruantCardNumOfHeart => Black87;
+
+
+  static get RestaruantCardSubTitle =>
+      new TextStyle(color: Color(0xFFAAAAAA), fontFamily: "bebas-neue", fontSize: 16.0,letterSpacing: 1.0);
+
 
 
 
