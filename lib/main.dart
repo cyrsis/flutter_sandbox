@@ -71,7 +71,7 @@ void main() => runApp(new MaterialApp(
           : AppTheme.hiddendrawerTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new GetJsonScreen()),
+          body: new ButtonRowScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

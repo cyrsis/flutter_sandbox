@@ -19,6 +19,7 @@ class PageReveal extends StatelessWidget {
   }
 }
 
+
 class CircleRevealClipper extends CustomClipper<Rect> {
 
   double revealpercent;
