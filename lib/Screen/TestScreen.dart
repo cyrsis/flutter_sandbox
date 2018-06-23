@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
+import 'package:flutter_sandbox/Util/Widget_Utils.dart';
 
 class TestScreen extends StatefulWidget {
   @override
@@ -20,10 +21,15 @@ class _TestScreenState extends State<TestScreen> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> children = <Widget>[];
+
+    addIfNotNull(buildCard(_buildBorderRadiusWithShadow), children);
+
     return new ListView(children: <Widget>[
-      buildCard(_buildBorderRadius),
-      buildCard(_buildBorderRadiusWithShadow),
-      buildCard(_buildBorderRadiusWithShadow),
+      new Column(children: children)
+//      buildCard(_buildBorderRadius),
+//      buildCard(_buildBorderRadiusWithShadow),
+//      buildCard(_buildBorderRadiusWithShadow),
     ]);
   }
 
@@ -87,5 +93,12 @@ class _TestScreenState extends State<TestScreen> {
             )
           ],
         ));
+  }
+
+  Widget _buildHeader() {
+    return new Container(
+      //Div
+      child: null,
+    );
   }
 }

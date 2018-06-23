@@ -11,6 +11,7 @@ import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/BatteryScreen.dart';
 import 'package:flutter_sandbox/Screen/ButtonRowScreen.dart';
 import 'package:flutter_sandbox/Screen/ChatScreenSample.dart';
+import 'package:flutter_sandbox/Screen/CircleKScreen.dart';
 import 'package:flutter_sandbox/Screen/ClockScreen.dart';
 import 'package:flutter_sandbox/Screen/ContactsDemo.dart';
 import 'package:flutter_sandbox/Screen/DeviceInfoScreen.dart';
@@ -23,6 +24,7 @@ import 'package:flutter_sandbox/Screen/InternetConnectionScreen.dart';
 import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
 import 'package:flutter_sandbox/Screen/LifeCycleScreen.dart';
 import 'package:flutter_sandbox/Screen/LoginScreen.dart';
+import 'package:flutter_sandbox/Screen/MapViewScreen.dart';
 import 'package:flutter_sandbox/Screen/MaterialPageRevealScreen.dart';
 import 'package:flutter_sandbox/Screen/RestaruarntAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColScreen.dart';
@@ -62,7 +64,10 @@ import 'package:flutter_sandbox/Redux/AppStateReducer.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
-void main() => runApp(new MaterialApp(
+const API_KEY = "AIzaSyBBEcmCP4ElyW1RR11Yy93dlJkQSC0LYRU";
+
+void main() {
+  runApp(new MaterialApp(
       debugShowMaterialGrid: false,
       debugShowCheckedModeBanner: false,
       title: "Shunga",
@@ -71,12 +76,13 @@ void main() => runApp(new MaterialApp(
           : AppTheme.hiddendrawerTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new TestScreen()),
+          body: new CircleKScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
       },
     ));
+}
 
 class mainTab extends StatefulWidget {
   @override

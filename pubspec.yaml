@@ -30,6 +30,7 @@ dependencies:
 
 
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -161,7 +162,14 @@ flutter:
   - assets/hiddenmenu/spoons_of_spices.jpg
   - assets/hiddenmenu/steak_on_cooktop.jpg
   - assets/hiddenmenu/wood_bk.jpg
-
+  - assets/materialpage/problemstatment.png
+  - assets/map/map.png
+  - assets/circlek/fastfood.jpeg
+  - assets/circlek/icecream.jpg
+  - assets/circlek/noodles.jpeg
+  - assets/circlek/numbella.jpg
+  - assets/circlek/circlelogo.png
+  - assets/circlek/map.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
