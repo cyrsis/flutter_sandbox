@@ -76,7 +76,7 @@ void main() {
           : AppTheme.hiddendrawerTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new CircleKScreen()),
+          body: new TestScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

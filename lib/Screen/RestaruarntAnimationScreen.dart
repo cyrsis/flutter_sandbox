@@ -45,6 +45,8 @@ class RestaurantAnimationScreenState extends State<RestaurantAnimationScreen> wi
     dropDownAnim.addListener(() {
       setState(() {});
     });
+
+
     fadeInViewAnim = new Tween(begin: 0.0, end: 1.0)
         .animate(new CurvedAnimation(parent: animControlPhrase1, curve: new Interval(0.3, 0.8, curve: Curves.easeOut)));
     fadeInViewAnim.addListener(() {
