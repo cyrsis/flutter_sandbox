@@ -8,8 +8,10 @@ import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationBasicScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationControllerOutputScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
+import 'package:flutter_sandbox/Screen/BackdropScreen.dart';
 import 'package:flutter_sandbox/Screen/BatteryScreen.dart';
 import 'package:flutter_sandbox/Screen/ButtonRowScreen.dart';
+import 'package:flutter_sandbox/Screen/CapsuleButtonScreen.dart';
 import 'package:flutter_sandbox/Screen/ChatScreenSample.dart';
 import 'package:flutter_sandbox/Screen/CircleKScreen.dart';
 import 'package:flutter_sandbox/Screen/ClockScreen.dart';
@@ -76,7 +78,7 @@ void main() {
           : AppTheme.hiddendrawerTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new TestScreen()),
+          body: new BackdropScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
