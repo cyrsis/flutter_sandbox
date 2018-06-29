@@ -123,6 +123,9 @@ class AppStyle {
   static get RestaruantCardSubTitle =>
       new TextStyle(color: Color(0xFFAAAAAA), fontFamily: "bebas-neue", fontSize: 16.0,letterSpacing: 1.0);
 
+  static get PinkTxt =>
+      new TextStyle(color: Colors.pinkAccent, fontSize: 10.0,letterSpacing: 1.0);
+
 
 
 

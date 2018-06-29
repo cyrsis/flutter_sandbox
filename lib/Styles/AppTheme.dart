@@ -4,7 +4,11 @@ class AppTheme {
   static final String Title = "MyApps";
 
   static final ThemeData Apptheme = new ThemeData(
-      primaryColor: Colors.lightBlue[800],
+      primaryColor: Colors.blue,
+      accentColor: Colors.cyan[600]);
+
+  static final ThemeData pinktheme = new ThemeData(
+      primaryColor: Colors.pinkAccent,
       accentColor: Colors.cyan[600]);
 
   static final ThemeData iosTheme = new ThemeData(

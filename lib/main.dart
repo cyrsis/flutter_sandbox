@@ -5,48 +5,9 @@ import 'package:flutter_sandbox/Animation/ArtistsDetailsAnimator.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
-import 'package:flutter_sandbox/Screen/AnimationBasicScreen.dart';
-import 'package:flutter_sandbox/Screen/AnimationControllerOutputScreen.dart';
-import 'package:flutter_sandbox/Screen/AnimationPlayerExampleScreen.dart';
-import 'package:flutter_sandbox/Screen/BackdropScreen.dart';
-import 'package:flutter_sandbox/Screen/BatteryScreen.dart';
-import 'package:flutter_sandbox/Screen/ButtonRowScreen.dart';
-import 'package:flutter_sandbox/Screen/CapsuleButtonScreen.dart';
-import 'package:flutter_sandbox/Screen/ChatScreenSample.dart';
-import 'package:flutter_sandbox/Screen/CircleKScreen.dart';
-import 'package:flutter_sandbox/Screen/ClockScreen.dart';
-import 'package:flutter_sandbox/Screen/ContactsDemo.dart';
-import 'package:flutter_sandbox/Screen/DeviceInfoScreen.dart';
-import 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
-import 'package:flutter_sandbox/Screen/EpsonPosScreen.dart';
-import 'package:flutter_sandbox/Screen/FriendsScreen.dart';
-import 'package:flutter_sandbox/Screen/GalleryScreen.dart';
-import 'package:flutter_sandbox/Screen/HiddenDrawerScreen.dart';
-import 'package:flutter_sandbox/Screen/InternetConnectionScreen.dart';
-import 'package:flutter_sandbox/Screen/LayOutScreen.dart';
-import 'package:flutter_sandbox/Screen/LifeCycleScreen.dart';
-import 'package:flutter_sandbox/Screen/LoginScreen.dart';
-import 'package:flutter_sandbox/Screen/MapViewScreen.dart';
-import 'package:flutter_sandbox/Screen/MaterialPageRevealScreen.dart';
-import 'package:flutter_sandbox/Screen/RestaruarntAnimationScreen.dart';
-import 'package:flutter_sandbox/Screen/RowColScreen.dart';
-import 'package:flutter_sandbox/Screen/SilverAppBarScreen.dart';
-import 'package:flutter_sandbox/Screen/SplashScreen.dart';
-import 'package:flutter_sandbox/Screen/StackScreen.dart';
-import 'package:flutter_sandbox/Screen/StreamScreens.dart';
-import 'package:flutter_sandbox/Screen/SwipScreenTest.dart';
-import 'package:flutter_sandbox/Screen/SwipeScreen.dart';
-import 'package:flutter_sandbox/Screen/TabTopScreen.dart';
-import 'package:flutter_sandbox/Screen/BasicAppBarSample.dart';
-import 'package:flutter_sandbox/Screen/ChartScreen.dart';
-import 'package:flutter_sandbox/Screen/ExpansionTileSample.dart';
-import 'package:flutter_sandbox/Screen/ExploreScreen.dart';
-import 'package:flutter_sandbox/Screen/GetJsonScreen.dart';
-import 'package:flutter_sandbox/Screen/HomeScreen.dart';
-import 'package:flutter_sandbox/Screen/ProfileScreen.dart';
-import 'package:flutter_sandbox/Screen/QRScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
+import 'package:flutter_sandbox/Screen/ScreenExport.dart';
 import 'package:flutter_sandbox/Screen/StepperScreen.dart';
 import 'package:flutter_sandbox/Screen/TabbedAppBarSample%20.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
@@ -75,10 +36,10 @@ void main() {
       title: "Shunga",
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.Apptheme
-          : AppTheme.hiddendrawerTheme,
+          : AppTheme.pinktheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new BackdropScreen()),
+          body: new PinkSpringScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
