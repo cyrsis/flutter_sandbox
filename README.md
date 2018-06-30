@@ -1,3 +1,14 @@
+# Goal
+
+This acts like a template for massive widgets
+
+Few Notes about Flutter
+
+ -- Works like AutoCad
+ -- Give you full control and animation
+ -- Syntax is easy to read
+ -- It is made for C# programmer
+
 March 24, 2018 2:33 am
 This guys is really good  for animation
 
@@ -5,7 +16,8 @@ https://sergiandreplace.com/flutter-animations-the-basics/
 
 # flutter_sandbox
 
-A new Flutter application.
+The flutter sandbox design for replace Sketch
+
 
 ## Getting Started
 
