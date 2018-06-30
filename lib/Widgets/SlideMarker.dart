@@ -11,11 +11,13 @@ class SlideMarker extends StatelessWidget {
 
   double paddingBottom;
 
+  var paddingRight;
+
   SlideMarker(
       {this.markcount,
       this.color,
       double this.paddingTop,
-      double this.paddingBottom});
+      double this.paddingBottom, this.paddingRight});
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,7 @@ class SlideMarker extends StatelessWidget {
         markTickness: 2.0,
         paddingTop: paddingTop,
         paddingBottom: paddingBottom,
+        paddingRight: paddingRight,
       ),
       child: Container(),
     );
@@ -48,12 +51,14 @@ class SlideMarksPainter extends CustomPainter {
 
   double markTickness;
 
+  var paddingRight;
+
   SlideMarksPainter(
       {this.markcount,
       this.color,
       double this.markTickness,
       this.paddingTop,
-      this.paddingBottom})
+      this.paddingBottom, this.paddingRight})
       : markPaint = new Paint()
           ..color = color
           ..strokeWidth = markTickness
@@ -76,10 +81,10 @@ class SlideMarksPainter extends CustomPainter {
       }
 
       final markY = i * gap + paddingTop;
-      //x,
+      //draw a line in x start, x end,
       canvas.drawLine(
-          Offset(size.width - markwidth, markY),
-          Offset(size.width, markY),
+          Offset(size.width -paddingRight- markwidth, markY),
+          Offset(size.width -paddingRight, markY),
           markPaint);
     }
   }

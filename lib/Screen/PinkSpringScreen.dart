@@ -54,11 +54,10 @@ class _PinkSpringScreenState extends State<PinkSpringScreen> {
         //-------- SpingSlider -------
         new Expanded(
             child: new SpringSlider(
-              markcount: 12,
-              positiveColor: Theme.of(context).primaryColor,
-              negativeColor: Theme.of(context).scaffoldBackgroundColor,
-            )
-        ),
+          markcount: 12,
+          positiveColor: Theme.of(context).primaryColor,
+          negativeColor: Theme.of(context).scaffoldBackgroundColor,
+        )),
 
         //-------- Bottom Text -------
         new Container(
@@ -66,7 +65,7 @@ class _PinkSpringScreenState extends State<PinkSpringScreen> {
           child: new Row(
             children: <Widget>[
               _buildTextButton("more".toUpperCase(), false),
-
+              new Expanded(child: new Container()),
               _buildTextButton("stats".toUpperCase(), false),
             ],
           ),

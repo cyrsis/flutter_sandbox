@@ -29,6 +29,7 @@ class _SpringSliderState extends State<SpringSlider>
           color:widget.positiveColor,
           paddingTop:50.0,
           paddingBottom:50.0,
+          paddingRight:20.0,
 
         )
       ],
