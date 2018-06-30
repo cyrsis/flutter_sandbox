@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
+import 'package:flutter_sandbox/Widgets/SpringSlider.dart';
 
 class PinkSpringScreen extends StatefulWidget {
   @override
@@ -9,27 +10,24 @@ class PinkSpringScreen extends StatefulWidget {
 class _PinkSpringScreenState extends State<PinkSpringScreen> {
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      color: const Color(0xFFD2527F),
-      child: new ClipRRect(
-        borderRadius: BorderRadius.circular(15.0),
-        child: new Scaffold(
-          appBar: new AppBar(
-            brightness: Brightness.light,
-            backgroundColor: Colors.white,
-            elevation: 0.0,
-            leading: IconButton(
-                icon: Icon(
-                  Icons.menu,
-                  color: Theme.of(context).primaryColor,
-                ),
-                onPressed: null),
-            actions: <Widget>[
-              _buildTextButton('setting'.toUpperCase(), true),
-            ],
-          ),
-          body: _buildBody(),
+    return new ClipRRect(
+      borderRadius: BorderRadius.circular(15.0),
+      child: new Scaffold(
+        appBar: new AppBar(
+          brightness: Brightness.light,
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          leading: IconButton(
+              icon: Icon(
+                Icons.menu,
+                color: Theme.of(context).primaryColor,
+              ),
+              onPressed: null),
+          actions: <Widget>[
+            _buildTextButton('setting'.toUpperCase(), true),
+          ],
         ),
+        body: _buildBody(),
       ),
     );
   }
@@ -45,7 +43,7 @@ class _PinkSpringScreenState extends State<PinkSpringScreen> {
             fontWeight: FontWeight.bold),
       ),
       onPressed: () {
-        //todo
+        //todo PressButton Onp
       },
     );
   }
@@ -53,13 +51,22 @@ class _PinkSpringScreenState extends State<PinkSpringScreen> {
   Widget _buildBody() {
     return new Column(
       children: <Widget>[
-        new Expanded(child: new Container()),
+        //-------- SpingSlider -------
+        new Expanded(
+            child: new SpringSlider(
+              markcount: 12,
+              positiveColor: Theme.of(context).primaryColor,
+              negativeColor: Theme.of(context).scaffoldBackgroundColor,
+            )
+        ),
+
+        //-------- Bottom Text -------
         new Container(
           color: Theme.of(context).primaryColor,
           child: new Row(
             children: <Widget>[
               _buildTextButton("more".toUpperCase(), false),
-              new Expanded(child: new Container()),
+
               _buildTextButton("stats".toUpperCase(), false),
             ],
           ),

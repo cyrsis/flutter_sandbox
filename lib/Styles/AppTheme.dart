@@ -9,6 +9,7 @@ class AppTheme {
 
   static final ThemeData pinktheme = new ThemeData(
       primaryColor: Colors.pinkAccent,
+      scaffoldBackgroundColor: Colors.white,
       accentColor: Colors.cyan[600]);
 
   static final ThemeData iosTheme = new ThemeData(
