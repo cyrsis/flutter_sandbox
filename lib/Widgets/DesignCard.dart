@@ -11,20 +11,24 @@ class DesignCard extends StatelessWidget {
           const ListTile(
             leading: const Icon(Icons.album),
             title: const Text('The Enchanted Nightingale'),
-            subtitle: const Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+            subtitle:
+                const Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
           ),
-          new ButtonTheme.bar( // make buttons use the appropriate styles for cards
+          new ButtonTheme.bar(
+            // make buttons use the appropriate styles for cards
             child: new ButtonBar(
               children: <Widget>[
-
-
                 new FlatButton(
                   child: const Text('BUY TICKETS'),
-                  onPressed: () { /* ... */ },
+                  onPressed: () {
+                    /* ... */
+                  },
                 ),
                 new FlatButton(
                   child: const Text('LISTEN'),
-                  onPressed: () { /* ... */ },
+                  onPressed: () {
+                    /* ... */
+                  },
                 ),
               ],
             ),

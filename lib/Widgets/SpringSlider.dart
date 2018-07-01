@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Clipper/SliderClipper.dart';
+import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Widgets/SlideMarker.dart';
 
 class SpringSlider extends StatefulWidget {
@@ -22,17 +24,16 @@ class SpringSlider extends StatefulWidget {
 
 class _SpringSliderState extends State<SpringSlider>
     with TickerProviderStateMixin {
+  final double paddingTop = 50.0;
+  final double paddingBottom = 50.0;
+
+  var sliderY = 0.5;
+
   @override
   Widget build(BuildContext context) {
     return new Stack(
       children: <Widget>[
-        new SlideMarker(
-          markcount: widget.markcount,
-          color: widget.positiveColor,
-          paddingTop: 50.0,
-          paddingBottom: 50.0,
-          paddingRight: 20.0,
-        ),
+        _buildSliderWhite(),
         new ClipPath(
           clipper: new SliderClipper(),
           child: new Stack(
@@ -43,65 +44,72 @@ class _SpringSliderState extends State<SpringSlider>
               new SlideMarker(
                 markcount: widget.markcount,
                 color: widget.negativeColor,
-                paddingTop: 50.0,
-                paddingBottom: 50.0,
+                paddingTop: paddingTop,
+                paddingBottom: paddingBottom,
                 paddingRight: 20.0,
               ),
             ],
           ),
-        )
+        ),
+        new Padding(
+          padding: EdgeInsets.only(top: paddingTop, bottom: paddingBottom),
+          child: new LayoutBuilder(builder: (context, constraints) {
+            //const Offset wont solve the Big Small text,
+            //Fraction may solve it
+            //Fractiontranslation translate it child
+            var height = constraints.maxHeight;
+
+            var TopTextY = (height * (1 - sliderY));
+
+            var pointYouhave;
+
+            return new Stack(
+              children: <Widget>[
+                new Positioned(
+                  left: 30.0,
+                  top: TopTextY - 50,
+                  child: FractionalTranslation(
+                    translation: new Offset(0.0, -1.0),
+                    child: new Text(
+                      'Testing Above',
+                      style: AppStyle.Black18,
+                    ),
+                  ),
+                ),
+                new Positioned(
+                  left: 30.0,
+                  top: TopTextY + 50,
+                  child: new PointWithText(
+                      points: pointYouhave,
+                      isAboveSlider: false,
+                      isPointsYouNeed: false,
+                      color: Theme.of(context).scaffoldBackgroundColor),
+                ),
+              ],
+            );
+          }),
+        ),
       ],
+    );
+  }
+
+  Widget _buildSliderWhite() {
+    return new SlideMarker(
+      markcount: widget.markcount,
+      color: widget.positiveColor,
+      paddingTop: paddingTop,
+      paddingBottom: paddingBottom,
+      paddingRight: 20.0,
     );
   }
 }
 
-class SliderClipper extends CustomClipper<Path> {
-  @override
-  getClip(Size size) {
-    var rect = new Path();
-
-    rect.addRect(
-        new Rect.fromLTWH(0.0, size.height / 2, size.width, size.height / 2),
-        );
-
-    return rect;
-  }
+class PointWithText extends StatelessWidget {
+  PointWithText(
+      {points, bool isAboveSlider, bool isPointsYouNeed, Color color});
 
   @override
-  bool shouldReclip(CustomClipper oldClipper) {
-    return true;
-  }
-}
-
-
-class CircleRevealClipper extends CustomClipper<Rect> {
-
-  double revealpercent;
-
-  CircleRevealClipper(this.revealpercent);
-
-
-  @override
-  Rect getClip(Size size) {
-    final epicenter = new Offset(size.width / 2, size.height * 0.9);
-
-    print("epcicenter ${epicenter}");
-    double theta = atan(epicenter.dy / epicenter.dx);
-
-    final distanceToCorner = epicenter.dy /
-        sin(theta); //Max size for the screen
-
-    final radius = distanceToCorner * revealpercent;
-
-    final diameter = 2 * radius;
-
-    return new Rect.fromLTWH(
-        epicenter.dx - radius, epicenter.dy - radius, diameter, diameter);
-    //calculate the distance from top left corner to make sure fill the screen
-  }
-
-  @override
-  bool shouldReclip(CustomClipper<Rect> oldClipper) {
-    return true;
+  Widget build(BuildContext context) {
+    return new Container();
   }
 }

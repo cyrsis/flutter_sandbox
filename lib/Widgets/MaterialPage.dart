@@ -4,8 +4,6 @@ import 'package:flutter_sandbox/Models/MaterialPageModel.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 
 class MaterialPage extends StatelessWidget {
-
-
   final MaterialPageModel model;
   final double percentVisible;
 
