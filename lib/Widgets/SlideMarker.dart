@@ -7,24 +7,29 @@ class SlideMarker extends StatelessWidget {
 
   var markcount;
 
-  var color;
+  var markColor;
 
   double paddingBottom;
 
   var paddingRight;
 
+  var backgroundColor;
+
   SlideMarker(
       {this.markcount,
-      this.color,
+      this.markColor,
       double this.paddingTop,
-      double this.paddingBottom, this.paddingRight});
+      double this.paddingBottom,
+      this.paddingRight,
+      this.backgroundColor});
 
   @override
   Widget build(BuildContext context) {
     return new CustomPaint(
       painter: new SlideMarksPainter(
         markcount: markcount,
-        color: color,
+        markcolor: markColor,
+        backgroundColor: backgroundColor,
         markTickness: 2.0,
         paddingTop: paddingTop,
         paddingBottom: paddingBottom,
@@ -45,7 +50,7 @@ class SlideMarksPainter extends CustomPainter {
 
   var paddingTop;
 
-  var color;
+  var markcolor;
 
   final Paint markPaint;
 
@@ -53,22 +58,30 @@ class SlideMarksPainter extends CustomPainter {
 
   var paddingRight;
 
+  var backgroundColor;
+  var backgroundPaint;
+
   SlideMarksPainter(
       {this.markcount,
-      this.color,
+      this.markcolor,
       double this.markTickness,
       this.paddingTop,
-      this.paddingBottom, this.paddingRight})
+      this.paddingBottom,
+      this.paddingRight,
+      this.backgroundColor})
       : markPaint = new Paint()
-          ..color = color
+          ..color = markcolor
           ..strokeWidth = markTickness
           ..style = PaintingStyle.stroke
-          ..strokeCap = StrokeCap.round //Not hardish
-
-  ;
+          ..strokeCap = StrokeCap.round,
+        backgroundPaint = new Paint()
+          ..color = backgroundColor
+          ..style = PaintingStyle.fill; //Not hardish
 
   @override
   void paint(Canvas canvas, Size size) {
+    canvas.drawRect(
+        Rect.fromLTWH(0.0, 0.0, size.width, size.height), backgroundPaint);
     var painttotalHeight = size.height - paddingTop - paddingBottom;
     var gap = painttotalHeight / (markcount - 1);
 
@@ -82,13 +95,10 @@ class SlideMarksPainter extends CustomPainter {
 
       final markY = i * gap + paddingTop;
       //draw a line in x start, x end,
-      canvas.drawLine(
-          Offset(size.width -paddingRight- markwidth, markY),
-          Offset(size.width -paddingRight, markY),
-          markPaint);
+      canvas.drawLine(Offset(size.width - paddingRight - markwidth, markY),
+          Offset(size.width - paddingRight, markY), markPaint);
     }
   }
 
   bool shouldRepaint(SlideMarksPainter oldDelegate) => true;
-
 }

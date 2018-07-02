@@ -6,6 +6,7 @@ import 'package:flutter_sandbox/Clipper/SliderClipper.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Widgets/PointWithText.dart';
 import 'package:flutter_sandbox/Widgets/SlideMarker.dart';
+import 'package:flutter_sandbox/Widgets/SliderGoo.dart';
 
 class SpringSlider extends StatefulWidget {
   var markcount;
@@ -40,24 +41,19 @@ class _SpringSliderState extends State<SpringSlider>
       child: new Stack(
         children: <Widget>[
           _buildSliderWhite(),
+
           new ClipPath(
             clipper: new SliderClipper(
                 slidepercent: sliderPercent,
                 paddingTop: paddingTop,
                 paddingBottom: paddingBottom),
-            child: new Stack(
-              children: <Widget>[
-                new Container(
-                  color: widget.positiveColor, //Div
-                ),
-                new SlideMarker(
-                  markcount: widget.markcount,
-                  color: widget.negativeColor,
-                  paddingTop: paddingTop,
-                  paddingBottom: paddingBottom,
-                  paddingRight: 20.0,
-                ),
-              ],
+            child: new SlideMarker(
+              markcount: widget.markcount,
+              markColor: widget.negativeColor,
+              backgroundColor: widget.positiveColor,
+              paddingTop: paddingTop,
+              paddingBottom: paddingBottom,
+              paddingRight: 20.0,
             ),
           ),
           new Padding(
@@ -109,7 +105,8 @@ class _SpringSliderState extends State<SpringSlider>
   Widget _buildSliderWhite() {
     return new SlideMarker(
       markcount: widget.markcount,
-      color: widget.positiveColor,
+      markColor: widget.positiveColor,
+      backgroundColor: widget.negativeColor,
       paddingTop: paddingTop,
       paddingBottom: paddingBottom,
       paddingRight: 20.0,
