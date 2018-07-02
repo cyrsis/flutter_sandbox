@@ -8,6 +8,7 @@ import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
 import 'package:flutter_sandbox/Screen/ScreenExport.dart';
+import 'package:flutter_sandbox/Screen/SpingAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/StepperScreen.dart';
 import 'package:flutter_sandbox/Screen/TabbedAppBarSample%20.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
@@ -39,7 +40,7 @@ void main() {
           : AppTheme.pinktheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new PinkSpringScreen()),
+          body: new SpringAnimationScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
