@@ -5,7 +5,6 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: "^6.0.0"
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.0
@@ -16,7 +15,7 @@ dependencies:
   rxdart: "^0.16.7"
   url_launcher: "^3.0.0"
   redux: "^3.0.0"
-  flutter_redux: "^0.5.0"
+  flutter_redux: "^0.5.2"
   qr_flutter: "^1.0.0"
   redux_epics: "^0.9.0"
   fluttery: "^0.0.5"
@@ -27,6 +26,8 @@ dependencies:
   device_info: "^0.2.0"
   hex: "^0.1.1"
   flutter_stream_friends: 0.8.0
+  spritewidget: 0.9.15
+
 
 
 
@@ -170,6 +171,13 @@ flutter:
   - assets/circlek/numbella.jpg
   - assets/circlek/circlelogo.png
   - assets/circlek/map.jpg
+  - assets/weather/ic_cloudy.png
+  - assets/weather/ic_rain.png
+  - assets/weather/ic_sunny.png
+  - assets/weather/weather-bk.png
+  - assets/weather/weather-bk_enlarged.png
+  - assets/weather/weathersprites.json
+  - assets/weather/weathersprites.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

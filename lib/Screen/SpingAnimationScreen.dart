@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'dart:ui';
+import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
@@ -11,11 +11,11 @@ class SpringAnimationScreen extends StatefulWidget {
 }
 
 class _SpringAnimationScreen extends State<SpringAnimationScreen> {
-  Widget _buildTextButton(String title, bool isOnLight) {
+  _buildTextButton(String title, bool isOnLight) {
     return FlatButton(
       padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
-      child: Text("Spring Screen",
-          style: TextStyle(
+      child: Text(title,
+          style: new TextStyle(
             fontSize: 12.0,
             fontWeight: FontWeight.bold,
             color: isOnLight ? Theme.of(context).primaryColor : Colors.white,
@@ -52,6 +52,7 @@ class _SpringAnimationScreen extends State<SpringAnimationScreen> {
         ),
         body: Column(
           children: <Widget>[
+
             Expanded(
               child: SpringySlider(
                 markCount: 12,
@@ -146,13 +147,6 @@ class _SpringySliderState extends State<SpringySlider>
             paddingTop: paddingTop,
             paddingBottom: paddingBottom,
           ),
-//          new SliderDebug(
-//            sliderPercent: sliderController.state == SpringySliderState.dragging
-//                ? sliderController.draggingPercent
-//                : sliderPercent,
-//            paddingTop: paddingTop,
-//            paddingBottom: paddingBottom,
-//          ),
         ],
       ),
     );
@@ -375,7 +369,7 @@ class SliderMarksPainter extends CustomPainter {
       if (i == 0 || i == markCount - 1) {
         markWidth = largeMarkWidth;
       } else if (i == 1 || i == markCount - 2) {
-        markWidth = lerpDouble(smallMarkWidth, largeMarkWidth, 0.5);
+        markWidth = ui.lerpDouble(smallMarkWidth, largeMarkWidth, 0.5);
       }
 
       final markY = i * gap + paddingTop;
@@ -415,6 +409,7 @@ class SliderClipper extends CustomClipper<Path> {
       case SpringySliderState.springing:
         return _clipSpringing(size);
     }
+    return null;
   }
 
   Path _clipIdle(Size size) {

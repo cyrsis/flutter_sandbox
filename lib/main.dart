@@ -17,6 +17,7 @@ import 'package:flutter_sandbox/Screen/TwoViews.dart';
 import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_sandbox/Screen/AnimatedListSample.dart';
+import 'package:flutter_sandbox/Screen/WeatherScreen.dart';
 import 'package:flutter_sandbox/Styles/AppIcons.dart';
 import 'package:flutter_sandbox/Styles/AppTheme.dart';
 import 'dart:async';
@@ -36,11 +37,11 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: "Shunga",
       theme: defaultTargetPlatform == TargetPlatform.iOS
-          ? AppTheme.Apptheme
-          : AppTheme.pinktheme,
+          ? AppTheme.WeatherTheme
+          : AppTheme.WeatherTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new SpringAnimationScreen()),
+          body: new WeatherScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

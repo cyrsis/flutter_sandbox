@@ -29,6 +29,12 @@ class AppTheme {
   static final ThemeData hiddendrawerTheme = new ThemeData(
     primarySwatch: Colors.brown,
   );
+
+  static get WeatherTheme  => new ThemeData(
+    primarySwatch: Colors.blue,
+  );
+
+  
 }
 
 

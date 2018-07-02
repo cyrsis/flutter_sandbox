@@ -126,6 +126,10 @@ class AppStyle {
   static get PinkTxt =>
       new TextStyle(color: Colors.pinkAccent, fontSize: 10.0,letterSpacing: 1.0);
 
+  static get WeatherTheme  => new ThemeData(
+    primarySwatch: Colors.blue,
+  );
+
   static Bold(Color color) {
     return TextStyle(fontWeight: FontWeight.bold,color: color)  ;
   }
