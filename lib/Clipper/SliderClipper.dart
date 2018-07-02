@@ -18,7 +18,7 @@ class SliderClipper extends CustomClipper<Path> {
 
     var top = paddingTop;
     var bottom = size.height;
-    var height = bottom - top;
+    var height = bottom-paddingBottom - top;
     var percentFromBottom = 1- slidepercent;
 
     rect.addRect(

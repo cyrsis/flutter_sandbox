@@ -72,7 +72,7 @@ class SlideMarksPainter extends CustomPainter {
     var painttotalHeight = size.height - paddingTop - paddingBottom;
     var gap = painttotalHeight / (markcount - 1);
 
-    for (var i = 0; i < markcount; ++i) {
+    for (var i = 0; i < markcount; i++) {
       var markwidth = smalllMarkWidth;
       if (i == 0 || i == markcount - 1) {
         markwidth = largeMarkWidth;
