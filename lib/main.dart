@@ -39,8 +39,8 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: "Shunga",
       theme: defaultTargetPlatform == TargetPlatform.iOS
-          ? AppTheme.WeatherTheme
-          : AppTheme.WeatherTheme,
+          ? AppTheme.EggTheme
+          : AppTheme.EggTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
           body: new EggTimerScreen()),

@@ -34,6 +34,10 @@ class AppTheme {
     primarySwatch: Colors.blue,
   );
 
+  static get EggTheme => new ThemeData(
+    fontFamily: 'BebasNeue',
+  );
+
   
 }
 

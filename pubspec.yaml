@@ -198,7 +198,6 @@ flutter:
    - family: bebas-neue
      fonts:
           - asset: assets/hiddenmenu/BebasNeue-Regular.ttf
-
    - family: FlamanteRoma
      fonts:
           - asset: assets/materialpage/fonts/Flamante-Roma-Medium.ttf

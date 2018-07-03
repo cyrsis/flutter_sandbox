@@ -41,54 +41,48 @@ class _EggTimerScreenState extends State<EggTimerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Egg Timer',
-      theme: new ThemeData(
-        fontFamily: 'BebasNeue',
-      ),
-      home: new Scaffold(
-        body: new Container(
-          decoration: new BoxDecoration(
-            gradient: new LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [GRADIENT_TOP, GRADIENT_BOTTOM],
-            ),
+    return new Scaffold(
+      body: new Container(
+        decoration: new BoxDecoration(
+          gradient: new LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [GRADIENT_TOP, GRADIENT_BOTTOM],
           ),
-          child: new Center(
-            child: new Column(
-              children: [
-                new EggTimerTimeDisplay(
-                  eggTimerState: eggTimer.state,
-                  selectionTime: eggTimer.lastStartTime,
-                  countdownTime: eggTimer.currentTime,
-                ),
-                new EggTimerDial(
-                  eggTimerState: eggTimer.state,
-                  currentTime: eggTimer.currentTime,
-                  maxTime: eggTimer.maxTime,
-                  ticksPerSection: 5,
-                  onTimeSelected: _onTimeSelected,
-                  onDialStopTurning: _onDialStopTurning,
-                ),
-                new Expanded(child: new Container()),
-                new EggTimerControls(
-                  eggTimerState: eggTimer.state,
-                  onPause: () {
-                    setState(() => eggTimer.pause());
-                  },
-                  onResume: () {
-                    setState(() => eggTimer.resume());
-                  },
-                  onRestart: () {
-                    setState(() => eggTimer.restart());
-                  },
-                  onReset: () {
-                    setState(() => eggTimer.reset());
-                  },
-                ),
-              ],
-            ),
+        ),
+        child: new Center(
+          child: new Column(
+            children: [
+              new EggTimerTimeDisplay(
+                eggTimerState: eggTimer.state,
+                selectionTime: eggTimer.lastStartTime,
+                countdownTime: eggTimer.currentTime,
+              ),
+              new EggTimerDial(
+                eggTimerState: eggTimer.state,
+                currentTime: eggTimer.currentTime,
+                maxTime: eggTimer.maxTime,
+                ticksPerSection: 5,
+                onTimeSelected: _onTimeSelected,
+                onDialStopTurning: _onDialStopTurning,
+              ),
+              new Expanded(child: new Container()),
+              new EggTimerControls(
+                eggTimerState: eggTimer.state,
+                onPause: () {
+                  setState(() => eggTimer.pause());
+                },
+                onResume: () {
+                  setState(() => eggTimer.resume());
+                },
+                onRestart: () {
+                  setState(() => eggTimer.restart());
+                },
+                onReset: () {
+                  setState(() => eggTimer.reset());
+                },
+              ),
+            ],
           ),
         ),
       ),

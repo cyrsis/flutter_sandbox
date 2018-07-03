@@ -94,7 +94,7 @@ class _EggTimerTimeDisplayState extends State<EggTimerTimeDisplay> with TickerPr
               style: const TextStyle(
                 color: Colors.black,
                 fontFamily: 'BebasNeue',
-                fontSize: 150.0,
+                fontSize: 120.0,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 10.0,
               ),
