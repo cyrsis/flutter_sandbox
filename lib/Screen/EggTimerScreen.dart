@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/Widgets/EggTimer.dart';
-import 'package:flutter_sandbox/Widgets/EggTimerControls.dart';
-import 'package:flutter_sandbox/Widgets/EggTimerDial.dart';
-import 'package:flutter_sandbox/Widgets/EggTimerTimeDisplay.dart';
+import 'package:flutter_sandbox/Widgets/EggTimer/EggTimer.dart';
+import 'package:flutter_sandbox/Widgets/EggTimer/EggTimerControls.dart';
+import 'package:flutter_sandbox/Widgets/EggTimer/EggTimerDial.dart';
+import 'package:flutter_sandbox/Widgets/EggTimer/EggTimerTimeDisplay.dart';
 
 class EggTimerScreen extends StatefulWidget {
   @override

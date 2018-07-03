@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/Widgets/ZoomScaffold.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
+import 'package:flutter_sandbox/Widgets/ZooMenu/ZoomScaffold.dart';
 
 
 final otherScreen = new Screen(
   title: 'OTHER SCREEN',
   background: new DecorationImage(
-    image: new AssetImage('assets/other_screen_bk.jpg'),
+    image: new AssetImage(AppImage.other_screen_bk),
     fit: BoxFit.cover,
     colorFilter: new ColorFilter.mode(const Color(0xCC000000), BlendMode.multiply),
   ),
@@ -18,7 +19,7 @@ final otherScreen = new Screen(
           child: new Card(
             child: new Column(
               children: [
-                new Image.asset('assets/other_screen_card_photo.jpg'),
+                new Image.asset(AppImage.other_screen_card_photot),
                 new Expanded(
                   child: new Center(
                     child: new Text('This is another screen!')

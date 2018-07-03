@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Widgets/BackgroundWithRings.dart';
-import 'package:flutter_sandbox/Widgets/Rain.dart';
+import 'package:flutter_sandbox/Widgets/Weather/Rain.dart';
 import 'package:flutter_sandbox/Widgets/radial_list.dart';
 import 'package:meta/meta.dart';
 

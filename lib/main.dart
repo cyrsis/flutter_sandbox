@@ -24,6 +24,7 @@ import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_sandbox/Screen/AnimatedListSample.dart';
 import 'package:flutter_sandbox/Screen/WeatherScreen.dart';
+import 'package:flutter_sandbox/Screen/ZoomMenuScreen.dart';
 import 'package:flutter_sandbox/Styles/AppIcons.dart';
 import 'package:flutter_sandbox/Styles/AppTheme.dart';
 import 'dart:async';
@@ -49,7 +50,7 @@ void main() {
           : AppTheme.FeatureDiscoveryTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new FeatureDiscoveryScreen()),
+          body: new ZoomMenuScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

@@ -2,8 +2,8 @@ import 'dart:math';
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/Widgets/EggTimer.dart';
-import 'package:flutter_sandbox/Widgets/EggTimerDialKnob.dart';
+import 'package:flutter_sandbox/Widgets/EggTimer/EggTimer.dart';
+import 'package:flutter_sandbox/Widgets/EggTimer/EggTimerDialKnob.dart';
 import 'package:fluttery/gestures.dart';
 
 final Color GRADIENT_TOP = const Color(0xFFF5F5F5);

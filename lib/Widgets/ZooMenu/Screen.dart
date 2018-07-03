@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/Widgets/ZoomScaffold.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
+import 'package:flutter_sandbox/Widgets/ZooMenu/ZoomScaffold.dart';
 
 
 final Screen restaurantScreen = new Screen(
     title: 'THE PALEO PADDOCK',
     background: new DecorationImage(
-      image: new AssetImage('assets/wood_bk.jpg'),
+      image: new AssetImage(AppImage.wood_bk),
       fit: BoxFit.cover,
     ),
     contentBuilder: (BuildContext context) {
       return new ListView(
           children: [
             new _RestaurantCard(
-                headImageAssetPath: 'assets/eggs_in_skillet.jpg',
+                headImageAssetPath: AppImage.egggs_in_skillet,
                 icon: Icons.fastfood,
                 iconBackgroundColor: Colors.orange,
                 title: 'il domacca',
@@ -20,7 +21,7 @@ final Screen restaurantScreen = new Screen(
                 heartCount: 84
             ),
             new _RestaurantCard(
-                headImageAssetPath: 'assets/steak_on_cooktop.jpg',
+                headImageAssetPath: AppImage.steak_on_cooktop,
                 icon: Icons.local_dining,
                 iconBackgroundColor: Colors.red,
                 title: 'Mc Grady',
@@ -28,7 +29,7 @@ final Screen restaurantScreen = new Screen(
                 heartCount: 84
             ),
             new _RestaurantCard(
-                headImageAssetPath: 'assets/spoons_of_spices.jpg',
+                headImageAssetPath: AppImage.spoons_of_spices,
                 icon: Icons.fastfood,
                 iconBackgroundColor: Colors.purpleAccent,
                 title: 'Sugar & Spice',

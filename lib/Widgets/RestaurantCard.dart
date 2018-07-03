@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 
 class RestaurantCard extends StatelessWidget {
@@ -9,7 +10,7 @@ class RestaurantCard extends StatelessWidget {
         child: new Column(
           children: <Widget>[
             new Image.asset(
-              'assets/hiddenmenu/eggs_in_skillet.jpg',
+              AppImage.egggs_in_skillet,
               width: double.infinity,
               height: 150.0,
               fit: BoxFit.cover,

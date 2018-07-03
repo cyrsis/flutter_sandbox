@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/Widgets/MenuScreen.dart';
-import 'package:flutter_sandbox/Widgets/OtherScreen.dart';
-import 'package:flutter_sandbox/Widgets/Screen.dart';
-import 'package:flutter_sandbox/Widgets/ZoomScaffold.dart';
+import 'package:flutter_sandbox/Widgets/ZooMenu/MenuScreen.dart';
+import 'package:flutter_sandbox/Widgets/ZooMenu/OtherScreen.dart';
+import 'package:flutter_sandbox/Widgets/ZooMenu/Screen.dart';
+import 'package:flutter_sandbox/Widgets/ZooMenu/ZoomScaffold.dart';
 
 
 

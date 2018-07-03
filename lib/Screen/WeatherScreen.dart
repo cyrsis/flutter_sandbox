@@ -3,7 +3,7 @@ import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Widgets/Forecast.dart';
 import 'package:flutter_sandbox/Widgets/ForecastAppBar.dart';
 import 'package:flutter_sandbox/Widgets/SlidingDrawer.dart';
-import 'package:flutter_sandbox/Widgets/WeekDrawer.dart';
+import 'package:flutter_sandbox/Widgets/Weather/WeekDrawer.dart';
 import 'package:flutter_sandbox/Widgets/forecast_list.dart';
 import 'package:flutter_sandbox/Widgets/radial_list.dart';
 import 'package:meta/meta.dart';

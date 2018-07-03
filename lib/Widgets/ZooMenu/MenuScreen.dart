@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/Widgets/ZoomScaffold.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
+import 'package:flutter_sandbox/Widgets/ZooMenu/ZoomScaffold.dart';
 
 final menuScreenKey = new GlobalKey(debugLabel: 'MenuScreen');
 
@@ -167,7 +168,7 @@ class _MenuScreenState extends State<MenuScreen> with TickerProviderStateMixin {
           height: double.infinity,
           decoration: new BoxDecoration(
             image: new DecorationImage(
-              image: new AssetImage('assets/dark_grunge_bk.jpg'),
+              image: new AssetImage(AppImage.dark_grunge_bk),
               fit: BoxFit.cover,
             ),
           ),

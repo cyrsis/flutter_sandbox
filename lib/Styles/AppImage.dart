@@ -54,4 +54,12 @@ class AppImage {
   static final String board_walk ="assets/flipcarousel/board_walk.jpg";
   static final String dusk_waves="assets/flipcarousel/dusk_waves.jpg";
   static final String van_on_beach="assets/flipcarousel/van_on_beach.jpg";
+
+  static final String dark_grunge_bk="assets/hiddenmenu/dark_grunge_bk.jpg";
+  static final String egggs_in_skillet="assets/hiddenmenu/eggs_in_skillet.jpg";
+  static final String other_screen_bk="assets/hiddenmenu/other_screen_bk.jpg";
+  static final String spoons_of_spices="assets/hiddenmenu/spoons_of_spices.jpg";
+  static final String other_screen_card_photot="assets/hiddenmenu/other_screen_card_photo.jpg";
+  static final String steak_on_cooktop="assets/hiddenmenu/steak_on_cooktop.jpg";
+  static final String wood_bk="assets/hiddenmenu/wood_bk.jpg";
 }

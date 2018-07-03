@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_sandbox/Widgets/FeatureDiscovery.dart';
+import 'package:flutter_sandbox/Widgets/FeatureDiscovery/FeatureDiscovery.dart';
 
 final feature1 = "FEATURE_1";
 final feature2 = "FEATURE_2";
