@@ -73,6 +73,7 @@ class _EggTimerControlsState extends State<EggTimerControls> with TickerProvider
     }
 
     return new Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         new Opacity(
           opacity: 1.0 - restartResetFadeController.value,
