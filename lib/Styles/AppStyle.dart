@@ -130,6 +130,9 @@ class AppStyle {
     primarySwatch: Colors.blue,
   );
 
+  static get CustomSliderText =>
+      new TextStyle(color: Colors.black, fontSize: 70.0);
+
   static Bold(Color color) {
     return TextStyle(fontWeight: FontWeight.bold,color: color)  ;
   }
