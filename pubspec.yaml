@@ -26,7 +26,8 @@ dependencies:
   device_info: "^0.2.0"
   hex: "^0.1.1"
   flutter_stream_friends: 0.8.0
-  spritewidget: 0.9.15
+  spritewidget: "^0.9.16"
+  fluttery_audio: 0.0.3
 
 
 
@@ -181,6 +182,10 @@ flutter:
   - assets/flipcarousel/board_walk.jpg
   - assets/flipcarousel/dusk_waves.jpg
   - assets/flipcarousel/van_on_beach.jpg
+  - assets/tinder/photo_1.jpg
+  - assets/tinder/photo_2.jpg
+  - assets/tinder/photo_3.jpg
+  - assets/tinder/photo_4.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

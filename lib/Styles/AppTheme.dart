@@ -46,6 +46,11 @@ class AppTheme {
     primarySwatch: Colors.blue,
   );
 
+  static get TinderTheme => new ThemeData(
+    primaryColorBrightness: Brightness.light,
+    primarySwatch: Colors.blue,
+  );
+
   
 }
 

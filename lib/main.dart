@@ -11,6 +11,7 @@ import 'package:flutter_sandbox/Screen/CustomeSliderScreen.dart';
 import 'package:flutter_sandbox/Screen/EggTimerScreen.dart';
 import 'package:flutter_sandbox/Screen/FeatureDiscoveryScreen.dart';
 import 'package:flutter_sandbox/Screen/FlipCarouselScreen.dart';
+import 'package:flutter_sandbox/Screen/MusicPlayerScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
 import 'package:flutter_sandbox/Screen/ScreenExport.dart';
@@ -19,6 +20,7 @@ import 'package:flutter_sandbox/Screen/StepperScreen.dart';
 import 'package:flutter_sandbox/Screen/TabbedAppBarSample%20.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
 import 'package:flutter_sandbox/Screen/ThemeScreen.dart';
+import 'package:flutter_sandbox/Screen/TinderScreen.dart';
 import 'package:flutter_sandbox/Screen/TwoViews.dart';
 import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 import 'package:flutter/foundation.dart';
@@ -46,11 +48,11 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: "Shunga",
       theme: defaultTargetPlatform == TargetPlatform.iOS
-          ? AppTheme.FlipCarouselTheme
-          : AppTheme.FeatureDiscoveryTheme,
+          ? AppTheme.TinderTheme
+          : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new ZoomMenuScreen()),
+          body: new MusicPlayerScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

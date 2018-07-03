@@ -35,7 +35,6 @@ class CircleKProductCard extends StatelessWidget {
                 ),
                 new Row(
                   children: <Widget>[
-                    //Todo Icon Wiget
                     new Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: new Container(

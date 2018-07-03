@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
-import 'package:flutter_sandbox/Widgets/Forecast.dart';
+import 'package:flutter_sandbox/Widgets/Weather/Forecast.dart';
 import 'package:flutter_sandbox/Widgets/ForecastAppBar.dart';
 import 'package:flutter_sandbox/Widgets/SlidingDrawer.dart';
 import 'package:flutter_sandbox/Widgets/Weather/WeekDrawer.dart';

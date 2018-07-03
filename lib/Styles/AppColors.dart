@@ -9,5 +9,9 @@ class AppColors {
   static const Color mediumslateblue = const Color(0xFF6D7AE5);
   static const Color grey = const Color(0xFF7F7F7F);
 
+  static const Color accentColor = const Color(0xFFf08f8f);
+  static const Color lightAccentColor = const Color(0xFFFFAFAF);
+  static const Color darkAccentColor = const Color(0xFFD06F6F);
+
 
 }
