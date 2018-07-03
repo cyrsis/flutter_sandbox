@@ -11,6 +11,7 @@ import 'package:flutter_sandbox/Screen/CustomeSliderScreen.dart';
 import 'package:flutter_sandbox/Screen/EggTimerScreen.dart';
 import 'package:flutter_sandbox/Screen/FeatureDiscoveryScreen.dart';
 import 'package:flutter_sandbox/Screen/FlipCarouselScreen.dart';
+import 'package:flutter_sandbox/Screen/MaterialPageReveal.dart';
 import 'package:flutter_sandbox/Screen/MusicPlayerScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
@@ -52,7 +53,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new MusicPlayerScreen()),
+          body: new MaterialPageReveal()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
