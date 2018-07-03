@@ -192,7 +192,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-
+   - family: BebasNeue
+     fonts:
+          - asset: assets/fonts/BebasNeue-Regular.ttf
    - family: bebas-neue
      fonts:
           - asset: assets/hiddenmenu/BebasNeue-Regular.ttf
