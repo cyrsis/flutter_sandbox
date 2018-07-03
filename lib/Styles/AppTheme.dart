@@ -38,6 +38,10 @@ class AppTheme {
     fontFamily: 'BebasNeue',
   );
 
+  static get FlipCarouselTheme => new ThemeData(
+    primarySwatch: Colors.blue,
+  );
+
   
 }
 

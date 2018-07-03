@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_sandbox/Animation/ArtistsDetailsAnimator.dart';
 
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/CustomeSliderScreen.dart';
 import 'package:flutter_sandbox/Screen/EggTimerScreen.dart';
+import 'package:flutter_sandbox/Screen/FlipCarouselScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
 import 'package:flutter_sandbox/Screen/ScreenExport.dart';
@@ -34,16 +36,17 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 const API_KEY = "AIzaSyBBEcmCP4ElyW1RR11Yy93dlJkQSC0LYRU";
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
   runApp(new MaterialApp(
       debugShowMaterialGrid: false,
       debugShowCheckedModeBanner: false,
       title: "Shunga",
       theme: defaultTargetPlatform == TargetPlatform.iOS
-          ? AppTheme.EggTheme
-          : AppTheme.EggTheme,
+          ? AppTheme.FlipCarouselTheme
+          : AppTheme.FlipCarouselTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new EggTimerScreen()),
+          body: new FlipCarouselScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
