@@ -50,4 +50,8 @@ class AppImage {
       "assets/weather/weather-bk_enlarged.png";
   static final String weatherspritesjson = "assets/weather/weathersprites.json";
   static final String weathersprites = "assets/weather/weathersprites.png";
+
+  static final String board_walk ="assets/flipcarousel/board_walk.jpg";
+  static final String dusk_waves="assets/flipcarousel/dusk_waves.jpg";
+  static final String van_on_beach="assets/flipcarousel/van_on_beach.jpg";
 }

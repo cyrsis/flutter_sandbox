@@ -178,7 +178,9 @@ flutter:
   - assets/weather/weather-bk_enlarged.png
   - assets/weather/weathersprites.json
   - assets/weather/weathersprites.png
-
+  - assets/flipcarousel/board_walk.jpg
+  - assets/flipcarousel/dusk_waves.jpg
+  - assets/flipcarousel/van_on_beach.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -192,6 +194,17 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+
+   - family: petita
+     fonts:
+          - asset: assets/fonts/PetitaMedium.ttf
+          - asset: assets/fonts/PetitaBold.ttf
+            weight: 700
+          - asset: assets/fonts/PetitaLight.ttf
+            weight: 300
+   - family: gidole
+     fonts:
+         - asset: assets/fonts/Gidole-Regular.ttf
    - family: BebasNeue
      fonts:
           - asset: assets/fonts/BebasNeue-Regular.ttf
