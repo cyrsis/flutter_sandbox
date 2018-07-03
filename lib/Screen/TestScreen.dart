@@ -8,6 +8,25 @@ class TestScreen extends StatefulWidget {
 class _TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
-    return new Container();
+    return Column(
+      children: <Widget>[
+        new Expanded(
+          child: AspectRatio(
+            aspectRatio: 1.0,
+            child: new RaisedButton(
+              padding: EdgeInsets.all(20.0),
+              color: Theme.of(context).accentColor,
+              elevation: 4.0,
+              shape: new CircleBorder(),
+              splashColor: Colors.blueGrey,
+              child: const Text('Click me'),
+              onPressed: () {
+                //todo
+              },
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }

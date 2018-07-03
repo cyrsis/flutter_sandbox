@@ -81,7 +81,7 @@ class SliderRender extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-        width: totalwidth,
+        width: totalwidth+ 6.0,
         height: 30.0,
         decoration: new BoxDecoration(
           color: negativeColor,

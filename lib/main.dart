@@ -42,7 +42,7 @@ void main() {
           : AppTheme.WeatherTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new CustomeSliderScreen()),
+          body: new TestScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
