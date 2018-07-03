@@ -42,6 +42,10 @@ class AppTheme {
     primarySwatch: Colors.blue,
   );
 
+  static get FeatureDiscoveryTheme   => new ThemeData(
+    primarySwatch: Colors.blue,
+  );
+
   
 }
 
