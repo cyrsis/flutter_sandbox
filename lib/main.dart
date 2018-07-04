@@ -7,7 +7,9 @@ import 'package:flutter_sandbox/Animation/ArtistsDetailsAnimator.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
+import 'package:flutter_sandbox/Screen/CartBloc/CartBloCScreen.dart';
 import 'package:flutter_sandbox/Screen/CustomeSliderScreen.dart';
+import 'package:flutter_sandbox/Screen/DynamicThemeScreen.dart';
 import 'package:flutter_sandbox/Screen/EggTimerScreen.dart';
 import 'package:flutter_sandbox/Screen/FeatureDiscoveryScreen.dart';
 import 'package:flutter_sandbox/Screen/FlipCarouselScreen.dart';
@@ -53,7 +55,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new MaterialPageReveal()),
+          body: new CartBloCScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

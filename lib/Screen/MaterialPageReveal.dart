@@ -6,17 +6,13 @@ import 'package:flutter_sandbox/Widgets/MaterialReveal/PageReveal.dart';
 import 'package:flutter_sandbox/Widgets/MaterialReveal/PagerIndicator.dart';
 import 'package:flutter_sandbox/Widgets/MaterialReveal/PagesModel.dart';
 
-
-
-
 class MaterialPageReveal extends StatefulWidget {
-
   @override
   _MaterialPageRevealState createState() => new _MaterialPageRevealState();
 }
 
-class _MaterialPageRevealState extends State<MaterialPageReveal> with TickerProviderStateMixin {
-
+class _MaterialPageRevealState extends State<MaterialPageReveal>
+    with TickerProviderStateMixin {
   StreamController<SlideUpdate> slideUpdateStream;
   AnimatedPageDragger animatedPageDragger;
 
@@ -87,13 +83,13 @@ class _MaterialPageRevealState extends State<MaterialPageReveal> with TickerProv
     return new Scaffold(
       body: new Stack(
         children: [
-          new Page(
+          new MaterialPages(
             viewModel: pages[activeIndex],
             percentVisible: 1.0,
           ),
           new PageReveal(
             revealPercent: slidePercent,
-            child: new Page(
+            child: new MaterialPages(
               viewModel: pages[nextPageIndex],
               percentVisible: slidePercent,
             ),

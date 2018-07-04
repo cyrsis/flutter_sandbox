@@ -72,4 +72,18 @@ class AppImage {
   static final String tinderPhoto2 = "assets/tinder/photo_2.jpg";
   static final String tinderPhoto3 = "assets/tinder/photo_3.jpg";
   static final String tinderPhoto4 = "assets/tinder/photo_4.jpg";
+
+  static final String materialbanks = "assets/materialpage/banks.png";
+  static final String materialhotels = "assets/materialpage/hotels.png";
+  static final String materialKey_old = "assets/materialpage/key.old.png";
+  static final String materialKey = "assets/materialpage/key.png";
+  static final String materialProblemstatement =
+      "assets/materialpage/problemstatment.png";
+  static final String materialShoppingCartOld =
+      "assets/materialpage/shopping_cart.old.png";
+  static final String materialShoppingCart =
+      "assets/materialpage/shopping_cart.png";
+  static final String materialStores = "assets/materialpage/stores.png";
+  static final String materialWalletOld = "assets/materialpage/wallet.old.png";
+  static final String materialWallet = "assets/materialpage/wallet.png";
 }

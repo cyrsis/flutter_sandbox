@@ -51,6 +51,10 @@ class AppTheme {
     primarySwatch: Colors.blue,
   );
 
+  static get CartBloc => ThemeData(
+      primaryColor: Colors.white
+  );
+
   
 }
 

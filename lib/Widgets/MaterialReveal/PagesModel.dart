@@ -1,35 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
 
 final pages = [
-  new PageViewModel(
+  new MaterialPageViewModel(
       const Color(0xFF678FB4),
-      'assets/hotels.png',
+      AppImage.materialhotels,
       'Hotels',
       'All hotels and hostels are sorted by hospitality rating',
-      'assets/key.png'
+      AppImage.materialKey
   ),
-  new PageViewModel(
+  new MaterialPageViewModel(
       const Color(0xFF65B0B4),
-      'assets/banks.png',
+      AppImage.materialbanks,
       'Banks',
       'We carefully verify all banks before adding them into the app',
-      'assets/wallet.png'
+      AppImage.materialWallet
   ),
-  new PageViewModel(
+  new MaterialPageViewModel(
     const Color(0xFF9B90BC),
-    'assets/stores.png',
+    AppImage.materialStores,
     'Store',
     'All local stores are categorized for your convenience',
-    'assets/shopping_cart.png',
+    AppImage.materialShoppingCart,
   ),
 ];
 
-class Page extends StatelessWidget {
+class MaterialPages extends StatelessWidget {
 
-  final PageViewModel viewModel;
+  final MaterialPageViewModel viewModel;
   final double percentVisible;
 
-  Page({
+  MaterialPages({
     this.viewModel,
     this.percentVisible = 1.0,
   });
@@ -90,14 +91,14 @@ class Page extends StatelessWidget {
   }
 }
 
-class PageViewModel {
+class MaterialPageViewModel {
   final Color color;
   final String heroAssetPath;
   final String title;
   final String body;
   final String iconAssetPath;
 
-  PageViewModel(
+  MaterialPageViewModel(
     this.color,
     this.heroAssetPath,
     this.title,

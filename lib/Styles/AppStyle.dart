@@ -133,6 +133,12 @@ class AppStyle {
   static get CustomSliderText =>
       new TextStyle(color: Colors.black, fontSize: 70.0);
 
+  static get SubTextStyleWhite => new TextStyle(
+      fontFamily: AppFrontsName.profileFonts,
+      fontSize: 16.0,
+      color: Colors.white70,
+      fontWeight: FontWeight.w700);
+
   static Bold(Color color) {
     return TextStyle(fontWeight: FontWeight.bold,color: color)  ;
   }

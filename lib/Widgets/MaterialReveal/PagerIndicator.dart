@@ -77,7 +77,7 @@ enum SlideDirection {
 }
 
 class PagerIndicatorViewModel {
-  final List<PageViewModel> pages;
+  final List<MaterialPageViewModel> pages;
   final int activeIndex;
   final SlideDirection slideDirection;
   final double slidePercent;

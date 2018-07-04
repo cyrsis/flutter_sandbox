@@ -19,7 +19,6 @@ export 'package:flutter_sandbox/Screen/LayOutScreen.dart';
 export 'package:flutter_sandbox/Screen/LifeCycleScreen.dart';
 export 'package:flutter_sandbox/Screen/LoginScreen.dart';
 export 'package:flutter_sandbox/Screen/MapViewScreen.dart';
-export 'package:flutter_sandbox/Screen/MaterialPageRevealScreen.dart';
 export 'package:flutter_sandbox/Screen/RestaruarntAnimationScreen.dart';
 export 'package:flutter_sandbox/Screen/RowColScreen.dart';
 export 'package:flutter_sandbox/Screen/SilverAppBarScreen.dart';
