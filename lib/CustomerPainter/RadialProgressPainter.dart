@@ -12,10 +12,10 @@ class RadialProgressPainter extends CustomPainter {
   double completePercent;
 
   RadialProgressPainter(
-      {MaterialColor this.lineColor,
-      MaterialAccentColor this.completeColor,
-      double this.completePercent,
-      double this.width});
+      {MaterialColor this.lineColor = Colors.amber,
+      MaterialAccentColor this.completeColor = Colors.blueAccent,
+      double this.completePercent = 10.0,
+      double this.width = 5.0});
 
   @override
   void paint(Canvas canvas, Size size) {

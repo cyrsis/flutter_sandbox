@@ -3,8 +3,6 @@ import 'package:flutter_sandbox/Widgets/Tinder/CardStack.dart';
 import 'package:flutter_sandbox/Widgets/Tinder/MatchEngine.dart';
 import 'package:flutter_sandbox/Widgets/Tinder/TinderProfiles.dart';
 
-
-
 class TinderScreen extends StatefulWidget {
   @override
   _TinderScreenState createState() => new _TinderScreenState();

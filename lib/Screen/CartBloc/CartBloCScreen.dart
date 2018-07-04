@@ -33,16 +33,17 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Bloc"),
         actions: <Widget>[
-          StreamBuilder<int>(
+          new StreamBuilder(
             stream: cartBloc.itemCount,
             initialData: 0,
-            builder: (context, snapshot) => CartButton(
+            builder: (context, snapshot) =>
+                new CartButton(
                   itemCount: snapshot.data,
                   onPressed: () {
                     Navigator.of(context).pushNamed(BlocCartPage.routeName);
                   },
                 ),
-          )
+          ),
         ],
       ),
       body: ProductGrid(),
