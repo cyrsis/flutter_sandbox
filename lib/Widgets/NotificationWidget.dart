@@ -5,7 +5,7 @@ class NotificationWidget extends StatefulWidget {
   final String title;
   final String subtitle;
 
-  const NotificationWidget({Key key, this.title, this.subtitle})
+  NotificationWidget({Key key, this.title, this.subtitle})
       : super(key: key);
 
   @override
