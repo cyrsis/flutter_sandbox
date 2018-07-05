@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Models/Stock.dart';
+import 'package:flutter_sandbox/Models/Stock/StockHomeTab.dart';
 import 'package:flutter_sandbox/Models/Stock/StockMenuItem.dart';
+import 'package:flutter_sandbox/Models/StockData.dart';
 import 'package:flutter_sandbox/String/StockString.dart';
 
 class StockScreen extends StatefulWidget {
@@ -17,6 +20,9 @@ class _StockScreenState extends State<StockScreen>
 
   bool _isSearching = false;
   bool _autorefresh = false;
+  var stocks = new StockData();
+
+  static const List<String> portfolioSymbols = const <String>['AAPL','FIZZ', 'FIVE', 'FLAT', 'ZINC', 'ZNGA'];
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +33,7 @@ class _StockScreenState extends State<StockScreen>
           appBar: isSearching ? _buildSearchBar() : _buildAppBar(),
           body: new TabBarView(
             children: <Widget>[
-              _buildStockTab(context, StockHomeTab.market, widget.stocks.allSymbols),
+              _buildStockTab(context, StockHomeTab.market, stocks.allSymbols),
               _buildStockTab(context, StockHomeTab.portfolio, portfolioSymbols),
             ],
           )),
@@ -88,7 +94,7 @@ class _StockScreenState extends State<StockScreen>
       bottom: new TabBar(
         tabs: <Widget>[
           new Tab(text: "market".toUpperCase()),
-          new Tab(text: "profolio".toUpperCase()),
+         // new Tab(text: "profolio".toUpperCase()),
         ],
       ),
     );
@@ -102,6 +108,32 @@ class _StockScreenState extends State<StockScreen>
 
   _buildStockTab(BuildContext context, market, allSymbols) {
 
+    return new AnimatedBuilder(
+      key: new ValueKey<StockHomeTab>(market),
+      animation: new Listenable.merge(<Listenable>[_searchQuery, stocks]),
+      builder: (BuildContext context, Widget child) {
+        return _buildStockList(context, _filterBySearchQuery(_getStockList(stocks, allSymbols)).toList(), market);
+      },
+    );
+
+
+  }
+
+  _buildStockList(BuildContext context, list, market) {
+    
+  }
+
+  _getStockList(StockData stocks, symbols) {
+
+    symbols.map<Stock>((String symbol) => stocks[symbol])
+        .where((Stock stock) => stock != null);
+  }
+
+  _filterBySearchQuery(stocks) {
+    if (_searchQuery.text.isEmpty)
+      return stocks;
+    final RegExp regexp = new RegExp(_searchQuery.text, caseSensitive: false);
+    return stocks.where((Stock stock) => stock.symbol.contains(regexp));
 
   }
 }
