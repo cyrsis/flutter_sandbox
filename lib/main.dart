@@ -13,6 +13,7 @@ import 'package:flutter_sandbox/Screen/DynamicThemeScreen.dart';
 import 'package:flutter_sandbox/Screen/EggTimerScreen.dart';
 import 'package:flutter_sandbox/Screen/FeatureDiscoveryScreen.dart';
 import 'package:flutter_sandbox/Screen/FlipCarouselScreen.dart';
+import 'package:flutter_sandbox/Screen/ImagePickerScreen.dart';
 import 'package:flutter_sandbox/Screen/MaterialPageReveal.dart';
 import 'package:flutter_sandbox/Screen/MusicPlayerScreen.dart';
 import 'package:flutter_sandbox/Screen/RadialProgressScreen.dart';
@@ -56,7 +57,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new RadialProgressScreen()),
+          body: new ImagePickerScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

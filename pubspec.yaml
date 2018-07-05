@@ -28,6 +28,7 @@ dependencies:
   flutter_stream_friends: 0.8.0
   spritewidget: "^0.9.16"
   fluttery_audio: 0.0.3
+  image_picker:
 
 
 
