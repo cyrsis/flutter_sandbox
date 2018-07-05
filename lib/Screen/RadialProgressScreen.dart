@@ -12,23 +12,21 @@ class _RadialProgressScreenState extends State<RadialProgressScreen>
     with SingleTickerProviderStateMixin {
   AnimationController percentAnimationController;
 
+  var newPercecentage = 0.0;
 
-  var newPercecentage= 0.0;
-
-  double percent =30.0;
-
+  double percent = 30.0;
 
   @override
   void initState() {
     super.initState();
     percentAnimationController = new AnimationController(
         vsync: this, duration: new Duration(milliseconds: 1200))
-    ..addListener(() {
-      setState(() {
-        percent= ui.lerpDouble(percent,newPercecentage , percentAnimationController.value);
+      ..addListener(() {
+        setState(() {
+          percent = ui.lerpDouble(
+              percent, newPercecentage, percentAnimationController.value);
+        });
       });
-    })
-    ;
   }
 
   @override
@@ -50,9 +48,7 @@ class _RadialProgressScreenState extends State<RadialProgressScreen>
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: new CustomPaint(
-                painter: new RadialProgressPainter(
-                  completePercent: percent
-                ),
+                painter: new RadialProgressPainter(completePercent: percent),
                 child: new RaisedButton(
                   color: Colors.teal,
                   shape: new CircleBorder(),
@@ -63,10 +59,9 @@ class _RadialProgressScreenState extends State<RadialProgressScreen>
                     setState(() {
                       percent = newPercecentage;
                       newPercecentage += 10;
-                      if (newPercecentage>100.0) {
-                        percent =0.0;
-                        newPercecentage=0.0;
-
+                      if (newPercecentage > 100.0) {
+                        percent = 0.0;
+                        newPercecentage = 0.0;
                       }
 
                       percentAnimationController.forward(from: 0.0);

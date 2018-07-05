@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:stocks/StockConfiguration.dart';
+import 'package:flutter_sandbox/Screen/Stock/StockConfiguration.dart';
 
 
 class StockSettings extends StatefulWidget {

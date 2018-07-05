@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Models/Stock.dart';
-import 'package:flutter_sandbox/Models/Stock/StockHomeTab.dart';
-import 'package:flutter_sandbox/Models/Stock/StockMenuItem.dart';
 import 'package:flutter_sandbox/Models/StockData.dart';
+import 'package:flutter_sandbox/Screen/Stock/StockHome.dart';
 import 'package:flutter_sandbox/String/StockString.dart';
 
 class StockScreen extends StatefulWidget {

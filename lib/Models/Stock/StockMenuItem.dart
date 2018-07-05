@@ -1,1 +1,0 @@
-enum StockMenuItem { autorefresh, refresh, speedUp, speedDown }

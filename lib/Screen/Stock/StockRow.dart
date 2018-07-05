@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:stocks/StockArrowPainter.dart';
-import 'package:stocks/StockData.dart';
+import 'package:flutter_sandbox/Screen/Stock/StockArrowPainter.dart';
+import 'package:flutter_sandbox/Screen/Stock/StockData.dart';
 
 
 typedef void StockRowActionCallback(Stock stock);

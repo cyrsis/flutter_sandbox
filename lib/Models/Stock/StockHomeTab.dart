@@ -1,1 +1,0 @@
-enum StockHomeTab { market, portfolio }

@@ -5,13 +5,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show debugDumpRenderTree, debugDumpLayerTree, debugDumpSemanticsTree, DebugSemanticsDumpOrder;
 import 'package:flutter/scheduler.dart' show timeDilation;
-import 'package:stocks/StockConfiguration.dart';
-import 'package:stocks/StockData.dart';
-import 'package:stocks/StockList.dart';
-import 'package:stocks/StockString.dart';
-import 'package:stocks/StockSymbolPage.dart';
-import 'package:stocks/Widget/NotImplementedDialog.dart';
-
+import 'package:flutter_sandbox/Screen/Stock/StockConfiguration.dart';
+import 'package:flutter_sandbox/Screen/Stock/StockData.dart';
+import 'package:flutter_sandbox/Screen/Stock/StockList.dart';
+import 'package:flutter_sandbox/Screen/Stock/StockSymbolPage.dart';
+import 'package:flutter_sandbox/String/StockString.dart';
+import 'package:flutter_sandbox/Widgets/NotImplementedDialog.dart';
 
 typedef void ModeUpdater(StockMode mode);
 
