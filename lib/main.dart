@@ -57,7 +57,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new ImagePickerScreen()),
+          body: new RadialProgressScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

@@ -1,3 +1,5 @@
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/CustomerPainter/RadialProgressPainter.dart';
 
@@ -8,21 +10,31 @@ class RadialProgressScreen extends StatefulWidget {
 
 class _RadialProgressScreenState extends State<RadialProgressScreen>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  AnimationController percentAnimationController;
 
-  var completePercent = 30.0;
+
+  var newPercecentage= 0.0;
+
+  double percent =30.0;
+
 
   @override
   void initState() {
     super.initState();
-    _controller = new AnimationController(
-        vsync: this, duration: new Duration(milliseconds: 1200));
+    percentAnimationController = new AnimationController(
+        vsync: this, duration: new Duration(milliseconds: 1200))
+    ..addListener(() {
+      setState(() {
+        percent= ui.lerpDouble(percent,newPercecentage , percentAnimationController.value);
+      });
+    })
+    ;
   }
 
   @override
   void dispose() {
     super.dispose();
-    _controller.dispose();
+    percentAnimationController.dispose();
   }
 
   @override
@@ -39,7 +51,7 @@ class _RadialProgressScreenState extends State<RadialProgressScreen>
               padding: const EdgeInsets.all(16.0),
               child: new CustomPaint(
                 painter: new RadialProgressPainter(
-                  completePercent: completePercent
+                  completePercent: percent
                 ),
                 child: new RaisedButton(
                   color: Colors.teal,
@@ -49,10 +61,15 @@ class _RadialProgressScreenState extends State<RadialProgressScreen>
                   splashColor: Colors.blueGrey,
                   onPressed: () {
                     setState(() {
-                      completePercent +=10.0;
-                      if (completePercent==100) {
-                        completePercent =0.0;
+                      percent = newPercecentage;
+                      newPercecentage += 10;
+                      if (newPercecentage>100.0) {
+                        percent =0.0;
+                        newPercecentage=0.0;
+
                       }
+
+                      percentAnimationController.forward(from: 0.0);
                     });
                   },
                 ),
