@@ -63,21 +63,13 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
   }
 
   Future _selectImagefromGallery() async {
-
     galleryfile = await ImagePicker.pickImage(source: ImageSource.gallery);
-    setState(() {
-
-
-
-    });
-
+    setState(() {});
   }
 
   Future _selectImageFromCamera() async {
-     camerafile = await ImagePicker.pickImage(source: ImageSource.camera);
-    setState(() {
-
-    });
+    camerafile = await ImagePicker.pickImage(source: ImageSource.camera);
+    setState(() {});
   }
 
   _displayImageFiles(File file) {

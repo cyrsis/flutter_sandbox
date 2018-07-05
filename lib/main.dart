@@ -30,7 +30,6 @@ import 'package:flutter_sandbox/Screen/TinderScreen.dart';
 import 'package:flutter_sandbox/Screen/TwoViews.dart';
 import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_sandbox/Screen/AnimatedListSample.dart';
 import 'package:flutter_sandbox/Screen/WeatherScreen.dart';
 import 'package:flutter_sandbox/Screen/ZoomMenuScreen.dart';
 import 'package:flutter_sandbox/Styles/AppIcons.dart';
@@ -58,7 +57,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new ImagePickerScreen()),
+          body: new TestScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()

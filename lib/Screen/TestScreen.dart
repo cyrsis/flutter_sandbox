@@ -1,43 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/CustomerPainter/RadialProgressPainter.dart';
+import 'package:flutter_sandbox/Clipper/BottomWaveClipper.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
 
-class TestScreen extends StatefulWidget {
-  @override
-  _TestScreenState createState() => new _TestScreenState();
-}
-
-class _TestScreenState extends State<TestScreen> {
-  var percent =20.0;
-
+class TestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        new Expanded(
-          child: AspectRatio(
-            aspectRatio: 1.0,
-            child: new CustomPaint(
-              painter:new  RadialProgressPainter(
-                lineColor:Colors.amber,
-                completeColor:Colors.blueAccent,
-                completePercent:percent,
-                width:8.0,
-              ),
-              child: new RaisedButton(
-                padding: EdgeInsets.all(20.0),
-                color: Theme.of(context).accentColor,
-                elevation: 4.0,
-                shape: new CircleBorder(),
-                splashColor: Colors.blueGrey,
-                child: const Text('Click me'),
-                onPressed: () {
-                  //todo
-                },
-              ),
-            ),
-          ),
-        ),
-      ],
+    return new Container(
+      width: double.infinity,
+      height: double.infinity,
+      child: new ClipPath(
+        clipper: new BottomWaveClipper(),
+        child: new Image.asset(
+            AppImage.portfolio1 ,
+            fit: BoxFit.cover),
+
+      ),
     );
   }
 }

@@ -1,35 +1,32 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:flutter_sandbox/Fonts/ProfileFronts.dart';
+
 /// QuickActions represents the horizontal list of rectangular buttons below the header
 class QuickAction extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    final blueGradient = const LinearGradient(
-        colors: const <Color>[
-          const Color(0xFF0075D1),
-          const Color(0xFF00A2E3),
-        ],
-        stops: const <double>[0.4, 0.6],
-        begin: Alignment.topRight,
-        end: Alignment.bottomLeft);
+    final blueGradient = const LinearGradient(colors: const <Color>[
+      const Color(0xFF0075D1),
+      const Color(0xFF00A2E3),
+    ], stops: const <double>[
+      0.4,
+      0.6
+    ], begin: Alignment.topRight, end: Alignment.bottomLeft);
+
     final purpleGraient = const LinearGradient(
-        colors: const <Color>[
-          const Color(0xFF882DEB),
-          const Color(0xFF9A4DFF)
-        ],
+        colors: const <Color>[const Color(0xFF882DEB), const Color(0xFF9A4DFF)],
         stops: const <double>[0.5, 0.7],
         begin: Alignment.topLeft,
         end: Alignment.bottomRight);
-    final redGradient = const LinearGradient(
-        colors: const <Color>[
-          const Color(0xFFBA110E),
-          const Color(0xFFCF3110),
-        ],
-        stops: const <double>[0.6, 0.8],
-        begin: Alignment.bottomRight,
-        end: Alignment.topLeft);
+
+    final redGradient = const LinearGradient(colors: const <Color>[
+      const Color(0xFFBA110E),
+      const Color(0xFFCF3110),
+    ], stops: const <double>[
+      0.6,
+      0.8
+    ], begin: Alignment.bottomRight, end: Alignment.topLeft);
 
     return new Container(
       constraints: const BoxConstraints(maxHeight: 120.0),
@@ -42,17 +39,13 @@ class QuickAction extends StatelessWidget {
                 left: 10.0, bottom: 20.0, right: 10.0, top: 10.0),
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              _buildAction(
-                  "Live\nBroadcast", () {}, Colors.blue, blueGradient,
+              _buildAction("Live\nBroadcast", () {}, Colors.blue, blueGradient,
                   new AssetImage("assets/profile/microphone.png")),
-              _buildAction(
-                  "My\nWallet", () {}, Colors.purple, purpleGraient,
+              _buildAction("My\nWallet", () {}, Colors.purple, purpleGraient,
                   new AssetImage("assets/profile/wallet.png")),
-              _buildAction(
-                  "Game\nCenter", () {}, Colors.red, redGradient,
+              _buildAction("Game\nCenter", () {}, Colors.red, redGradient,
                   new AssetImage("assets/profile/joystick.png")),
-            ]
-        ),
+            ]),
       ),
     );
   }
@@ -75,13 +68,13 @@ class QuickAction extends StatelessWidget {
             shape: BoxShape.rectangle,
             borderRadius: new BorderRadius.circular(10.0),
             boxShadow: <BoxShadow>[
-              new BoxShadow(color: Colors.black38,
+              new BoxShadow(
+                  color: Colors.black38,
                   blurRadius: 2.0,
                   spreadRadius: 1.0,
                   offset: new Offset(0.0, 1.0)),
             ],
-            gradient: gradient
-        ),
+            gradient: gradient),
         child: new Stack(
           children: <Widget>[
             new Opacity(
@@ -134,5 +127,4 @@ class _BackgroundImageClipper extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) => false;
-
 }

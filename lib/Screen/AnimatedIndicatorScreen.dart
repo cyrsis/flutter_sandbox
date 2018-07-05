@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
+import 'package:flutter_sandbox/CustomerPainter/TabIndicatorPainter.dart';
 
 class AnimatedIndicatorScreen extends StatefulWidget {
   @override
@@ -99,7 +100,7 @@ class _TabIndicatorState extends State<TabIndicator>
         child: new CustomPaint(
             size: new Size(MediaQuery.of(context).size.width,
                 MediaQuery.of(context).size.height),
-            painter: new _TabIndicatorPainter(
+            painter: new TabIndicatorPainter(
                 dxTarget: dxTargetAnim.value,
                 dxEntry: dxEntryAnim.value,
                 dy: height / 2,
@@ -166,39 +167,3 @@ class _TabIndicatorState extends State<TabIndicator>
   }
 }
 
-class _TabIndicatorPainter extends CustomPainter {
-  Paint painter;
-  final double dxTarget;
-  final double dxEntry;
-  final double radius;
-  final double dy;
-
-  _TabIndicatorPainter(
-      {this.dxTarget = 200.0,
-      this.dxEntry = 50.0,
-      this.radius = 25.0,
-      this.dy = 25.0}) {
-    painter = new Paint()
-      ..color = Colors.white
-      ..style = PaintingStyle.fill;
-  }
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    bool left2right = dxEntry < dxTarget;
-    Offset entry = new Offset(left2right ? dxEntry : dxTarget, dy);
-    Offset target = new Offset(left2right ? dxTarget : dxEntry, dy);
-
-    Path path = new Path();
-    path.addArc(
-        new Rect.fromCircle(center: entry, radius: radius), 0.5 * pi, 1 * pi);
-    path.addRect(
-        new Rect.fromLTRB(entry.dx, dy - radius, target.dx, dy + radius));
-    path.addArc(
-        new Rect.fromCircle(center: target, radius: radius), 1.5 * pi, 1 * pi);
-    canvas.drawPath(path, painter);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) => true;
-}
