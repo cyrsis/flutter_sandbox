@@ -94,7 +94,7 @@ class _StockScreenState extends State<StockScreen>
       bottom: new TabBar(
         tabs: <Widget>[
           new Tab(text: "market".toUpperCase()),
-         // new Tab(text: "profolio".toUpperCase()),
+         //  new Tab(text: "profolio".toUpperCase()),
         ],
       ),
     );
