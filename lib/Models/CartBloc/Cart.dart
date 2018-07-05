@@ -6,6 +6,7 @@ import 'package:flutter_sandbox/Models/CartBloc/Product.dart';
 
 
 class Cart {
+
   final List<CartItem> _items = <CartItem>[];
 
   /// Creates an empty cart.

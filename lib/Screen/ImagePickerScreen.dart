@@ -12,6 +12,10 @@ class ImagePickerScreen extends StatefulWidget {
 class _ImagePickerScreenState extends State<ImagePickerScreen> {
   File file;
 
+  File camerafile;
+
+  File galleryfile;
+
   @override
   Widget build(BuildContext context) {
     final statusBarHeight = MediaQuery.of(context).padding.top;
@@ -49,8 +53,8 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
                   },
                 ),
               ),
-              _displayImageFiles(file),
-              _displayImageFiles(file),
+              _displayImageFiles(galleryfile),
+              _displayImageFiles(camerafile),
             ],
           ),
         ),
@@ -60,15 +64,17 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
 
   Future _selectImagefromGallery() async {
 
-    var file = await ImagePicker.pickImage(source: ImageSource.gallery);
+    galleryfile = await ImagePicker.pickImage(source: ImageSource.gallery);
     setState(() {
+
+
 
     });
 
   }
 
   Future _selectImageFromCamera() async {
-    var file = await ImagePicker.pickImage(source: ImageSource.camera);
+     camerafile = await ImagePicker.pickImage(source: ImageSource.camera);
     setState(() {
 
     });
