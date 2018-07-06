@@ -14,7 +14,7 @@ import 'package:flutter_sandbox/Screen/CustomeSliderScreen.dart';
 import 'package:flutter_sandbox/Screen/DynamicThemeScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/EggTimerScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/FeatureDiscoveryScreen.dart';
-import 'package:flutter_sandbox/Screen/FlipCarouselScreen.dart';
+import 'package:flutter_sandbox/Screen/Fluttery/FlipCarouselScreen.dart';
 import 'package:flutter_sandbox/Screen/ImagePickerScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/MaterialPageReveal.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/MusicPlayerScreen.dart';
@@ -59,7 +59,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new ZoomMenuScreen()),
+          body: new FlipCarouselScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()

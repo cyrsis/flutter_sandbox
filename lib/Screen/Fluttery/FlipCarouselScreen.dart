@@ -1,11 +1,7 @@
 import 'dart:math';
 import 'dart:ui' show lerpDouble;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Models/CardViewModel.dart';
-
-
-
 
 class FlipCarouselScreen extends StatefulWidget {
   @override
@@ -61,7 +57,8 @@ class CardFlipper extends StatefulWidget {
   _CardFlipperState createState() => new _CardFlipperState();
 }
 
-class _CardFlipperState extends State<CardFlipper> with TickerProviderStateMixin {
+class _CardFlipperState extends State<CardFlipper>
+    with TickerProviderStateMixin {
   double scrollPercent = 0.0;
   Offset startDrag;
   double startDragPercentScroll;
@@ -79,8 +76,8 @@ class _CardFlipperState extends State<CardFlipper> with TickerProviderStateMixin
     )
       ..addListener(() {
         setState(() {
-          scrollPercent =
-              lerpDouble(finishScrollStart, finishScrollEnd, finishScrollController.value);
+          scrollPercent = lerpDouble(
+              finishScrollStart, finishScrollEnd, finishScrollController.value);
 
           if (widget.onScroll != null) {
             widget.onScroll(scrollPercent);
@@ -101,7 +98,8 @@ class _CardFlipperState extends State<CardFlipper> with TickerProviderStateMixin
     final singleCardDragPercent = dragDistance / context.size.width;
 
     setState(() {
-      scrollPercent = (startDragPercentScroll + (-singleCardDragPercent / widget.cards.length))
+      scrollPercent = (startDragPercentScroll +
+              (-singleCardDragPercent / widget.cards.length))
           .clamp(0.0, 1.0 - (1 / widget.cards.length));
       print('percentScroll: $scrollPercent');
 
@@ -113,7 +111,8 @@ class _CardFlipperState extends State<CardFlipper> with TickerProviderStateMixin
 
   void _onPanEnd(DragEndDetails details) {
     finishScrollStart = scrollPercent;
-    finishScrollEnd = (scrollPercent * widget.cards.length).round() / widget.cards.length;
+    finishScrollEnd =
+        (scrollPercent * widget.cards.length).round() / widget.cards.length;
     finishScrollController.forward(from: 0.0);
 
     setState(() {
@@ -164,20 +163,23 @@ class _CardFlipperState extends State<CardFlipper> with TickerProviderStateMixin
     final rotationPointMultiplier = angle > 0.0 ? angle / angle.abs() : 1.0;
     print('Angle: $angle');
     projection *= new Matrix4.translationValues(
-        horizontalTranslation + (rotationPointMultiplier * 300.0), 0.0, 0.0) *
+            horizontalTranslation + (rotationPointMultiplier * 300.0),
+            0.0,
+            0.0) *
         new Matrix4.rotationY(angle) *
         new Matrix4.translationValues(0.0, 0.0, radius) *
-        new Matrix4.translationValues(-rotationPointMultiplier * 300.0, 0.0, 0.0);
+        new Matrix4.translationValues(
+            -rotationPointMultiplier * 300.0, 0.0, 0.0);
 
     return projection;
   }
 
   Widget _buildCard(
-      CardViewModel viewModel,
-      int cardIndex,
-      int cardCount,
-      double scrollPercent,
-      ) {
+    CardViewModel viewModel,
+    int cardIndex,
+    int cardCount,
+    double scrollPercent,
+  ) {
     final cardScrollPercent = scrollPercent / (1 / cardCount);
     final parallax = scrollPercent - (cardIndex / widget.cards.length);
 
@@ -212,7 +214,8 @@ class _CardFlipperState extends State<CardFlipper> with TickerProviderStateMixin
 
 class Card extends StatelessWidget {
   final CardViewModel viewModel;
-  final double parallaxPercent; // [0.0, 1.0] (0.0 for all the way right, 1.0 for all the way left)
+  final double
+      parallaxPercent; // [0.0, 1.0] (0.0 for all the way right, 1.0 for all the way left)
 
   Card({
     this.viewModel,
@@ -246,7 +249,8 @@ class Card extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             new Padding(
-              padding: const EdgeInsets.only(top: 30.0, left: 20.0, right: 20.0),
+              padding:
+                  const EdgeInsets.only(top: 30.0, left: 20.0, right: 20.0),
               child: new Text(
                 '${viewModel.address}'.toUpperCase(),
                 style: new TextStyle(
@@ -347,7 +351,8 @@ class Card extends StatelessWidget {
                         ),
                       ),
                       new Text(
-                        '${viewModel.windSpeedInMph}mph ${viewModel.cardinalDirection}',
+                        '${viewModel.windSpeedInMph}mph ${viewModel
+                            .cardinalDirection}',
                         style: new TextStyle(
                           color: Colors.white,
                           fontFamily: 'petita',
@@ -450,8 +455,8 @@ class ScrollIndicatorPainter extends CustomPainter {
     this.cardCount,
     this.scrollPercent,
   })  : trackPaint = new Paint()
-    ..color = const Color(0xFF444444)
-    ..style = PaintingStyle.fill,
+          ..color = const Color(0xFF444444)
+          ..style = PaintingStyle.fill,
         thumbPaint = new Paint()
           ..color = Colors.white
           ..style = PaintingStyle.fill;

@@ -32,4 +32,4 @@ export 'package:flutter_sandbox/Screen/GetJsonScreen.dart';
 export 'package:flutter_sandbox/Screen/HomeScreen.dart';
 export 'package:flutter_sandbox/Screen/ProfileScreen.dart';
 export 'package:flutter_sandbox/Screen/QRScreen.dart';
-export 'package:flutter_sandbox/Screen/PinkSpringScreen.dart';
+export 'package:flutter_sandbox/Screen/Fluttery/PinkSpringScreen.dart';
