@@ -12,11 +12,11 @@ import 'package:flutter_sandbox/Screen/Calculator/CalculatorExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/CartBloc/CartBloCScreen.dart';
 import 'package:flutter_sandbox/Screen/CustomeSliderScreen.dart';
 import 'package:flutter_sandbox/Screen/DynamicThemeScreen.dart';
-import 'package:flutter_sandbox/Screen/EggTimerScreen.dart';
-import 'package:flutter_sandbox/Screen/FeatureDiscoveryScreen.dart';
+import 'package:flutter_sandbox/Screen/Fluttery/EggTimerScreen.dart';
+import 'package:flutter_sandbox/Screen/Fluttery/FeatureDiscoveryScreen.dart';
 import 'package:flutter_sandbox/Screen/FlipCarouselScreen.dart';
 import 'package:flutter_sandbox/Screen/ImagePickerScreen.dart';
-import 'package:flutter_sandbox/Screen/MaterialPageReveal.dart';
+import 'package:flutter_sandbox/Screen/Fluttery/MaterialPageReveal.dart';
 import 'package:flutter_sandbox/Screen/MusicPlayerScreen.dart';
 import 'package:flutter_sandbox/Screen/RadialProgressScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
@@ -28,12 +28,12 @@ import 'package:flutter_sandbox/Screen/Stock/StockScreen.dart';
 import 'package:flutter_sandbox/Screen/TabbedAppBarSample%20.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
 import 'package:flutter_sandbox/Screen/ThemeScreen.dart';
-import 'package:flutter_sandbox/Screen/TinderScreen.dart';
+import 'package:flutter_sandbox/Screen/Fluttery/TinderScreen.dart';
 import 'package:flutter_sandbox/Screen/TwoViews.dart';
 import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_sandbox/Screen/WeatherScreen.dart';
-import 'package:flutter_sandbox/Screen/ZoomMenuScreen.dart';
+import 'package:flutter_sandbox/Screen/Fluttery/WeatherScreen.dart';
+import 'package:flutter_sandbox/Screen/Fluttery/ZoomMenuScreen.dart';
 import 'package:flutter_sandbox/Styles/AppIcons.dart';
 import 'package:flutter_sandbox/Styles/AppTheme.dart';
 import 'dart:async';
@@ -59,20 +59,20 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new AnimatedSizeScreen()),
+          body: new MaterialPageReveal()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
-        '/mainTab': (BuildContext context) => new mainTab()
+        '/mainTab': (BuildContext context) => new MainTab()
       },
     ));
 }
 
-class mainTab extends StatefulWidget {
+class MainTab extends StatefulWidget {
   @override
-  _mainTabState createState() => new _mainTabState();
+  _MainTabState createState() => new _MainTabState();
 }
 
-class _mainTabState extends State<mainTab> with SingleTickerProviderStateMixin {
+class _MainTabState extends State<MainTab> with SingleTickerProviderStateMixin {
   static const String routeName = "/mainTab";
 
   @override

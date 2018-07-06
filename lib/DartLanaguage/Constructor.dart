@@ -1,10 +1,11 @@
 main() {
-  
-  Employee person = new Employee.fromJson({new Map():{
-  "12":12,
-  }
-
+  Employee person = new Employee.fromJson({
+    new Map(): {
+      "12": 12,
+    }
   });
+
+  person.name;
 }
 
 class Person {
@@ -16,9 +17,7 @@ class Person {
 }
 
 class Employee extends Person {
-  Employee.fromJson(Map data) : super.fromJson(data)
-  {
+  Employee.fromJson(Map data) : super.fromJson(data) {
     print("I am employee ${data.toString()}");
   }
-  
 }

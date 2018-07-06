@@ -11,7 +11,7 @@ main() async {
 }
 
 Future function2() async {
-  for(int i = 0; i<1000000000 ; i ++);
+
   return "Second";
 }
 

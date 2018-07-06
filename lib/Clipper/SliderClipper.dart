@@ -8,9 +8,9 @@ class SliderClipper extends CustomClipper<Path> {
   double slidepercent;
 
   SliderClipper(
-      {double this.slidepercent,
-      double this.paddingTop,
-      double this.paddingBottom});
+      { this.slidepercent,
+       this.paddingTop,
+       this.paddingBottom});
 
   @override
   getClip(Size size) {
