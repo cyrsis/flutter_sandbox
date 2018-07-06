@@ -189,6 +189,16 @@ flutter:
   - assets/tinder/photo_4.jpg
   - assets/WavePath/coffee_bottom_clip_points.png
   - assets/WavePath/coffee_header.jpeg
+  - assets/Beer/cider.png
+  - assets/Beer/copper.png
+  - assets/Beer/deception.png
+  - assets/Beer/luxe.png
+  - assets/Beer/maximus.png
+  - assets/Beer/pilsnah.png
+  - assets/Beer/porternoir.png
+  - assets/Beer/session.png
+  - assets/Beer/statesman.png
+  - assets/Beer/stuntman.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

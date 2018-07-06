@@ -90,4 +90,15 @@ class AppImage {
   static final String coffee_bottom_clip_points = "assets/WavePath/coffee_bottom_clip_points.png";
 
   static final String coffe_header = "assets/WavePath/coffee_header.jpeg";
+
+  static final String beer_cider = "assets/Beer/cider.png";
+  static final String beer_copper = "assets/Beer/copper.png";
+  static final String beer_deception = "assets/Beer/deception.png";
+  static final String beer_luxe = "assets/Beer/luxe.png";
+  static final String beer_maximus = "assets/Beer/maximus.png";
+  static final String beer_pilsnah = "assets/Beer/pilsnah.png";
+  static final String beer_porternoir = "assets/Beer/porternoir.png";
+  static final String beer_session = "assets/Beer/session.png";
+  static final String beer_statesman = "assets/Beer/statesman.png";
+  static final String beer_stuntman = "assets/Beer/stuntman.png";
 }

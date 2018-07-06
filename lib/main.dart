@@ -7,6 +7,7 @@ import 'package:flutter_sandbox/Animation/ArtistsDetailsAnimator.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
+import 'package:flutter_sandbox/Screen/BeerHeroAnimationScreen/BeerHeroAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/Calculator/CalculatorExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/CartBloc/CartBloCScreen.dart';
 import 'package:flutter_sandbox/Screen/CustomeSliderScreen.dart';
@@ -59,7 +60,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new CalculatorScreen()),
+          body: new BeerHeroAnimationScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
