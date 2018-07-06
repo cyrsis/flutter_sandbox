@@ -13,7 +13,6 @@ export 'package:flutter_sandbox/Screen/DirectoryScreen.dart';
 export 'package:flutter_sandbox/Screen/EpsonPosScreen.dart';
 export 'package:flutter_sandbox/Screen/FriendsScreen.dart';
 export 'package:flutter_sandbox/Screen/GalleryScreen.dart';
-export 'package:flutter_sandbox/Screen/Fluttery/HiddenDrawerScreen.dart';
 export 'package:flutter_sandbox/Screen/InternetConnectionScreen.dart';
 export 'package:flutter_sandbox/Screen/LayOutScreen.dart';
 export 'package:flutter_sandbox/Screen/LifeCycleScreen.dart';
