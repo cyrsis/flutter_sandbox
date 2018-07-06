@@ -50,7 +50,7 @@ class _AppBarBottomSampleState extends State<AppBarBottomSample> with SingleTick
             ),
           ],
           bottom: new PreferredSize(
-            preferredSize: const Size.fromHeight(48.0),
+            preferredSize: Size.fromHeight(48.0),
             child: new Theme(
               data: Theme.of(context).copyWith(accentColor: Colors.white),
               child: new Container(

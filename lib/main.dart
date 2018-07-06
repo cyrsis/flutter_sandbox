@@ -22,6 +22,7 @@ import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
 import 'package:flutter_sandbox/Screen/ScreenExport.dart';
 import 'package:flutter_sandbox/Screen/SpingAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/StepperScreen.dart';
+import 'package:flutter_sandbox/Screen/Stock/CalculatorScreen.dart';
 import 'package:flutter_sandbox/Screen/Stock/StockScreen.dart';
 import 'package:flutter_sandbox/Screen/TabbedAppBarSample%20.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
@@ -57,7 +58,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new TestScreen()),
+          body: new CalculatorScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new mainTab()
