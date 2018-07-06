@@ -86,4 +86,8 @@ class AppImage {
   static final String materialStores = "assets/materialpage/stores.png";
   static final String materialWalletOld = "assets/materialpage/wallet.old.png";
   static final String materialWallet = "assets/materialpage/wallet.png";
+
+  static final String coffee_bottom_clip_points = "assets/WavePath/coffee_bottom_clip_points.png";
+
+  static final String coffe_header = "assets/WavePath/coffee_header.jpeg";
 }

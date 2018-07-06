@@ -11,7 +11,7 @@ class TestScreen extends StatelessWidget {
       child: new ClipPath(
         clipper: new BottomWaveClipper(),
         child: new Image.asset(
-            AppImage.portfolio1 ,
+            AppImage.coffe_header,
             fit: BoxFit.cover),
 
       ),
