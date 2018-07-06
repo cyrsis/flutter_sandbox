@@ -24,7 +24,7 @@ class Beer {
         this.alcohol,
         this.color});
 
-  String get asset => 'assets/images/beers/$image.png';
+  String get asset => 'assets/Beer/$image.png';
   bool get isDark => color.computeLuminance() < 0.6;
 }
 

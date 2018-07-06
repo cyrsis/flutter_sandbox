@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Screen/Calculator/Logic.dart';
 
-class CalculatorScreen extends StatefulWidget {
-  const CalculatorScreen({Key key}) : super(key: key);
+class CalculatorExampleScreen extends StatefulWidget {
+  const CalculatorExampleScreen({Key key}) : super(key: key);
 
   @override
-  _CalculatorScreenState createState() => new _CalculatorScreenState();
+  _CalculatorExampleScreenState createState() => new _CalculatorExampleScreenState();
 }
 
-class _CalculatorScreenState extends State<CalculatorScreen> {
+class _CalculatorExampleScreenState extends State<CalculatorExampleScreen> {
   /// As the user taps keys we update the current `_expression` and we also
   /// keep a stack of previous expressions so we can return to earlier states
   /// when the user hits the DEL key.
@@ -142,7 +142,7 @@ class CalcDisplay extends StatelessWidget {
 class KeyPad extends StatelessWidget {
   const KeyPad({this.calcState});
 
-  final _CalculatorScreenState calcState;
+  final _CalculatorExampleScreenState calcState;
 
   @override
   Widget build(BuildContext context) {
@@ -231,7 +231,7 @@ class CalcKey extends StatelessWidget {
 }
 
 class NumberKey extends CalcKey {
-  NumberKey(int value, _CalculatorScreenState calcState)
+  NumberKey(int value, _CalculatorExampleScreenState calcState)
       : super('$value', () {
           calcState.handleNumberTap(value);
         });
