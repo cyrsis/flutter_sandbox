@@ -19,6 +19,7 @@ import 'package:flutter_sandbox/Screen/Fluttery/FlipCarouselScreen.dart';
 import 'package:flutter_sandbox/Screen/ImagePickerScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/MaterialPageReveal.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/MusicPlayerScreen.dart';
+import 'package:flutter_sandbox/Screen/Planet/ui/home/PlanetScreen.dart';
 import 'package:flutter_sandbox/Screen/RadialProgressScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/RowColumnTraversal.dart';
@@ -61,7 +62,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new ProfileScreen()),
+          body: new PlanetScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()

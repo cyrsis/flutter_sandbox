@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_planets_tutorial/model/planets.dart';
-import 'package:flutter_planets_tutorial/ui/common/plannet_summary.dart';
-import 'package:flutter_planets_tutorial/ui/common/separator.dart';
-import 'package:flutter_planets_tutorial/ui/text_style.dart';
+import 'package:flutter_sandbox/Models/Planet.dart';
+import 'package:flutter_sandbox/Screen/Planet/ui/common/PlanetSummary.dart';
+import 'package:flutter_sandbox/Screen/Planet/ui/common/Separator.dart';
+import 'package:flutter_sandbox/Styles/AppStyle.dart';
 
 
 class DetailPage extends StatelessWidget {
@@ -72,10 +72,10 @@ class DetailPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(_overviewTitle,
-                        style: Style.headerTextStyle,),
+                        style: AppStyle.headerTextStyle,),
                       new Separator(),
                       new Text(
-                          planet.description, style: Style.commonTextStyle),
+                          planet.description, style: AppStyle.commonTextStyle),
                     ],
                   ),
                 ),

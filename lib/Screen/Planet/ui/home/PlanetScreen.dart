@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'HomePageBody.dart';
 
-class HomePage extends StatelessWidget {
+class PlanetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
