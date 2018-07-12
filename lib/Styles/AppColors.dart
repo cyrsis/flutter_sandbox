@@ -14,4 +14,7 @@ class AppColors {
   static const Color darkAccentColor = const Color(0xFFD06F6F);
 
 
+  static const Color lightGary = const Color(0xFF7B869B);
+
+
 }

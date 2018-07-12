@@ -11,7 +11,7 @@ class _BatteryScreenState extends State<BatteryScreen> {
 
   Battery battery = new Battery();
 
-  StreamSubscription<BatteryState> BatterySubscription;
+  StreamSubscription<BatteryState> batterySubscription;
 
   BatteryState batteryState;
 
@@ -28,12 +28,12 @@ class _BatteryScreenState extends State<BatteryScreen> {
   @override
   void dispose() {
     super.dispose();
-    BatterySubscription?.cancel();
+    batterySubscription?.cancel();
   }
 
   @override
   void initState() {
-    BatterySubscription = battery.onBatteryStateChanged.listen((BatteryState state){
+    batterySubscription = battery.onBatteryStateChanged.listen((BatteryState state){
       setState(() {
         batteryState= state;
       });
