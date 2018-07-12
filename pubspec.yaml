@@ -199,6 +199,13 @@ flutter:
   - assets/Beer/session.png
   - assets/Beer/statesman.png
   - assets/Beer/stuntman.png
+  - assets/planet/earth.png
+  - assets/planet/ic_distance.png
+  - assets/planet/ic_gravity.png
+  - assets/planet/mars.png
+  - assets/planet/mercury.png
+  - assets/planet/moon.png
+  - assets/planet/neptune.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

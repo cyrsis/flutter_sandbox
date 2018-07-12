@@ -121,7 +121,7 @@ class _CalculatorExampleScreenState extends State<CalculatorExampleScreen> {
               new Expanded(
                   flex: 2,
                   child: new CalcDisplay(content: _expression.toString())),
-              const Divider(height: 1.0),
+              new Divider(height: 1.0),
               new Expanded(flex: 3, child: new KeyPad(calcState: this))
             ]));
   }

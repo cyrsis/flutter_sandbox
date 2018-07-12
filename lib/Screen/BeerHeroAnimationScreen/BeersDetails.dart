@@ -22,6 +22,7 @@ class _BeerDetailState extends State<BeerDetail> {
   @override
   void initState() {
     if(widget.beer.isDark){
+
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     } else {
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);

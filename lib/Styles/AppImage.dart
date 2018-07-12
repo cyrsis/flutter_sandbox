@@ -101,4 +101,13 @@ class AppImage {
   static final String beer_session = "assets/Beer/session.png";
   static final String beer_statesman = "assets/Beer/statesman.png";
   static final String beer_stuntman = "assets/Beer/stuntman.png";
+
+  static final String planet_earth = "assets/planet/earth.png";
+  static final String planet_ic_distance = "assets/planet/ic_distance.png";
+  static final String planet_ic_gravity = "assets/planet/ic_gravity.png";
+  static final String planet_ic_mars = "assets/planet/mars.png";
+  static final String planet_ic_mercury = "assets/planet/mercury.png";
+  static final String planet_ic_moon = "assets/planet/moon.png";
+  static final String planet_ic_neptune = "assets/planet/neptune.png";
+  
 }
