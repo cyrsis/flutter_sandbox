@@ -12,6 +12,7 @@ import 'package:flutter_sandbox/Screen/BeerHeroAnimationScreen/BeerHeroAnimation
 import 'package:flutter_sandbox/Screen/Calculator/CalculatorExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/CartBloc/CartBloCScreen.dart';
 import 'package:flutter_sandbox/Screen/CustomeSliderScreen.dart';
+import 'package:flutter_sandbox/Screen/DataTimeScreen.dart';
 import 'package:flutter_sandbox/Screen/DynamicThemeScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/EggTimerScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/FeatureDiscoveryScreen.dart';
@@ -62,7 +63,7 @@ void main() {
           : AppTheme.TinderTheme,
       home: new Scaffold(
           backgroundColor: Colors.white,
-          body: new PlanetScreen()),
+          body: new DateTimePickerScreen()),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
