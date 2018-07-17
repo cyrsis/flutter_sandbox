@@ -15,16 +15,17 @@ class _EasingAnimationScreenState extends State<EasingAnimationScreen>
   void initState() {
     super.initState();
     _controller = new AnimationController(
-        vsync: this, duration: new Duration(milliseconds: 1200));
+        vsync: this, duration: new Duration(seconds: 2));
 
     _animation = new Tween(
-      begin: 0.0,
-      end: 1.0,
+      begin: -1.0,
+      end: 0.0,
     ).animate(new CurvedAnimation(
       parent: _controller,
       curve: Curves.easeIn,
     ))
       ..addStatusListener(statusHandler);
+    _controller.forward();
   }
 
   @override
@@ -36,7 +37,7 @@ class _EasingAnimationScreenState extends State<EasingAnimationScreen>
   @override
   Widget build(BuildContext context) {
     final double wide = MediaQuery.of(context).size.width;
-    _controller.forward();
+
     return AnimatedBuilder(
         animation: _controller,
         builder: (BuildContext context, Widget child) {
