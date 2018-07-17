@@ -30,6 +30,7 @@ class TestScreenState extends State<TestScreen> {
                 ),
                 ListTile(
                   title: Text('Item 1'),
+                  leading: new Icon(Icons.card_giftcard),
                   onTap: () {
                     // Update the state of the app
                     // ...

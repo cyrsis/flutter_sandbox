@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Screen/Animation/EasingAnimationScreen.dart';
+import 'package:flutter_sandbox/Screen/Animation/MaskingAnimationScreen.dart';
+import 'package:flutter_sandbox/Screen/Animation/OffSetDelayAnimationScreen.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 
 class AnimationScreen extends StatefulWidget {
@@ -32,6 +34,10 @@ class _AnimationScreenState extends State<AnimationScreen> {
           new ListTile(
             leading: new Icon(Icons.photo),
             title: new Text('OffSet & Delay'),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => new OffSetDelayAnimationScreen()));
+            },
           ),
           new ListTile(
             leading: new Icon(Icons.phone),
@@ -48,6 +54,10 @@ class _AnimationScreenState extends State<AnimationScreen> {
           ListTile(
             leading: Icon(Icons.account_balance),
             title: Text("Masking"),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => new MaskingAnimationScreen()));
+            },
           ),
           ListTile(
             leading: Icon(Icons.layers),
