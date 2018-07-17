@@ -162,6 +162,9 @@ class AppStyle {
       color: Colors.white70,
       fontWeight: FontWeight.w700);
 
+  static get middWhiteText =>
+      new TextStyle(color: Colors.white, fontSize: 18.0);
+
   static Bold(Color color) {
     return TextStyle(fontWeight: FontWeight.bold,color: color)  ;
   }

@@ -7,6 +7,7 @@ import 'package:flutter_sandbox/Animation/ArtistsDetailsAnimator.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
+import 'package:flutter_sandbox/Screen/Animation/AnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/AnnScreen.dart';
 import 'package:flutter_sandbox/Screen/BeerHeroAnimationScreen/BeerHeroAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/Calculator/CalculatorExampleScreen.dart';
@@ -61,9 +62,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new Scaffold(
-          backgroundColor: Colors.white,
-          body: new DateTimePickerScreen()),
+      home: new AnimationScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
