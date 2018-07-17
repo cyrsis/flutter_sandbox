@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Screen/Animation/EasingAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/Animation/MaskingAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/Animation/OffSetDelayAnimationScreen.dart';
+import 'package:flutter_sandbox/Screen/Animation/ParentAnimationScreen.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 
 class AnimationScreen extends StatefulWidget {
@@ -42,6 +43,10 @@ class _AnimationScreenState extends State<AnimationScreen> {
           new ListTile(
             leading: new Icon(Icons.phone),
             title: new Text('Parenting'),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => new ParentAnimationScreen()));
+            },
           ),
           ListTile(
             leading: Icon(Icons.transform),
