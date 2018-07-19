@@ -8,7 +8,6 @@ import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/Animation/AnimationScreen.dart';
-import 'package:flutter_sandbox/Screen/AnnScreen.dart';
 import 'package:flutter_sandbox/Screen/BeerHeroAnimationScreen/BeerHeroAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/Calculator/CalculatorExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/CartBloc/CartBloCScreen.dart';
@@ -62,7 +61,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new AnimationScreen(),
+      home: new TestScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
