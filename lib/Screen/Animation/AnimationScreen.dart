@@ -3,6 +3,7 @@ import 'package:flutter_sandbox/Screen/Animation/EasingAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/Animation/MaskingAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/Animation/OffSetDelayAnimationScreen.dart';
 import 'package:flutter_sandbox/Screen/Animation/ParentAnimationScreen.dart';
+import 'package:flutter_sandbox/Screen/Animation/ParentingAnimationWidget.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 
 class AnimationScreen extends StatefulWidget {

@@ -18,14 +18,14 @@ class _ParentAnimationScreenState extends State<ParentAnimationScreen>
   void initState() {
     super.initState();
     _controller = new AnimationController(
-        vsync: this, duration: new Duration(milliseconds: 1200));
+        vsync: this, duration: new Duration(milliseconds: 2000));
 
     _growingAnimation = Tween(
-      begin: 0.0,
-      end: 1.0,
+      begin: 10.0,
+      end: 100.0,
     ).animate(CurvedAnimation(
       parent: _controller,
-      curve: Curves.easeIn,
+      curve: Curves.fastOutSlowIn,
     ));
 
     _animation = Tween(
@@ -33,7 +33,7 @@ class _ParentAnimationScreenState extends State<ParentAnimationScreen>
       end: 0.0,
     ).animate(CurvedAnimation(
       parent: _controller,
-      curve: Curves.easeIn,
+      curve: Curves.fastOutSlowIn,
     ))
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
@@ -64,7 +64,6 @@ class _ParentAnimationScreenState extends State<ParentAnimationScreen>
             body: Align(
               alignment: Alignment.center,
               child: new Container(
-                //Div
                 child: new Center(
                   child: ListView(
                     shrinkWrap: true,
@@ -76,23 +75,21 @@ class _ParentAnimationScreenState extends State<ParentAnimationScreen>
                             child: AnimatedBuilder(
                                 animation: _growingAnimation,
                                 builder: (BuildContext context, Widget child) {
-                                  return Scaffold(
-                                    body: Center(
-                                      child: Container(
-                                        height: _growingAnimation.value,
-                                        width: _growingAnimation.value,
-                                        color: Colors.black12,
-                                      ),
+                                  return Center(
+                                    child: Container(
+                                      height: _growingAnimation.value,
+                                      width: _growingAnimation.value * 2,
+                                      color: Colors.black12,
                                     ),
                                   );
                                 })),
                       ),
                       Transform(
                         transform: Matrix4.translationValues(
-                            _animation.value * width, 0.0, 0.0),
+                            _animation.value * width, 10.0, 0.0),
                         child: new Center(
                           child: new Container(
-                            padding: EdgeInsets.only(top: 16.0),
+                            padding: const EdgeInsets.only(top: 16.0),
                             width: 200.0,
                             height: 100.0,
                             color: Colors.black12,
