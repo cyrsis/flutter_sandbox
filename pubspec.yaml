@@ -29,7 +29,7 @@ dependencies:
   spritewidget: "^0.9.16"
   fluttery_audio: 0.0.3
   image_picker:
-
+  rx_command:
 
 
 
