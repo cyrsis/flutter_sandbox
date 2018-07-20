@@ -13,7 +13,9 @@ import 'package:flutter_sandbox/Screen/Calculator/CalculatorExampleScreen.dart';
 import 'package:flutter_sandbox/Screen/CartBloc/CartBloCScreen.dart';
 import 'package:flutter_sandbox/Screen/CustomeSliderScreen.dart';
 import 'package:flutter_sandbox/Screen/DataTimeScreen.dart';
+import 'package:flutter_sandbox/Screen/DialogScreen.dart';
 import 'package:flutter_sandbox/Screen/DynamicThemeScreen.dart';
+import 'package:flutter_sandbox/Screen/ExpandedListViewBuilderScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/EggTimerScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/FeatureDiscoveryScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/FlipCarouselScreen.dart';
@@ -61,7 +63,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new TestScreen(),
+      home: new ExpandedListViewBuilderScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()

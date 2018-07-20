@@ -1,9 +1,3 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-// Adapted from
-// https://github.com/flutter/udacity-course/blob/master/unit_converter/unit_converter/lib/backdrop.dart
 
 import 'dart:math' as math;
 
