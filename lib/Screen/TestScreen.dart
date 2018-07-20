@@ -16,13 +16,25 @@ class TestScreen extends StatefulWidget {
 }
 
 class TestScreenState extends State<TestScreen> {
-  String _dateSelected ='';
+  String _dateSelected = '';
 
   double _value1 = 0.0;
 
   var _controller;
 
-  Widget _BuildRadioButtonList(){
+  Future _BuildAlert(BuildContext context, String message) async {
+    return showDialog(
+        context: context,
+        child: AlertDialog(
+          title: Text(message),
+          actions: <Widget>[
+            FlatButton(onPressed: () => Navigator.pop(context), child: new Text(
+                'OK'), )
+          ],
+        ));
+  }
+
+  Widget _BuildRadioButtonList() {
     List radioList = new List<Widget>();
 
     for (var i = 0; i < 3; i++) {
@@ -33,40 +45,21 @@ class TestScreenState extends State<TestScreen> {
 
     return column;
   }
+
   @override
   Widget build(BuildContext context) {
-
-
     return new Scaffold(
+      appBar: new AppBar(elevation: 0.0, backgroundColor: Colors.transparent),
       body: new Container(
         //Div
         child: Column(
           children: [
-            
 
-            new Text(
-              "${(_value1*100).round()}",
-              style: new TextStyle(
-                fontSize: 24.0,
-                letterSpacing: 2.0,
-              ),
+            new FlatButton(
+              padding: new EdgeInsets.symmetric(vertical: 12.0, horizontal: 12.0),
+              child: new Text("Alert"),
+              onPressed: () =>  _BuildAlert(context, "Is this good"),
             ),
-            Slider(value: _value1.toDouble(), onChanged: _set2),
-
-            TextField(
-              controller: _controller,
-              decoration: InputDecoration(
-                  hintText: "请输入标题",
-                  hintStyle: new TextStyle(color: Colors.black),
-                  icon: new Icon(Icons.people)
-              ),
-              autocorrect: true,
-              autofocus: true,
-              keyboardType: TextInputType.text,
-              onChanged: _textonChange,
-              onSubmitted: _textSubmitted,
-            ),
-            _BuildRadioButtonList(),
           ],
         ),
       ),
@@ -75,31 +68,13 @@ class TestScreenState extends State<TestScreen> {
 
 
 
-  Future _selectDate() async {
-    DateTime picked = await showDatePicker(
-        context: context,
-        initialDate: DateTime.now(),
-        firstDate: DateTime(2018),
-        lastDate: DateTime(2019));
-
-    if (picked != null) {
-      setState(() {
-        _dateSelected = picked.toString();
-      });
-    }
-  }
-
   void _set2(var value) {
     setState(() {
-         _value1= value;
+      _value1 = value;
     });
   }
 
-  void _textonChange(String value) {
+  void _textonChange(String value) {}
 
-
-  }
-
-  void _textSubmitted(String value) {
-  }
+  void _textSubmitted(String value) {}
 }
