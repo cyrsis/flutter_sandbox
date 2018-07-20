@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Clipper/BottomWaveClipper.dart';
+import 'package:flutter_sandbox/Screen/LocationShare/Roundedbutton.dart';
 import 'package:flutter_sandbox/Styles/AppImage.dart';
 import 'package:flutter_sandbox/Widgets/QuickAction.dart';
 import 'package:flutter_sandbox/Widgets/TimeText.dart';
@@ -34,13 +35,22 @@ class TestScreenState extends State<TestScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
 
+                new RoundedButton(
+                  buttonName: 'Sign-In',
+                  onTap: _handleSubmitted,
+                  width: screenSize.width,
+                  height: 50.0,
+                  bottomMargin: 10.0,
+                  borderWidth: 0.0,
+                  buttonColor: const Color.fromRGBO(100, 100, 100, 1.0),
+                ),
                 TextField(
                   controller: _controller,
                   decoration: InputDecoration(
                       hintText: "请输入标题",
                       hintStyle: new TextStyle(color: Colors.black),
                       icon: new Icon(Icons.people),
-                      
+
                   ),
                   autocorrect: true,
                   autofocus: true,
@@ -108,6 +118,9 @@ class TestScreenState extends State<TestScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery
+        .of(context)
+        .size;
     return new Scaffold(
         key: _scaffoldKey,
         appBar: new AppBar(elevation: 0.0, backgroundColor: Colors.transparent),
@@ -115,6 +128,16 @@ class TestScreenState extends State<TestScreen> {
             //Div
             child: Column(
           children: [
+            new RoundedButton(
+              buttonName: 'Sign-In',
+              onTap: _handleSubmitted,
+              width: screenSize.width,
+              height: 50.0,
+              bottomMargin: 10.0,
+              borderWidth: 0.0,
+              buttonColor: const Color.fromRGBO(100, 100, 100, 1.0),
+            ),
+
             TextField(
               controller: _controller,
               decoration: InputDecoration(
@@ -157,5 +180,8 @@ class TestScreenState extends State<TestScreen> {
 
   void _textSubmitted(String value) {
     print(" The test is ${_controller.text}");
+  }
+
+  void _handleSubmitted() {
   }
 }

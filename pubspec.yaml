@@ -30,6 +30,7 @@ dependencies:
   fluttery_audio: 0.0.3
   image_picker:
   rx_command:
+  map_view:
 
 
 
