@@ -35,11 +35,14 @@ class TestScreenState extends State<TestScreen> {
   }
   @override
   Widget build(BuildContext context) {
+
+
     return new Scaffold(
       body: new Container(
         //Div
         child: Column(
           children: [
+            
 
             new Text(
               "${(_value1*100).round()}",
