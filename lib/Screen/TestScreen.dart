@@ -16,18 +16,13 @@ class TestScreen extends StatefulWidget {
 }
 
 class TestScreenState extends State<TestScreen> {
-
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
-
 
   String _dateSelected = '';
 
   double _value1 = 0.0;
 
-  var _controller;
-
-
+  TextEditingController _controller= new TextEditingController();
 
   void _BuildBottomSheet(BuildContext context) {
     showModalBottomSheet(
@@ -38,6 +33,22 @@ class TestScreenState extends State<TestScreen> {
             child: new Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+
+                TextField(
+                  controller: _controller,
+                  decoration: InputDecoration(
+                      hintText: "请输入标题",
+                      hintStyle: new TextStyle(color: Colors.black),
+                      icon: new Icon(Icons.people),
+                      
+                  ),
+                  autocorrect: true,
+                  autofocus: true,
+                  keyboardType: TextInputType.text,
+                  onChanged: _textonChange,
+                  onSubmitted: _textSubmitted,
+
+                ),
                 new Text(
                   'Some infor here',
                   style: new TextStyle(
@@ -78,8 +89,9 @@ class TestScreenState extends State<TestScreen> {
         ));
   }
 
-  void _BuildSnackBar(){
-    _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text("Hello Snackbar")));
+  void _BuildSnackBar() {
+    _scaffoldKey.currentState
+        .showSnackBar(SnackBar(content: Text("Hello Snackbar")));
   }
 
   Widget _BuildRadioButtonList() {
@@ -97,32 +109,40 @@ class TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      key: _scaffoldKey,
-      appBar: new AppBar(elevation: 0.0, backgroundColor: Colors.transparent),
-      body: new Container(
-        //Div
-        child: Column(
+        key: _scaffoldKey,
+        appBar: new AppBar(elevation: 0.0, backgroundColor: Colors.transparent),
+        body: new Container(
+            //Div
+            child: Column(
           children: [
-            new FlatButton(
-              padding:
-                  new EdgeInsets.symmetric(vertical: 12.0, horizontal: 12.0),
-              child: new Text("Alert"),
-              onPressed: () => _BuildAlert(context, "Is this good"),
+            TextField(
+              controller: _controller,
+              decoration: InputDecoration(
+                hintText: "请输入标题",
+                hintStyle: new TextStyle(color: Colors.black),
+                icon: new Icon(Icons.people),
+              ),
+              autocorrect: true,
+              autofocus: true,
+              keyboardType: TextInputType.text,
+              onChanged: _textonChange,
+              onSubmitted: _textSubmitted,
             ),
+
             new RaisedButton(
-              child: const Text('Show Bottom Sheet'),
-              color: Theme.of(context).accentColor,
+              child: const Text('hit me'),
+              color: Theme
+                  .of(context)
+                  .accentColor,
               elevation: 4.0,
               splashColor: Colors.blueGrey,
               onPressed: () {
-                _BuildSnackBar();
+                print("Controller values ${_controller.text}");
                 // Perform some action
               },
             ),
           ],
-        ),
-      ),
-    );
+        )));
   }
 
   void _set2(var value) {
@@ -131,7 +151,11 @@ class TestScreenState extends State<TestScreen> {
     });
   }
 
-  void _textonChange(String value) {}
+  void _textonChange(String value) {
+    print(" The test is ${_controller.text}");
+  }
 
-  void _textSubmitted(String value) {}
+  void _textSubmitted(String value) {
+    print(" The test is ${_controller.text}");
+  }
 }
