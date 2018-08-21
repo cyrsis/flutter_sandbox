@@ -19,6 +19,7 @@ import 'package:flutter_sandbox/Screen/ExpandedListViewBuilderScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/EggTimerScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/FeatureDiscoveryScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/FlipCarouselScreen.dart';
+import 'package:flutter_sandbox/Screen/FontAwesomeScreen.dart';
 import 'package:flutter_sandbox/Screen/ImagePickerScreen.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/MaterialPageReveal.dart';
 import 'package:flutter_sandbox/Screen/Fluttery/MusicPlayerScreen.dart';
@@ -63,7 +64,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new TestScreen(),
+      home: new FontAwesomeScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()

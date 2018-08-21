@@ -120,7 +120,6 @@ class TestScreenState extends State<TestScreen> {
             child: Column(
           children: [
 
-
             TextField(
               controller: _controller,
               decoration: InputDecoration(
@@ -138,7 +137,7 @@ class TestScreenState extends State<TestScreen> {
             new RaisedButton(
               child: const Text('hit me'),
               color: Theme
-                  .of(context)
+                  .of(context) 
                   .accentColor,
               elevation: 4.0,
               splashColor: Colors.blueGrey,
