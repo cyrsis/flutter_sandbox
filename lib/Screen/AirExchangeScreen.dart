@@ -70,24 +70,27 @@ class _AirExchangeScreenState extends State<AirExchangeScreen> {
         bottom: PreferredSize(
             child: Column(
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextField(
-                    controller: _controller,
-                    decoration: InputDecoration(
-                        fillColor: Colors.white,
-                        hintText: "Amount",
+                TextField(
+                  controller: _controller,
+                  decoration: InputDecoration(
+                      fillColor: Colors.white,
+                      hintText: "Amount",
 
-                        hintStyle: new TextStyle(color: Colors.white),
-                        icon: new Icon(Icons.people,color: Colors.white,)),
-                    autocorrect: false,
-                    autofocus: true,
-                    keyboardType: TextInputType.text,
-                  ),
+                      hintStyle: new TextStyle(color: Colors.white),
+                      icon: new Icon(Icons.people,color: Colors.white,)),
+                  autocorrect: false,
+                  autofocus: true,
+                  keyboardType: TextInputType.text,
+                ),
+
+                IconButton(
+                    icon: Icon(Icons.crop_rotate),
+                    onPressed: null
                 )
+
               ],
             ),
-            preferredSize: const Size.fromHeight(70.0)),
+            preferredSize: const Size.fromHeight(90.0)),
       ),
       body: new Container(
         child: new ListView(
