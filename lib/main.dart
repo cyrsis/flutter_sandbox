@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_sandbox/Animation/ArtistsDetailsAnimator.dart';
 
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
+import 'package:flutter_sandbox/Screen/AirExchangeScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedIndicatorScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/Animation/AnimationScreen.dart';
@@ -64,7 +65,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new FontAwesomeScreen(),
+      home: new AirExchangeScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
