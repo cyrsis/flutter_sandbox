@@ -1,3 +1,17 @@
+#Install For Mac
+
+```bash
+
+git clone -b beta https://github.com/flutter/flutter.git
+git checkout v0.5.1
+then run
+
+flutter doctor
+
+--Checking is this working or not
+
+```
+
 # Goal
 
 This acts like a template for massive widgets
