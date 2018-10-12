@@ -3,7 +3,9 @@
 ```bash
 
 git clone -b beta https://github.com/flutter/flutter.git
+
 git checkout v0.5.1
+
 then run
 
 flutter doctor
