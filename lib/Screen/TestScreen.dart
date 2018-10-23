@@ -1,169 +1,47 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/Clipper/BottomWaveClipper.dart';
-import 'package:flutter_sandbox/Styles/AppImage.dart';
-import 'package:flutter_sandbox/Widgets/QuickAction.dart';
-import 'package:flutter_sandbox/Widgets/TimeText.dart';
 
 class TestScreen extends StatefulWidget {
-  var _first = false;
 
   @override
-  TestScreenState createState() {
-    return new TestScreenState();
-  }
+  _TestScreenState createState() => new _TestScreenState();
 }
 
-class TestScreenState extends State<TestScreen> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
-  String _dateSelected = '';
-
-  double _value1 = 0.0;
-
-  TextEditingController _controller= new TextEditingController();
-
-
-  void _BuildBottomSheet(BuildContext context) {
-    showModalBottomSheet(
-        context: context,
-        builder: (BuildContext context) {
-          return Container(
-            //Div
-            child: new Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-
-                TextField(
-                  controller: _controller,
-                  decoration: InputDecoration(
-                      hintText: "请输入标题",
-                      hintStyle: new TextStyle(color: Colors.black),
-                      icon: new Icon(Icons.people),
-
-                  ),
-                  autocorrect: true,
-                  autofocus: true,
-                  keyboardType: TextInputType.text,
-                  onChanged: _textonChange,
-                  onSubmitted: _textSubmitted,
-
-                ),
-                new Text(
-                  'Some infor here',
-                  style: new TextStyle(
-                      color: Colors.black26,
-                      fontSize: 12.0,
-                      fontWeight: FontWeight.bold),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: RaisedButton(
-                    child: const Text('Close'),
-                    color: Theme.of(context).accentColor,
-                    elevation: 4.0,
-                    splashColor: Colors.blueGrey,
-                    onPressed: () {
-                      Navigator.pop(context);
-                      // Perform some action
-                    },
-                  ),
-                ),
-              ],
-            ),
-          );
-        });
-  }
-
-  Future _BuildAlert(BuildContext context, String message) async {
-    return showDialog(
-        context: context,
-        child: AlertDialog(
-          title: Text(message),
-          actions: <Widget>[
-            FlatButton(
-              onPressed: () => Navigator.pop(context),
-              child: new Text('OK'),
-            ),
-          ],
-        ));
-  }
-
-  void _BuildSnackBar() {
-    _scaffoldKey.currentState
-        .showSnackBar(SnackBar(content: Text("Hello Snackbar")));
-  }
-
-  Widget _BuildRadioButtonList() {
-    List radioList = new List<Widget>();
-
-    for (var i = 0; i < 3; i++) {
-      radioList.add(Radio(value: i, groupValue: _value1, onChanged: _set2));
-    }
-
-    Row column = Row(children: radioList);
-
-    return column;
-  }
+class _TestScreenState extends State<TestScreen>
+    with SingleTickerProviderStateMixin {
+  TabController controller;
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery
-        .of(context)
-        .size;
-    return new Scaffold(
-        key: _scaffoldKey,
-        appBar: new AppBar(elevation: 0.0, backgroundColor: Colors.transparent),
-        body: new Container(
-            //Div
-            child: Column(
-          children: [
-
-            TextField(
-              controller: _controller,
-              decoration: InputDecoration(
-                hintText: "请输入标题",
-                hintStyle: new TextStyle(color: Colors.black),
-                icon: new Icon(Icons.people),
-              ),
-              autocorrect: true,
-              autofocus: true,
-              keyboardType: TextInputType.text,
-              onChanged: _textonChange,
-              onSubmitted: _textSubmitted,
-            ),
-
-            new RaisedButton(
-              child: const Text('hit me'),
-              color: Theme
-                  .of(context) 
-                  .accentColor,
-              elevation: 4.0,
-              splashColor: Colors.blueGrey,
-              onPressed: () {
-                print("Controller values ${_controller.text}");
-                // Perform some action
-              },
-            ),
+    return Scaffold(
+      appBar: new AppBar(
+        title: new Text("Coffee Shop"),
+        backgroundColor: Colors.deepOrange,
+        bottom: new TabBar(
+          controller: controller,
+          tabs: <Tab>[
+            new Tab(icon: new Icon(Icons.send)),
+            new Tab(icon: new Icon(Icons.explore)),
+            new Tab(icon: new Icon(Icons.search)),
+            new Tab(icon: new Icon(Icons.account_box)),
           ],
-        )));
+
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        new BottomNavigationBarItem(
+            icon: new Icon(Icons.add), title: new Text("Hey")),
+        new BottomNavigationBarItem(
+            icon: new Icon(Icons.print), title: new Text("Nope")),
+        new BottomNavigationBarItem(
+            icon: new Icon(Icons.call_missed), title: new Text("Hello"))
+      ], onTap: (int i) => debugPrint("Hey Touched ${i}")),
+    );
   }
 
-  void _set2(var value) {
-    setState(() {
-      _value1 = value;
-    });
+  @override
+  void initState() {
+    controller = new TabController(length: 4, vsync: this);
   }
 
-  void _textonChange(String value) {
-    print(" The test is ${_controller.text}");
-  }
 
-  void _textSubmitted(String value) {
-    print(" The test is ${_controller.text}");
-  }
-
-  void _handleSubmitted() {
-  }
 }

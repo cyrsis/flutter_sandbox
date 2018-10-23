@@ -30,8 +30,7 @@ dependencies:
   fluttery_audio: 0.0.3
   image_picker:
   rx_command:
-  firebase_database:
-  font_awesome: 
+  font_awesome:
 
 
 
@@ -208,6 +207,7 @@ flutter:
   - assets/planet/mercury.png
   - assets/planet/moon.png
   - assets/planet/neptune.png
+  - assets/Coffee/coffee_in_bed.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -277,5 +277,5 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
-  # For details regarding fonts from package dependencies, 
+  # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages

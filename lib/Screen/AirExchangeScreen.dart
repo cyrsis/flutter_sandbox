@@ -74,8 +74,7 @@ class _AirExchangeScreenState extends State<AirExchangeScreen> {
                   controller: _controller,
                   decoration: InputDecoration(
                       fillColor: Colors.white,
-                      hintText: "Amount",
-
+                      hintText: "Current Amount HKD",
                       hintStyle: new TextStyle(color: Colors.white),
                       icon: new Icon(Icons.people,color: Colors.white,)),
                   autocorrect: false,
@@ -86,7 +85,19 @@ class _AirExchangeScreenState extends State<AirExchangeScreen> {
                 IconButton(
                     icon: Icon(Icons.crop_rotate),
                     onPressed: null
-                )
+                ),
+                TextField(
+                  controller: _controller,
+                  decoration: InputDecoration(
+                      fillColor: Colors.white,
+                      hintText: "Amount JPY",
+
+                      hintStyle: new TextStyle(color: Colors.white),
+                      icon: new Icon(Icons.people,color: Colors.white,)),
+                  autocorrect: false,
+                  autofocus: true,
+                  keyboardType: TextInputType.text,
+                ),
 
               ],
             ),

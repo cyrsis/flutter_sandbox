@@ -94,12 +94,7 @@ class CircleKProductCard extends StatelessWidget {
             )
         ),
 
-        new Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: new Image.asset(
-              'assets/circlek/circlelogo.png', width: 20.0,
-              height: 20.0),
-        )
+
       ],
     );
   }
