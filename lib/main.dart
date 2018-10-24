@@ -10,6 +10,7 @@ import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/Coffee.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/ScreenExport.dart';
+import 'package:flutter_sandbox/Screen/SignUpScreen.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
 import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 import 'package:flutter_sandbox/Styles/AppIcons.dart';
@@ -35,7 +36,7 @@ int reducer(int state, dynamic action) {
 void main() {
   //timeDilation = 1.0; //Slow Down the animation
   //SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
-
+//Using Redux
 //  final store = new Store<int>(reducer, initialState: 0);
 //  runApp(ReduxAppExample(store: store));
   runApp(new MaterialApp(
@@ -45,7 +46,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new AirExchangeScreen(),
+      home: new SignUpScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
