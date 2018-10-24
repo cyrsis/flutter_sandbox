@@ -208,6 +208,17 @@ flutter:
   - assets/planet/moon.png
   - assets/planet/neptune.png
   - assets/Coffee/coffee_in_bed.jpg
+  - assets/uikit/blank.jpg
+  - assets/uikit/dashboard.jpg
+  - assets/uikit/login.jpg
+  - assets/uikit/map.png
+  - assets/uikit/payment.jpg
+  - assets/uikit/pk.jpg
+  - assets/uikit/profile.jpg
+  - assets/uikit/setting.jpeg
+  - assets/uikit/shopping.jpeg
+  - assets/uikit/timeline.jpeg
+  - assets/uikit/verification.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
