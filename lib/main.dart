@@ -8,6 +8,7 @@ import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AirExchangeScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/Coffee.dart';
+import 'package:flutter_sandbox/Screen/FlutterMapScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/ScreenExport.dart';
 import 'package:flutter_sandbox/Screen/SignUpScreen.dart';
@@ -46,7 +47,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new SignUpScreen(),
+      home: new FluttermapScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()

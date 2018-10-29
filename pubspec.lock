@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.31.2-alpha.2"
+  ansicolor:
+    dependency: transitive
+    description:
+      name: ansicolor
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.10"
   args:
     dependency: transitive
     description:
@@ -36,6 +43,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
+  browser:
+    dependency: transitive
+    description:
+      name: browser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.10.0+3"
   cached_network_image:
     dependency: "direct main"
     description:
@@ -71,6 +85,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.2"
+  console_log_handler:
+    dependency: transitive
+    description:
+      name: console_log_handler
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.7"
   convert:
     dependency: transitive
     description:
@@ -118,6 +139,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.4+1"
+  flutter_map:
+    dependency: "direct main"
+    description:
+      name: flutter_map
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.11+1"
   flutter_redux:
     dependency: "direct main"
     description:
@@ -179,6 +207,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.0-alpha.12"
+  geolocation:
+    dependency: "direct main"
+    description:
+      name: geolocation
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
   glob:
     dependency: transitive
     description:
@@ -263,6 +298,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0-alpha.12"
+  latlong:
+    dependency: transitive
+    description:
+      name: latlong
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.3"
   logging:
     dependency: transitive
     description:
@@ -499,6 +541,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
+  supports_color:
+    dependency: transitive
+    description:
+      name: supports_color
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.1"
   synchronized:
     dependency: transitive
     description:
@@ -527,6 +576,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.0"
+  tuple:
+    dependency: transitive
+    description:
+      name: tuple
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   typed_data:
     dependency: transitive
     description:
@@ -555,6 +611,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.5.3"
+  validate:
+    dependency: transitive
+    description:
+      name: validate
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.6.1"
   vector_math:
     dependency: transitive
     description:
