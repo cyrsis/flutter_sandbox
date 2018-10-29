@@ -31,7 +31,7 @@ class StreamScreenState extends State<StreamScreen> {
     var streamedRes = await client.send(req);
 
     streamedRes.stream
-        .transform(UTF8.decoder)
+        .transform(utf8.decoder)
         .transform(json.decoder)
         .expand((e) => e)
         .map((map) => Photo.fromJsonMap(map))

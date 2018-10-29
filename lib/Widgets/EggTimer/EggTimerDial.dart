@@ -84,7 +84,7 @@ class _EggTimerDialState extends State<EggTimerDial> with TickerProviderStateMix
       onTimeSelected: widget.onTimeSelected,
       onDialStopTurning: widget.onDialStopTurning,
       child: new Container(
-        width: double.INFINITY,
+        width: double.infinity,
         child: new Padding(
           padding: const EdgeInsets.only(left: 45.0, right: 45.0),
           child: new AspectRatio(
@@ -109,8 +109,8 @@ class _EggTimerDialState extends State<EggTimerDial> with TickerProviderStateMix
               child: new Stack(
                 children: [
                   new Container(
-                    width: double.INFINITY,
-                    height: double.INFINITY,
+                    width: double.infinity,
+                    height: double.infinity,
                     padding: const EdgeInsets.all(55.0),
                     child: new CustomPaint(
                       painter: new TickPainter(
