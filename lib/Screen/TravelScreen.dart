@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Screen/ProfilePage.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
 
-import 'profile.dart';
 
-void main() => runApp(new MyApp());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
+class TravelScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: new MyHomePage(),
-    );
-  }
+  _TravelScreenState createState() => new _TravelScreenState();
 }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage>
+class _TravelScreenState extends State<TravelScreen>
     with SingleTickerProviderStateMixin {
   TabController tabController;
 
@@ -58,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage>
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'travelogram',
+                  'travelmate',
                   style: TextStyle(
                       fontFamily: 'Montserrat',
                       fontSize: 20.0,
@@ -74,14 +64,14 @@ class _MyHomePageState extends State<MyHomePage>
                 SizedBox(width: 5.0),
                 InkWell(
                   child: Hero(
-                    tag: 'assets/chris.jpg',
+                    tag: AppImage.travelscreen_chris,
                     child: Container(
                       height: 50.0,
                       width: 50.0,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25.0),
                           image: DecorationImage(
-                              image: AssetImage('assets/chris.jpg'))),
+                              image: AssetImage(AppImage.travelscreen_chris))),
                     ),
                   ),
                   onTap: () {
@@ -268,7 +258,7 @@ class _MyHomePageState extends State<MyHomePage>
                           topLeft: Radius.circular(15.0),
                           bottomLeft: Radius.circular(15.0)),
                       image: DecorationImage(
-                          image: AssetImage('assets/beach1.jpg'),
+                          image: AssetImage(AppImage.travelscreen_beach1),
                           fit: BoxFit.cover))),
               SizedBox(width: 2.0),
               Column(
@@ -282,7 +272,7 @@ class _MyHomePageState extends State<MyHomePage>
                           topRight: Radius.circular(15.0),
                         ),
                         image: DecorationImage(
-                            image: AssetImage('assets/beach2.jpg'),
+                            image: AssetImage(AppImage.travelscreen_beach2),
                             fit: BoxFit.cover),
                       )),
                   SizedBox(height: 2.0),
@@ -293,7 +283,7 @@ class _MyHomePageState extends State<MyHomePage>
                         borderRadius: BorderRadius.only(
                             bottomRight: Radius.circular(15.0)),
                         image: DecorationImage(
-                            image: AssetImage('assets/beach3.jpg'),
+                            image: AssetImage(AppImage.travelscreen_beach3),
                             fit: BoxFit.cover),
                       )),
                 ],

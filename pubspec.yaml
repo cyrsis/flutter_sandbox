@@ -221,6 +221,14 @@ flutter:
   - assets/uikit/shopping.jpeg
   - assets/uikit/timeline.jpeg
   - assets/uikit/verification.jpg
+  - assets/travelscreen/beach1.jpg
+  - assets/travelscreen/beach2.jpg
+  - assets/travelscreen/beach3.jpg
+  - assets/travelscreen/chatbubble.png
+  - assets/travelscreen/chris.jpg
+  - assets/travelscreen/fav.png
+  - assets/travelscreen/navarrow.png
+  - assets/travelscreen/speechbubble.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -234,7 +242,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-
+   - family: Montserrat
+     fonts:
+          - asset: assets/fonts/Montserrat-Regular.ttf
+          - asset: assets/fonts/Montserrat-Bold.ttf
+            weight: 700
    - family: petita
      fonts:
           - asset: assets/fonts/PetitaMedium.ttf

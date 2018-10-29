@@ -87,7 +87,8 @@ class AppImage {
   static final String materialWalletOld = "assets/materialpage/wallet.old.png";
   static final String materialWallet = "assets/materialpage/wallet.png";
 
-  static final String coffee_bottom_clip_points = "assets/WavePath/coffee_bottom_clip_points.png";
+  static final String coffee_bottom_clip_points =
+      "assets/WavePath/coffee_bottom_clip_points.png";
 
   static final String coffe_header = "assets/WavePath/coffee_header.jpeg";
 
@@ -109,5 +110,16 @@ class AppImage {
   static final String planet_ic_mercury = "assets/planet/mercury.png";
   static final String planet_ic_moon = "assets/planet/moon.png";
   static final String planet_ic_neptune = "assets/planet/neptune.png";
-  
+
+
+  static final String travelscreen_beach1 = "assets/travelscreen/beach1.jpg";
+  static final String travelscreen_beach2 = "assets/travelscreen/beach2.jpg";
+  static final String travelscreen_beach3 = "assets/travelscreen/beach3.jpg";
+  static final String travelscreen_chatbubble =
+      "assets/travelscreen/chatbubble.png";
+  static final String travelscreen_chris = "assets/travelscreen/chris.jpg";
+  static final String travelscreen_fav = "assets/travelscreen/fav.png";
+  static final String travelscreen_narrow = "assets/travelscreen/navarrow.png";
+  static final String travelscreen_speechbubble =
+      "assets/travelscreen/speechbubble.png";
 }
