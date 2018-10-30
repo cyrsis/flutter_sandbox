@@ -61,9 +61,9 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
           onPressed: _toggleFavorite,
         ),
         backgroundColor: Colors.redAccent,
-        elevation: 0.0,
+        elevation: 10.0,
         title: new Text(
-          'AirExchange ',
+          'Naked Exchange ',
           style: AppStyle.AppBarTextStyle,
         ),
         centerTitle: true,
@@ -101,7 +101,7 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
 
               ],
             ),
-            preferredSize: const Size.fromHeight(90.0)),
+            preferredSize: const Size.fromHeight(120.0)),
       ),
       body: new Container(
         child: new ListView(
