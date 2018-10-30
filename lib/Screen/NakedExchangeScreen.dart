@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
 import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Widgets/CircleKProductCard.dart';
 import 'package:flutter_sandbox/Widgets/NotificationWidget.dart';
+import 'package:country_code_picker/country_code_picker.dart';
 
 class NakedExchangeScreen extends StatefulWidget {
   @override
@@ -76,7 +78,7 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
                       fillColor: Colors.white,
                       hintText: "Current Amount HKD",
                       hintStyle: new TextStyle(color: Colors.white),
-                      icon: new Icon(Icons.people,color: Colors.white,)),
+                      icon: new Icon(Icons.people, color: Colors.white,)),
                   autocorrect: false,
                   autofocus: true,
                   keyboardType: TextInputType.text,
@@ -91,9 +93,8 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
                   decoration: InputDecoration(
                       fillColor: Colors.white,
                       hintText: "Amount JPY",
-
                       hintStyle: new TextStyle(color: Colors.white),
-                      icon: new Icon(Icons.people,color: Colors.white,)),
+                      icon: new Icon(Icons.people, color: Colors.white,)),
                   autocorrect: false,
                   autofocus: true,
                   keyboardType: TextInputType.text,
@@ -105,51 +106,64 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
       ),
       body: new Container(
         child: new ListView(
-          children: <Widget>[
-            new ListTile(
-              leading: new Icon(Icons.map),
-              title: new Text('USD'),
-              trailing: new Text('2000'),
-            ),
-            new ListTile(
-                leading: new Icon(Icons.photo),
-                title: new Text('JPY'),
-                trailing: new Text('2000')),
-            new ListTile(
-                leading: new Icon(Icons.phone),
-                title: new Text('HKD'),
-                trailing: new Text('2000')),
-            new ListTile(
-                leading: new Icon(Icons.phone),
-                title: new Text('HKD'),
-                trailing: new Text('2000')),
-            new ListTile(
-                leading: new Icon(Icons.phone),
-                title: new Text('HKD'),
-                trailing: new Text('2000')),
-            new ListTile(
-                leading: new Icon(Icons.phone),
-                title: new Text('HKD'),
-                trailing: new Text('2000')),
-            new ListTile(
-                leading: new Icon(Icons.phone),
-                title: new Text('HKD'),
-                trailing: new Text('2000')),
-            new ListTile(
-                leading: new Icon(Icons.phone),
-                title: new Text('HKD'),
-                trailing: new Text('2000')),
-            new ListTile(
-                leading: new Icon(Icons.phone),
-                title: new Text('HKD'),
-                trailing: new Text('2000')),
-            new ListTile(
-                leading: new Icon(Icons.phone),
-                title: new Text('HKD'),
-                trailing: new Text('2000')),
-          ],
+            children: <Widget>[
+
+        new CountryCodePicker(
+        onChanged: print,
+            // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+            initialSelection: 'IT',
+            favorite: ['+39', 'FR'])
+      ,
+
+      new ListTile(
+        leading: Image(
+          width: 20.0,
+          height: 20.0,
+          image: new AssetImage(
+              "flags/us.png"),
         ),
+        title: new Text('USD'),
+        trailing: new Text('2000'),
       ),
+      new ListTile(
+          leading: new Icon(Icons.photo),
+          title: new Text('JPY'),
+          trailing: new Text('2000')),
+      new ListTile(
+          leading: new Icon(Icons.phone),
+          title: new Text('HKD'),
+          trailing: new Text('2000')),
+      new ListTile(
+          leading: new Icon(Icons.phone),
+          title: new Text('HKD'),
+          trailing: new Text('2000')),
+      new ListTile(
+          leading: new Icon(Icons.phone),
+          title: new Text('HKD'),
+          trailing: new Text('2000')),
+      new ListTile(
+          leading: new Icon(Icons.phone),
+          title: new Text('HKD'),
+          trailing: new Text('2000')),
+      new ListTile(
+          leading: new Icon(Icons.phone),
+          title: new Text('HKD'),
+          trailing: new Text('2000')),
+      new ListTile(
+          leading: new Icon(Icons.phone),
+          title: new Text('HKD'),
+          trailing: new Text('2000')),
+      new ListTile(
+          leading: new Icon(Icons.phone),
+          title: new Text('HKD'),
+          trailing: new Text('2000')),
+      new ListTile(
+          leading: new Icon(Icons.phone),
+          title: new Text('HKD'),
+          trailing: new Text('2000')),
+      ],
+    ),)
+    ,
     );
   }
 }

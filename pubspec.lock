@@ -99,6 +99,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  country_code_picker:
+    dependency: "direct main"
+    description:
+      name: country_code_picker
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   crypto:
     dependency: transitive
     description:
