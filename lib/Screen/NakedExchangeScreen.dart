@@ -11,8 +11,13 @@ class NakedExchangeScreen extends StatefulWidget {
 }
 
 class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
+  final _Inputcontroller = TextEditingController();
   bool _isFavorited = true;
   int _favoriteCount = 41;
+
+  String _convertedValue = "";
+
+  double _inputValue = 10.0;
 
   void _toggleFavorite() {
     setState(() {
@@ -53,9 +58,14 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    final _controller = TextEditingController();
+  void dispose() {
+    // TODO: implement dispose
+    _Inputcontroller.dispose();
+    super.dispose();
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
         leading: IconButton(
@@ -76,7 +86,7 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   TextField(
-                    controller: _controller,
+                    controller: _Inputcontroller,
                     decoration: InputDecoration(
                         fillColor: Colors.white,
                         hintText: "Current Amount HKD",
@@ -87,22 +97,9 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
                         )),
                     autocorrect: true,
                     autofocus: true,
+                    onChanged: _updateInputValue,
                     keyboardType:
                         TextInputType.numberWithOptions(decimal: true),
-                  ),
-                  TextField(
-                    controller: _controller,
-                    decoration: InputDecoration(
-                        fillColor: Colors.white,
-                        hintText: "Amount JPY",
-                        hintStyle: new TextStyle(color: Colors.white),
-                        icon: new Icon(
-                          Icons.people,
-                          color: Colors.white,
-                        )),
-                    autocorrect: false,
-                    autofocus: true,
-                    keyboardType: TextInputType.text,
                   ),
                 ],
               ),
@@ -127,7 +124,7 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
                 trailing: Column(
                   children: <Widget>[
                     new Text('7.8'),
-                    new Text('7.8'),
+                    new Text((_inputValue * 7.8).toString()),
                   ],
                 ),
                 onTap: () {
@@ -162,12 +159,23 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
                     new Text('7.8'),
                   ],
                 ),
-                onTap: () { /* react to the tile being tapped */ }
-            ),
-
+                onTap: () {
+                  /* react to the tile being tapped */
+                }),
           ],
         ),
       ),
     );
+  }
+
+  void _updateInputValue(String input) {
+    setState(() {
+      try {
+        final inputDouble = double.parse(input);
+        _inputValue = inputDouble;
+      } on Exception catch (e) {
+        print('Error: $e');
+      }
+    });
   }
 }
