@@ -81,7 +81,7 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
         centerTitle: true,
         bottom: PreferredSize(
             child: Padding(
-              padding: const EdgeInsets.only(left: 50.0, right: 50.0),
+              padding: const EdgeInsets.only(left: 50.0, right: 50.0,bottom: 20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -140,7 +140,7 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
                 trailing: Column(
                   children: <Widget>[
                     new Text('105.4743'),
-                    new Text('7.8'),
+                    new Text((_inputValue * 0.887129).toString()+" CNY"),
                   ],
                 ),
                 onTap: () {
@@ -156,7 +156,7 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
                 trailing: Column(
                   children: <Widget>[
                     new Text('528.2800'),
-                    new Text('7.8'),
+                    new Text((_inputValue * 0.179840).toString()+" AUD"),
                   ],
                 ),
                 onTap: () {
