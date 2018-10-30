@@ -70,100 +70,104 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
         ),
         centerTitle: true,
         bottom: PreferredSize(
-            child: Column(
-              children: <Widget>[
-                TextField(
-                  controller: _controller,
-                  decoration: InputDecoration(
-                      fillColor: Colors.white,
-                      hintText: "Current Amount HKD",
-                      hintStyle: new TextStyle(color: Colors.white),
-                      icon: new Icon(Icons.people, color: Colors.white,)),
-                  autocorrect: false,
-                  autofocus: true,
-                  keyboardType: TextInputType.text,
-                ),
-
-                IconButton(
-                    icon: Icon(Icons.crop_rotate),
-                    onPressed: null
-                ),
-                TextField(
-                  controller: _controller,
-                  decoration: InputDecoration(
-                      fillColor: Colors.white,
-                      hintText: "Amount JPY",
-                      hintStyle: new TextStyle(color: Colors.white),
-                      icon: new Icon(Icons.people, color: Colors.white,)),
-                  autocorrect: false,
-                  autofocus: true,
-                  keyboardType: TextInputType.text,
-                ),
-
-              ],
+            child: Padding(
+              padding: const EdgeInsets.only(left: 50.0, right: 50.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  TextField(
+                    controller: _controller,
+                    decoration: InputDecoration(
+                        fillColor: Colors.white,
+                        hintText: "Current Amount HKD",
+                        hintStyle: new TextStyle(color: Colors.white),
+                        icon: new Icon(
+                          Icons.money_off,
+                          color: Colors.white,
+                        )),
+                    autocorrect: true,
+                    autofocus: true,
+                    keyboardType:
+                        TextInputType.numberWithOptions(decimal: true),
+                  ),
+                  TextField(
+                    controller: _controller,
+                    decoration: InputDecoration(
+                        fillColor: Colors.white,
+                        hintText: "Amount JPY",
+                        hintStyle: new TextStyle(color: Colors.white),
+                        icon: new Icon(
+                          Icons.people,
+                          color: Colors.white,
+                        )),
+                    autocorrect: false,
+                    autofocus: true,
+                    keyboardType: TextInputType.text,
+                  ),
+                ],
+              ),
             ),
-            preferredSize: const Size.fromHeight(120.0)),
+            preferredSize: const Size.fromHeight(70.0)),
       ),
       body: new Container(
         child: new ListView(
-            children: <Widget>[
+          children: <Widget>[
+            new CountryCodePicker(
+                onChanged: print,
+                // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                initialSelection: 'IT',
+                favorite: ['+39', 'FR']),
+            new ListTile(
+                leading: Image(
+                  width: 20.0,
+                  height: 20.0,
+                  image: new AssetImage(AppImage.flag_us),
+                ),
+                title: new Text('USD'),
+                trailing: Column(
+                  children: <Widget>[
+                    new Text('7.8'),
+                    new Text('7.8'),
+                  ],
+                ),
+                onTap: () {
+                  /* react to the tile being tapped */
+                }),
+            new ListTile(
+                leading: Image(
+                  width: 20.0,
+                  height: 20.0,
+                  image: new AssetImage(AppImage.flag_cn),
+                ),
+                title: new Text('CNY'),
+                trailing: Column(
+                  children: <Widget>[
+                    new Text('105.4743'),
+                    new Text('7.8'),
+                  ],
+                ),
+                onTap: () {
+                  /* react to the tile being tapped */
+                }),
+            new ListTile(
+                leading: Image(
+                  width: 20.0,
+                  height: 20.0,
+                  image: new AssetImage(AppImage.flag_ad),
+                ),
+                title: new Text('AUD'),
+                trailing: Column(
+                  children: <Widget>[
+                    new Text('528.2800'),
+                    new Text('7.8'),
+                  ],
+                ),
+                onTap: () { /* react to the tile being tapped */ }
+            ),
 
-        new CountryCodePicker(
-        onChanged: print,
-            // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
-            initialSelection: 'IT',
-            favorite: ['+39', 'FR'])
-      ,
-
-      new ListTile(
-        leading: Image(
-          width: 20.0,
-          height: 20.0,
-          image: new AssetImage(
-              "flags/us.png"),
+          ],
         ),
-        title: new Text('USD'),
-        trailing: new Text('2000'),
       ),
-      new ListTile(
-          leading: new Icon(Icons.photo),
-          title: new Text('JPY'),
-          trailing: new Text('2000')),
-      new ListTile(
-          leading: new Icon(Icons.phone),
-          title: new Text('HKD'),
-          trailing: new Text('2000')),
-      new ListTile(
-          leading: new Icon(Icons.phone),
-          title: new Text('HKD'),
-          trailing: new Text('2000')),
-      new ListTile(
-          leading: new Icon(Icons.phone),
-          title: new Text('HKD'),
-          trailing: new Text('2000')),
-      new ListTile(
-          leading: new Icon(Icons.phone),
-          title: new Text('HKD'),
-          trailing: new Text('2000')),
-      new ListTile(
-          leading: new Icon(Icons.phone),
-          title: new Text('HKD'),
-          trailing: new Text('2000')),
-      new ListTile(
-          leading: new Icon(Icons.phone),
-          title: new Text('HKD'),
-          trailing: new Text('2000')),
-      new ListTile(
-          leading: new Icon(Icons.phone),
-          title: new Text('HKD'),
-          trailing: new Text('2000')),
-      new ListTile(
-          leading: new Icon(Icons.phone),
-          title: new Text('HKD'),
-          trailing: new Text('2000')),
-      ],
-    ),)
-    ,
     );
   }
 }
