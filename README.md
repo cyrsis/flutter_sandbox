@@ -49,3 +49,18 @@ For help getting started with Flutter, view our online
 Would work on this tomorrow
 https://github.com/matthew-carroll/flutter_ui_challenge_material_page_reveal/tree/recording/lib
 
+
+## Add the following in the build.gradle
+
+```bash
+subprojects {
+    project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support'
+                    && !details.requested.name.contains('multidex') ) {
+                details.useVersion "26.1.0"
+            }
+        }
+    }
+}
+```

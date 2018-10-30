@@ -122,4 +122,6 @@ class AppImage {
   static final String travelscreen_narrow = "assets/travelscreen/navarrow.png";
   static final String travelscreen_speechbubble =
       "assets/travelscreen/speechbubble.png";
+
+  static final String login_logotwo = "assets/login/logotwo.png";
 }

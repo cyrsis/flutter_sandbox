@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/ReduxAppActions.dart';
 import 'package:flutter_sandbox/ReduxAppExample.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
-import 'package:flutter_sandbox/Screen/AirExchangeScreen.dart';
+import 'package:flutter_sandbox/Screen/NakedExchangeScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/Coffee.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
@@ -45,7 +45,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new AirExchangeScreen(),
+      home: new NakedExchangeScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()

@@ -33,6 +33,7 @@ dependencies:
   font_awesome:
   geolocation: ^0.2.1
   flutter_map:
+  firebase_auth:
 
 
 
@@ -229,6 +230,7 @@ flutter:
   - assets/travelscreen/fav.png
   - assets/travelscreen/navarrow.png
   - assets/travelscreen/speechbubble.png
+  - assets/login/logotwo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

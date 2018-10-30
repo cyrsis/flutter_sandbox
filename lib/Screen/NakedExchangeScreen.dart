@@ -3,12 +3,12 @@ import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Widgets/CircleKProductCard.dart';
 import 'package:flutter_sandbox/Widgets/NotificationWidget.dart';
 
-class AirExchangeScreen extends StatefulWidget {
+class NakedExchangeScreen extends StatefulWidget {
   @override
-  _AirExchangeScreenState createState() => new _AirExchangeScreenState();
+  _NakedExchangeScreenState createState() => new _NakedExchangeScreenState();
 }
 
-class _AirExchangeScreenState extends State<AirExchangeScreen> {
+class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
   bool _isFavorited = true;
   int _favoriteCount = 41;
 
