@@ -123,8 +123,8 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen> {
                 title: new Text('USD'),
                 trailing: Column(
                   children: <Widget>[
-                    new Text('7.8'),
-                    new Text((_inputValue * 7.8).toString()),
+                    new Text('0.127460'),
+                    new Text((_inputValue * 0.127460).toString()+" USD"),
                   ],
                 ),
                 onTap: () {

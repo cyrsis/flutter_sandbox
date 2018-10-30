@@ -380,4 +380,14 @@ class AppImage {
   static final String flag_vu = "assets/flags/vu.png";
   static final String flag_tj = "assets/flags/tj.png";
   static final String flag_an = "assets/flags/an.png";
+
+  static final String converter_area = "assets/converter/icons/area.png";
+  static final String converter_currency = "assets/converter/icons/currency.png";
+  static final String converter_storage = "assets/converter/icons/digital_storage.png";
+  static final String converter_length = "assets/converter/icons/length.png";
+  static final String converter_mass = "assets/converter/icons/mass.png";
+  static final String converter_power = "assets/converter/icons/power.png";
+  static final String converter_time = "assets/converter/icons/time.png";
+  static final String converter_volume = "assets/converter/icons/volume.png";
+
 }

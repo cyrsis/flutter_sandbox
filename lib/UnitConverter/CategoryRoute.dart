@@ -6,6 +6,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
 
 import 'api.dart';
 import 'backdrop.dart';
@@ -72,15 +73,15 @@ class _CategoryRouteState extends State<CategoryRoute> {
       'error': Color(0xFF912D2D),
     }),
   ];
-  static const _icons = <String>[
-    'assets/icons/length.png',
-    'assets/icons/area.png',
-    'assets/icons/volume.png',
-    'assets/icons/mass.png',
-    'assets/icons/time.png',
-    'assets/icons/digital_storage.png',
-    'assets/icons/power.png',
-    'assets/icons/currency.png',
+  static final _icons = <String>[
+    AppImage.converter_length,
+    AppImage.converter_area,
+    AppImage.converter_volume,
+    AppImage.converter_mass,
+    AppImage.converter_volume,
+    AppImage.converter_storage,
+    AppImage.converter_power,
+    AppImage.converter_currency,
   ];
 
   @override

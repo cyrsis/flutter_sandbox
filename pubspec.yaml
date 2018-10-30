@@ -490,6 +490,15 @@ flutter:
   - assets/flags/vu.png
   - assets/flags/tj.png
   - assets/flags/an.png
+  - assets/converter/icons/area.png
+  - assets/converter/icons/currency.png
+  - assets/converter/icons/digital_storage.png
+  - assets/converter/icons/length.png
+  - assets/converter/icons/mass.png
+  - assets/converter/icons/power.png
+  - assets/converter/icons/time.png
+  - assets/converter/icons/volume.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
