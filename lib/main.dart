@@ -13,6 +13,7 @@ import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/Coffee.dart';
 import 'package:flutter_sandbox/Screen/FlutterMapScreen.dart';
 import 'package:flutter_sandbox/Screen/ListCardsScreen.dart';
+import 'package:flutter_sandbox/Screen/SetStateScreen.dart';
 import 'package:flutter_sandbox/Screen/TravelScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/ScreenExport.dart';
@@ -54,7 +55,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new HireTalentScreen(),
+      home: new SetStateScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
