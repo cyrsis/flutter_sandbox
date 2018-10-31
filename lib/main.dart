@@ -6,6 +6,7 @@ import 'package:flutter_sandbox/AuthFirebae/LoginMainScreen.dart';
 import 'package:flutter_sandbox/ReduxAppActions.dart';
 import 'package:flutter_sandbox/ReduxAppExample.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
+import 'package:flutter_sandbox/Screen/AddRemoveListWidgetScreen.dart';
 import 'package:flutter_sandbox/Screen/ArrowScreen.dart';
 import 'package:flutter_sandbox/Screen/HireTalent/HireTalentScreen.dart';
 import 'package:flutter_sandbox/Screen/NakedExchangeScreen.dart';
@@ -55,7 +56,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new SetStateScreen(),
+      home: new AddRemoveListWidgetScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
