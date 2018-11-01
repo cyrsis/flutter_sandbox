@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Styles/AppImage.dart';
 
 
 
@@ -151,7 +152,7 @@ class _FoodReceiptScreenState extends State<FoodReceiptScreen> {
                   height: 275.0,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      image: DecorationImage(image: AssetImage('assets/breakfast.jpg'), fit: BoxFit.cover)
+                      image: DecorationImage(image: AssetImage(AppImage.food_breakfast), fit: BoxFit.cover)
                   ),
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
@@ -211,7 +212,7 @@ class _FoodReceiptScreenState extends State<FoodReceiptScreen> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.0),
                 image:
-                DecorationImage(image: AssetImage('assets/balanced.jpg'))),
+                DecorationImage(image: AssetImage(AppImage.food_breakfast))),
             height: 125.0,
             width: 100.0,
           ),
@@ -243,7 +244,7 @@ class _FoodReceiptScreenState extends State<FoodReceiptScreen> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.5),
                         image: DecorationImage(
-                            image: AssetImage('assets/chris.jpg'))),
+                            image: AssetImage(AppImage.food_christ))),
                   ),
                   SizedBox(width: 10.0),
                   Text('James Oliver',
