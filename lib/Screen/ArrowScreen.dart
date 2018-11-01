@@ -215,7 +215,7 @@ class _ArrowScreenState extends State<ArrowScreen>
                 child: Container(
                   height: 20.0,
                   width: 20.0,
-                  child: Image.asset('assets/navarrow.png'),
+                  child: Image.asset(AppImage.travelscreen_narrow),
                 ),
               ),
               SizedBox(width: 7.0),
@@ -224,7 +224,7 @@ class _ArrowScreenState extends State<ArrowScreen>
                 child: Container(
                   height: 20.0,
                   width: 20.0,
-                  child: Image.asset('assets/chatbubble.png'),
+                  child: Image.asset(AppImage.travelscreen_chatbubble),
                 ),
               ),
               SizedBox(width: 7.0),
@@ -233,7 +233,7 @@ class _ArrowScreenState extends State<ArrowScreen>
                 child: Container(
                   height: 22.0,
                   width: 22.0,
-                  child: Image.asset('assets/fav.png'),
+                  child: Image.asset(AppImage.travelscreen_fav),
                 ),
               )
             ],

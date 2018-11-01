@@ -139,51 +139,47 @@ class _NakedExchangeScreenState extends State<NakedExchangeScreen>
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(
-                  padding: EdgeInsets.fromLTRB(15.0, 35.0, 15.0, 10.0),
-                  child: Material(
-                    elevation: 10.0,
-                    borderRadius: BorderRadius.circular(25.0),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          prefixIcon: Icon(Icons.search, color: Colors.black),
-                          contentPadding:
-                          EdgeInsets.only(left: 15.0, top: 15.0,bottom: 10.0),
-                          hintText: 'Exchange HKD Amount ',
-                          hintStyle: TextStyle(color: Colors.grey)),
-                    ),
-                  ),
-                ),
-//                Material(
-//                  borderRadius: BorderRadius.circular(25.0),
-//                  elevation: 10.0,
-//                  child: Padding(
-//                    padding: const EdgeInsets.only(left: 100.0, right: 50.0),
-//                    child: TextField(
-//                      controller: _Inputcontroller,
+//                Container(
+//                  padding: EdgeInsets.fromLTRB(45.0, 20.0, 35.0, 10.0),
+//                  child: Material(
+//                    elevation: 10.0,
+//                    borderRadius: BorderRadius.circular(25.0),
+//                    child: TextFormField(
 //                      decoration: InputDecoration(
 //                          border: InputBorder.none,
-//                          fillColor: Colors.white,
-//                          hintText: "Amount HKD",
-//                          hintStyle: new TextStyle(color: Colors.white),
-//                          icon: new Icon(
-//                            Icons.nature_people,
-//                            color: Colors.white,
-//                            size: 35.0 ,
-//                          )),
-//                      autocorrect: true,
-//                      autofocus: true,
-//                      onChanged: _updateInputValue,
-//                      keyboardType:
-//                          TextInputType.numberWithOptions(decimal: true),
+//                          prefixIcon: Icon(Icons.search, color: Colors.black),
+//                          contentPadding:
+//                          EdgeInsets.only(left: 15.0, top: 15.0,bottom: 10.0),
+//                          hintText: 'Exchange HKD Amount ',
+//                          hintStyle: TextStyle(color: Colors.grey)),
 //                    ),
 //                  ),
 //                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 100.0, right: 50.0),
+                  child: TextField(
+                    controller: _Inputcontroller,
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        fillColor: Colors.white,
+                        hintText: "Amount HKD",
+                        hintStyle: new TextStyle(color: Colors.white),
+                        icon: new Icon(
+                          Icons.nature_people,
+                          color: Colors.white,
+                          size: 35.0 ,
+                        )),
+                    autocorrect: true,
+                    autofocus: true,
+                    onChanged: _updateInputValue,
+                    keyboardType:
+                        TextInputType.numberWithOptions(decimal: true),
+                  ),
+                ),
                 getTabBar()
               ],
             ),
-            preferredSize: const Size.fromHeight(90.0)),
+            preferredSize: const Size.fromHeight(120.0)),
       ),
       body: getTabBarView(
           <Widget>[ListOfExchangeQuote(_inputValue), ListOfExchangeOffer()]),
