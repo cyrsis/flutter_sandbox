@@ -390,4 +390,10 @@ class AppImage {
   static final String converter_time = "assets/converter/icons/time.png";
   static final String converter_volume = "assets/converter/icons/volume.png";
 
+  static final String food_balanced = "assets/foodreceipt/balanced.jpg";
+  static final String food_breakfast = "assets/foodreceipt/breakfast.jpg";
+  static final String food_christ = "assets/foodreceipt/chris.jpg";
+  static final String food_food = "assets/foodreceipt/food.jpg";
+  static final String food_pasta = "assets/foodreceipt/pasta.jpg";
+  static final String food_sandswitch = "assets/foodreceipt/sandwich.jpg";
 }

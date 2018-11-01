@@ -498,6 +498,12 @@ flutter:
   - assets/converter/icons/power.png
   - assets/converter/icons/time.png
   - assets/converter/icons/volume.png
+  - assets/foodreceipt/balanced.jpg
+  - assets/foodreceipt/breakfast.jpg
+  - assets/foodreceipt/chris.jpg
+  - assets/foodreceipt/food.jpg
+  - assets/foodreceipt/pasta.jpg
+  - assets/foodreceipt/sandwich.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -512,8 +518,14 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+   - family: Timesroman
+     fonts:
+          - asset: assets/fonts/serif-regular.ttf
+          - asset: assets/fonts/serifbold.ttf
+            weight: 700
    - family: Quicksand
      fonts:
+          - asset: assets/fonts/Quicksand-Regular.ttf
           - asset: assets/fonts/Quicksand-Medium.ttf
           - asset: assets/fonts/Quicksand-Bold.ttf
             weight: 700
