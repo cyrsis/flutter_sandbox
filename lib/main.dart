@@ -57,7 +57,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new FoodReceiptScreen(),
+      home: new NakedExchangeScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
