@@ -4,16 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Styles/AppImage.dart';
 import 'package:flutter_sandbox/Util/Widget_Utils.dart';
 
-
-
 class EatIdecideScreen extends StatefulWidget {
   @override
   _EatIdecideScreenState createState() => new _EatIdecideScreenState();
 }
 
 class _EatIdecideScreenState extends State<EatIdecideScreen> {
-
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -23,23 +19,33 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
             Stack(
               children: <Widget>[
                 Container(
-                  height: 250.0,
-                  color: Color(getColorHexFromStr('F8E71C')),
+                  height: 290.0,
+                  color: Color(getColorHexFromStr('006565')),
                 ),
                 Column(
                   children: <Widget>[
+                    SizedBox(height:45.0),
+                    new Text(
+                      "ASAP@ HKIA - Gate 70 ",
+                      style: TextStyle(
+                        color: Colors.grey,
+                          fontFamily: 'Quicksand',
+                          fontSize: 15.0,fontWeight:
+                          FontWeight.bold)
+                    ),
                     Container(
-                      padding: EdgeInsets.fromLTRB(15.0, 35.0, 15.0, 10.0),
+                      padding: EdgeInsets.fromLTRB(15.0, 15.0, 15.0, 10.0),
                       child: Material(
                         elevation: 10.0,
                         borderRadius: BorderRadius.circular(25.0),
                         child: TextFormField(
                           decoration: InputDecoration(
                               border: InputBorder.none,
-                              prefixIcon: Icon(Icons.search, color: Colors.black),
+                              prefixIcon:
+                                  Icon(Icons.search, color: Colors.black),
                               contentPadding:
-                              EdgeInsets.only(left: 15.0, top: 15.0),
-                              hintText: 'Search for dish name',
+                                  EdgeInsets.only(left: 15.0, top: 15.0,bottom: 15.0),
+                              hintText: 'Search for Restaurant',
                               hintStyle: TextStyle(color: Colors.grey)),
                         ),
                       ),
@@ -60,16 +66,13 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text('POPULAR DISHES',
+                                Text('Local Food \nUnder 30 minutes',
                                     style: TextStyle(
+                                      color: Colors.grey,
                                         fontSize: 20.0,
                                         fontFamily: 'Timesroman',
                                         fontWeight: FontWeight.bold)),
-                                Text('THIS WEEK',
-                                    style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'Timesroman',
-                                        fontWeight: FontWeight.bold)),
+
                               ],
                             )
                           ],
@@ -108,8 +111,7 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                 style: TextStyle(
                     fontFamily: 'Quicksand',
                     color: Colors.grey,
-                    fontSize: 14.0
-                ),
+                    fontSize: 14.0),
               ),
             ),
             Container(
@@ -120,8 +122,7 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                 style: TextStyle(
                     fontFamily: 'Timesroman',
                     fontWeight: FontWeight.bold,
-                    fontSize: 30.0
-                ),
+                    fontSize: 30.0),
               ),
             ),
             SizedBox(height: 10.0),
@@ -133,12 +134,14 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                     height: 275.0,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
-                        image: DecorationImage(image: AssetImage(AppImage.food_breakfast), fit: BoxFit.cover)
-                    ),
+                        image: DecorationImage(
+                            image: AssetImage(AppImage.food_duck),
+                            fit: BoxFit.cover)),
                     child: BackdropFilter(
                       filter: ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
                       child: Container(
-                        decoration: BoxDecoration(color: Colors.white.withOpacity(0.0)),
+                        decoration:
+                            BoxDecoration(color: Colors.white.withOpacity(0.0)),
                       ),
                     ),
                   ),
@@ -147,21 +150,21 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                     padding: EdgeInsets.only(top: 150.0, left: 60.0),
                     child: Column(
                       children: <Widget>[
-                        Text('BEST OF',
+                        Text(
+                          'BEST OF',
                           style: TextStyle(
                               fontFamily: 'Timesroman',
                               fontSize: 25.0,
                               color: Colors.white,
-                              fontWeight: FontWeight.bold
-                          ),
+                              fontWeight: FontWeight.bold),
                         ),
-                        Text('THE DAY',
+                        Text(
+                          'THE DAY',
                           style: TextStyle(
                               fontFamily: 'Timesroman',
                               fontSize: 25.0,
                               color: Colors.white,
-                              fontWeight: FontWeight.bold
-                          ),
+                              fontWeight: FontWeight.bold),
                         ),
                         SizedBox(height: 10.0),
                         Container(
@@ -170,8 +173,7 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                           color: Colors.orange,
                         )
                       ],
-                    )
-                )
+                    ))
               ],
             )
           ],
@@ -190,24 +192,28 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
       ),
       child: Row(
         children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12.0),
-                image:
-                DecorationImage(image: AssetImage(AppImage.food_breakfast))),
-            height: 125.0,
-            width: 100.0,
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.0),
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(AppImage.food_glutinous))),
+              height: 125.0,
+              width: 100.0,
+            ),
           ),
           SizedBox(width: 20.0),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'Grilled Chicken',
+                'Glutinous rice',
                 style: TextStyle(fontFamily: 'Quicksand'),
               ),
               Text(
-                'with Fruit Salad',
+                ' dumpling',
                 style: TextStyle(fontFamily: 'Quicksand'),
               ),
               SizedBox(height: 10.0),

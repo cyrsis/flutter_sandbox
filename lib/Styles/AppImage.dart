@@ -396,4 +396,6 @@ class AppImage {
   static final String food_food = "assets/foodreceipt/food.jpg";
   static final String food_pasta = "assets/foodreceipt/pasta.jpg";
   static final String food_sandswitch = "assets/foodreceipt/sandwich.jpg";
+  static final String food_duck = "assets/foodonboarding/duck.jpeg";
+  static final String food_glutinous = "assets/foodonboarding/glutinous.png";
 }
