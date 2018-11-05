@@ -37,6 +37,8 @@ dependencies:
   barcode_scan:
   path_provider:
   flutter_masked_text:
+  firebase_auth:
+  cloud_firestore:
 
 
 
