@@ -36,6 +36,7 @@ dependencies:
   country_code_picker:
   barcode_scan:
   path_provider:
+  flutter_masked_text:
 
 
 
@@ -507,6 +508,21 @@ flutter:
   - assets/foodreceipt/sandwich.jpg
   - assets/foodonboarding/duck.jpeg
   - assets/foodonboarding/glutinous.png
+  - assets/foodonboarding/bbq.jpg
+  - assets/foodonboarding/sweetsourpork.jpg
+  - assets/uikit/blank.jpg
+  - assets/uikit/dashboard.jpg
+  - assets/uikit/login.jpg
+  - assets/uikit/map.png
+  - assets/uikit/payment.jpg
+  - assets/uikit/pk.jpg
+  - assets/uikit/profile.jpg
+  - assets/uikit/setting.jpeg
+  - assets/uikit/shopping.jpeg
+  - assets/uikit/timeline.jpeg
+  - assets/uikit/verification.jpg
+  - assets/payment/asiamiles.jpg
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

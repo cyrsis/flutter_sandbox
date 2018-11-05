@@ -16,6 +16,7 @@ import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/Coffee.dart';
 import 'package:flutter_sandbox/Screen/FlutterMapScreen.dart';
 import 'package:flutter_sandbox/Screen/ListCardsScreen.dart';
+import 'package:flutter_sandbox/Screen/PaymentScreen.dart';
 import 'package:flutter_sandbox/Screen/ScanQrScreen.dart';
 import 'package:flutter_sandbox/Screen/SetStateScreen.dart';
 import 'package:flutter_sandbox/Screen/TravelScreen.dart';
@@ -59,12 +60,13 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new EatIdecideScreen(),
+      home: new ScanQrScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
       },
-    ));
+    )
+  );
 }
 
 class MainTab extends StatefulWidget {

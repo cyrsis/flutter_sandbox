@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_sandbox/Screen/PaymentScreen.dart';
 import 'package:flutter_sandbox/Styles/AppImage.dart';
 import 'package:flutter_sandbox/Util/Widget_Utils.dart';
 
@@ -89,11 +90,11 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                         shrinkWrap: true,
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
-                          _foodCard(),
+                          InkWell(child: _foodCard()),
                           SizedBox(width: 10.0),
-                          _foodCard(),
+                          InkWell(child: _foodCard2()),
                           SizedBox(width: 10.0),
-                          _foodCard(),
+                          InkWell(child: _foodCard3()),
                           SizedBox(width: 10.0),
                         ],
                       ),
@@ -107,7 +108,7 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.only(left: 15.0),
               child: Text(
-                'November 11',
+                'November 4',
                 style: TextStyle(
                     fontFamily: 'Quicksand',
                     color: Colors.grey,
@@ -126,55 +127,60 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
               ),
             ),
             SizedBox(height: 10.0),
-            Stack(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(left: 12.0, right: 12.0),
-                  child: Container(
-                    height: 275.0,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: DecorationImage(
-                            image: AssetImage(AppImage.food_duck),
-                            fit: BoxFit.cover)),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
-                      child: Container(
-                        decoration:
-                            BoxDecoration(color: Colors.white.withOpacity(0.0)),
+            InkWell(
+              onTap: ()=>
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => new PaymentScreen())),
+              child: Stack(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(left: 12.0, right: 12.0),
+                    child: Container(
+                      height: 275.0,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          image: DecorationImage(
+                              image: AssetImage(AppImage.food_duck),
+                              fit: BoxFit.cover)),
+                      child: BackdropFilter(
+                        filter: ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
+                        child: Container(
+                          decoration:
+                              BoxDecoration(color: Colors.white.withOpacity(0.0)),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Container(
-                    padding: EdgeInsets.only(top: 150.0, left: 60.0),
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          'BEST OF',
-                          style: TextStyle(
-                              fontFamily: 'Timesroman',
-                              fontSize: 25.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'THE DAY',
-                          style: TextStyle(
-                              fontFamily: 'Timesroman',
-                              fontSize: 25.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(height: 10.0),
-                        Container(
-                          height: 3.0,
-                          width: 50.0,
-                          color: Colors.orange,
-                        )
-                      ],
-                    ))
-              ],
+                  Container(
+                      padding: EdgeInsets.only(top: 150.0, left: 60.0),
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            'BEST OF',
+                            style: TextStyle(
+                                fontFamily: 'Timesroman',
+                                fontSize: 25.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            'THE DAY',
+                            style: TextStyle(
+                                fontFamily: 'Timesroman',
+                                fontSize: 25.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 10.0),
+                          Container(
+                            height: 3.0,
+                            width: 50.0,
+                            color: Colors.orange,
+                          )
+                        ],
+                      ))
+                ],
+              ),
             )
           ],
         ),
@@ -235,7 +241,133 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                             image: AssetImage(AppImage.food_christ))),
                   ),
                   SizedBox(width: 10.0),
-                  Text('James Oliver',
+                  Text('Gordon \nRamsay',
+                      style: TextStyle(fontFamily: 'Quicksand'))
+                ],
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
+  Widget _foodCard2() {
+    return Container(
+      height: 125.0,
+      width: 250.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12.0),
+        color: Colors.white,
+      ),
+      child: Row(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.0),
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(AppImage.food_bbq))),
+              height: 125.0,
+              width: 100.0,
+            ),
+          ),
+          SizedBox(width: 20.0),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'BBQ',
+                style: TextStyle(fontFamily: 'Quicksand'),
+              ),
+              Text(
+                'Pork',
+                style: TextStyle(fontFamily: 'Quicksand'),
+              ),
+              SizedBox(height: 10.0),
+              Container(
+                height: 2.0,
+                width: 75.0,
+                color: Colors.orange,
+              ),
+              SizedBox(height: 10.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    height: 25.0,
+                    width: 25.0,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.5),
+                        image: DecorationImage(
+                            image: AssetImage(AppImage.food_christ))),
+                  ),
+                  SizedBox(width: 10.0),
+                  Text('Jamie Oliver',
+                      style: TextStyle(fontFamily: 'Quicksand'))
+                ],
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
+  Widget _foodCard3() {
+    return Container(
+      height: 125.0,
+      width: 250.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12.0),
+        color: Colors.white,
+      ),
+      child: Row(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.0),
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(AppImage.food_sweetsourpork))),
+              height: 125.0,
+              width: 100.0,
+            ),
+          ),
+          SizedBox(width: 20.0),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Sweet Sour',
+                style: TextStyle(fontFamily: 'Quicksand'),
+              ),
+              Text(
+                ' Pork',
+                style: TextStyle(fontFamily: 'Quicksand'),
+              ),
+              SizedBox(height: 10.0),
+              Container(
+                height: 2.0,
+                width: 75.0,
+                color: Colors.orange,
+              ),
+              SizedBox(height: 10.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    height: 25.0,
+                    width: 25.0,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.5),
+                        image: DecorationImage(
+                            image: AssetImage(AppImage.food_christ))),
+                  ),
+                  SizedBox(width: 10.0),
+                  Text('Jamie Oliver',
                       style: TextStyle(fontFamily: 'Quicksand'))
                 ],
               )

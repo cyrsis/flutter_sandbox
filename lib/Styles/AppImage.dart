@@ -382,8 +382,10 @@ class AppImage {
   static final String flag_an = "assets/flags/an.png";
 
   static final String converter_area = "assets/converter/icons/area.png";
-  static final String converter_currency = "assets/converter/icons/currency.png";
-  static final String converter_storage = "assets/converter/icons/digital_storage.png";
+  static final String converter_currency =
+      "assets/converter/icons/currency.png";
+  static final String converter_storage =
+      "assets/converter/icons/digital_storage.png";
   static final String converter_length = "assets/converter/icons/length.png";
   static final String converter_mass = "assets/converter/icons/mass.png";
   static final String converter_power = "assets/converter/icons/power.png";
@@ -398,4 +400,20 @@ class AppImage {
   static final String food_sandswitch = "assets/foodreceipt/sandwich.jpg";
   static final String food_duck = "assets/foodonboarding/duck.jpeg";
   static final String food_glutinous = "assets/foodonboarding/glutinous.png";
+  static final String food_bbq = "assets/foodonboarding/bbq.jpg";
+  static final String food_sweetsourpork =
+      "assets/foodonboarding/sweetsourpork.jpg";
+
+  static final String uikit_blank = "assets/uikit/blank.jpg";
+  static final String uikit_dashboard = "assets/uikit/dashboard.jpg";
+  static final String uikit_login = "assets/uikit/login.jpg";
+  static final String uikit_map = "assets/uikit/map.png";
+  static final String uikit_payment = "assets/uikit/payment.jpg";
+  static final String uikit_pk = "assets/uikit/pk.jpg";
+  static final String uikit_profile = "assets/uikit/profile.jpg";
+  static final String uikit_setting = "assets/uikit/setting.jpeg";
+  static final String uikit_shopping = "assets/uikit/shopping.jpeg";
+  static final String uikit_timeline = "assets/uikit/timeline.jpeg";
+  static final String uikit_vertification = "assets/uikit/verification.jpg";
+  static final String payment_asmiamiles = "assets/payment/asiamiles.jpg";
 }
