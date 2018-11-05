@@ -416,4 +416,9 @@ class AppImage {
   static final String uikit_timeline = "assets/uikit/timeline.jpeg";
   static final String uikit_vertification = "assets/uikit/verification.jpg";
   static final String payment_asmiamiles = "assets/payment/asiamiles.jpg";
+
+  static final String burger_burger1 = "assets/burger/burger1.jpg";
+  static final String burger_burger2 = "assets/burger/burger2.jpg";
+  static final String burger_burger3 = "assets/burger/burger3.jpg";
+  static final String burger_burger4 = "assets/burger/burger4.jpg";
 }
