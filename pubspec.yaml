@@ -39,7 +39,9 @@ dependencies:
   flutter_masked_text:
   firebase_auth:
   cloud_firestore:
-
+  firebase_storage:
+  archive:
+  pointycastle:
 
 
 
