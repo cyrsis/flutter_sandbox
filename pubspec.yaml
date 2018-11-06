@@ -42,6 +42,7 @@ dependencies:
   firebase_storage:
   archive:
   pointycastle:
+  sqljocky5:
 
 
 
