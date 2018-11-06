@@ -1,6 +1,9 @@
 import 'dart:async';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/widgets.dart';
 
 class UserManagement {
@@ -22,8 +25,8 @@ class UserManagement {
     var userInfo = new UserUpdateInfo();
     userInfo.photoUrl = picUrl;
 
-    await FirebaseAuth.instance.currentUser().updateProfile(userInfo).then((val) {
-      FirebaseAuth.instance.currentUser()..then((user) {
+    await FirebaseAuth.instance.updateProfile(userInfo).then((val) {
+      FirebaseAuth.instance.currentUser().then((user) {
         Firestore.instance
             .collection('/users')
             .where('uid', isEqualTo: user.uid)

@@ -37,13 +37,15 @@ dependencies:
   barcode_scan:
   path_provider:
   flutter_masked_text:
-  firebase_auth:
+  firebase_auth: "0.5.20"
   cloud_firestore:
-  firebase_storage:
+  firebase_storage: "1.0.0"
   archive:
   pointycastle:
   sqljocky5:
   google_sign_in:
+
+
 
 
 
