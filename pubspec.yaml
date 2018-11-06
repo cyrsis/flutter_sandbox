@@ -43,6 +43,7 @@ dependencies:
   archive:
   pointycastle:
   sqljocky5:
+  google_sign_in:
 
 
 
