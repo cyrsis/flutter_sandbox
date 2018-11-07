@@ -14,6 +14,7 @@ import 'package:flutter_sandbox/Screen/ArrowScreen.dart';
 import 'package:flutter_sandbox/Screen/BurgerTruckScreen.dart';
 import 'package:flutter_sandbox/Screen/CalculatorScreen.dart';
 import 'package:flutter_sandbox/Screen/CardScreen.dart';
+import 'package:flutter_sandbox/Screen/CloudFunctionScreeen.dart';
 import 'package:flutter_sandbox/Screen/ColorFilterScreen.dart';
 import 'package:flutter_sandbox/Screen/EatIdecideScreen.dart';
 import 'package:flutter_sandbox/Screen/FireStoreCRUD/FireStoreScreen.dart';
@@ -70,7 +71,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new CardScreen(),
+      home: new CloudFunctionScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()

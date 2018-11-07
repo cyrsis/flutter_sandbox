@@ -75,7 +75,8 @@ class _CardScreenState extends State<CardScreen>
                           Positioned(
                             left: 20.0,
                             child: Container(
-                              transform: Matrix4.translationValues(0.0, delayedCardAnimation.value * devHeight, 0.0),
+                              transform: Matrix4.translationValues(0.0,
+                                  delayedCardAnimation.value * devHeight, 0.0),
                               width: 260.0,
                               height: 400.0,
                               decoration: BoxDecoration(
@@ -84,10 +85,10 @@ class _CardScreenState extends State<CardScreen>
                             ),
                           ),
                           Positioned(
-
                             left: 10.0,
                             child: Container(
-                              transform: Matrix4.translationValues(0.0, cardAnimation.value * devHeight, 0.0),
+                              transform: Matrix4.translationValues(
+                                  0.0, cardAnimation.value * devHeight, 0.0),
                               width: 280.0,
                               height: 400.0,
                               decoration: BoxDecoration(
@@ -108,7 +109,8 @@ class _CardScreenState extends State<CardScreen>
                             top: 320.0,
                             left: 15.0,
                             child: Container(
-                              transform: Matrix4.translationValues(0.0, infoAnimation.value * devHeight, 0.0),
+                              transform: Matrix4.translationValues(
+                                  0.0, infoAnimation.value * devHeight, 0.0),
                               width: 270.0,
                               height: 90.0,
                               decoration: BoxDecoration(
@@ -169,7 +171,8 @@ class _CardScreenState extends State<CardScreen>
                         ],
                       )),
                   Container(
-                    transform: Matrix4.translationValues(0.0, fabButtonanim.value * devHeight, 0.0),
+                    transform: Matrix4.translationValues(
+                        0.0, fabButtonanim.value * devHeight, 0.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[

@@ -541,6 +541,11 @@ flutter:
   - assets/jobs/twitter.png
   - assets/jobs/website.png
   - assets/common/google_signin_button.png
+  - assets/card/chatbubble.png
+  - assets/card/girl.jpeg
+  - assets/card/girls.jpeg
+  - assets/card/images.png
+  - assets/card/simbolo.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
