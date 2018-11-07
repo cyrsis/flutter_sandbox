@@ -44,8 +44,8 @@ dependencies:
   pointycastle:
   sqljocky5:
   google_sign_in:
-  share: "^0.5.2"
   flutter_circular_chart:
+  share: "^0.5.2"
 
 
 
