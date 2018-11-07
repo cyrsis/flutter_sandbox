@@ -13,6 +13,7 @@ import 'package:flutter_sandbox/Screen/AddRemoveListWidgetScreen.dart';
 import 'package:flutter_sandbox/Screen/ArrowScreen.dart';
 import 'package:flutter_sandbox/Screen/BurgerTruckScreen.dart';
 import 'package:flutter_sandbox/Screen/CalculatorScreen.dart';
+import 'package:flutter_sandbox/Screen/CardScreen.dart';
 import 'package:flutter_sandbox/Screen/ColorFilterScreen.dart';
 import 'package:flutter_sandbox/Screen/EatIdecideScreen.dart';
 import 'package:flutter_sandbox/Screen/FireStoreCRUD/FireStoreScreen.dart';
@@ -69,7 +70,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new NewsAppMainScreen(),
+      home: new CardScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()

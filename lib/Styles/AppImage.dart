@@ -429,4 +429,10 @@ class AppImage {
   static final String jobs_twitter = "assets/jobs/twitter.png";
   static final String jobs_website = "assets/jobs/website.png";
   static final String google_signin_button = "assets/common/google_signin_button.png";
+
+  static final String card_Chatbubble = "assets/card/chatbubble.png";
+  static final String card_Girl = "assets/card/girl.jpeg";
+  static final String card_Girls = "assets/card/girls.jpeg";
+  static final String card_Images = "assets/card/images.png";
+  static final String card_Simbolo = "assets/card/simbolo.png";
 }
