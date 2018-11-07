@@ -536,6 +536,9 @@ flutter:
   - assets/burger/burger4.jpg
   - assets/colorblend/background_bg.jpg
   - assets/login/facebook.png
+  - assets/jobs/twitter.png
+  - assets/jobs/website.png
+  - assets/common/google_signin_button.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -616,6 +619,24 @@ flutter:
        - asset: assets/fonts/Flamante-Roma-Medium.ttf
        - asset: assets/fonts/Flamante-Roma-MediumItalic.ttf
          style: italic
+   - family: Cabin Sketch
+     fonts:
+       - asset: assets/fonts/CabinSketch-Regular.ttf
+   - family: RobotoMono
+     fonts:
+     - asset: assets/fonts/RobotoMono-Bold.ttf
+     - asset: assets/fonts/RobotoMono-Italic.ttf
+     - asset: assets/fonts/RobotoMono-Light.ttf
+     - asset: assets/fonts/RobotoMono-Medium.ttf
+     - asset: assets/fonts/RobotoMono-Regular.ttf
+     - asset: assets/fonts/RobotoMono-Thin.ttf
+       weight: 700
+   - family: ProductSans
+     fonts:
+     - asset: assets/fonts/ProductSans-Bold.ttf
+     - asset: assets/fonts/ProductSans-Italic.ttf
+     - asset: assets/fonts/ProductSans-Regular.ttf
+       weight: 700
 
 
   #       - asset: fonts/Schyler-Italic.ttf

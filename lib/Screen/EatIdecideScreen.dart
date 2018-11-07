@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/Screen/PaymentScreen.dart';
 import 'package:flutter_sandbox/Styles/AppImage.dart';
+import 'package:flutter_sandbox/Styles/AppStyle.dart';
 import 'package:flutter_sandbox/Util/Widget_Utils.dart';
 
 class EatIdecideScreen extends StatefulWidget {
@@ -28,12 +29,7 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                     SizedBox(height:45.0),
                     new Text(
                       "ASAP@ HKIA - Gate 70 ",
-                      style: TextStyle(
-                        color: Colors.grey,
-                          fontFamily: 'Quicksand',
-                          fontSize: 15.0,fontWeight:
-                          FontWeight.bold)
-                    ),
+                      style: AppStyle.Quicksand15Blod),
                     Container(
                       padding: EdgeInsets.fromLTRB(15.0, 15.0, 15.0, 10.0),
                       child: Material(
@@ -157,19 +153,11 @@ class _EatIdecideScreenState extends State<EatIdecideScreen> {
                         children: <Widget>[
                           Text(
                             'BEST OF',
-                            style: TextStyle(
-                                fontFamily: 'Timesroman',
-                                fontSize: 25.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                            style: AppStyle.Timesorman25BoldWhite,
                           ),
                           Text(
                             'THE DAY',
-                            style: TextStyle(
-                                fontFamily: 'Timesroman',
-                                fontSize: 25.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                            style: AppStyle.Timesorman25BoldWhite,
                           ),
                           SizedBox(height: 10.0),
                           Container(

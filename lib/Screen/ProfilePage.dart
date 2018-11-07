@@ -23,6 +23,7 @@ class _ProfilePageState extends State<ProfilePage> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.more_vert),
+             onPressed: () {},
           )
         ],
       ),

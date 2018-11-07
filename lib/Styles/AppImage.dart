@@ -425,4 +425,8 @@ class AppImage {
   static final String colorblend_backgroundbg = "assets/colorblend/background_bg.jpg";
 
   static final String login_facebook = "assets/login/facebook.png";
+
+  static final String jobs_twitter = "assets/jobs/twitter.png";
+  static final String jobs_website = "assets/jobs/website.png";
+  static final String google_signin_button = "assets/common/google_signin_button.png";
 }

@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/AuthFirebae/LoginMainScreen.dart';
 import 'package:flutter_sandbox/AuthFirebae/TestFirebaseSignInScreen.dart';
+import 'package:flutter_sandbox/JobsApp/JobMainScreen.dart';
 import 'package:flutter_sandbox/ReduxAppActions.dart';
 import 'package:flutter_sandbox/ReduxAppExample.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
@@ -65,7 +66,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new SignUpMinMainScreen(),
+      home: new JobMainScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
