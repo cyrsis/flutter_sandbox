@@ -9,6 +9,8 @@ class SilverAppBarScreen extends StatefulWidget {
 }
 
 class _SilverAppBarScreenState extends State<SilverAppBarScreen> {
+
+
   List<OrderItem> _items = <OrderItem>[
     new OrderItem(1, 'Mixed Grill', 'Platter', 1, 30.0, 'mixedgrill.jpg'),
     new OrderItem(

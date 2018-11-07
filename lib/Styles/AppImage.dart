@@ -423,4 +423,6 @@ class AppImage {
   static final String burger_burger4 = "assets/burger/burger4.jpg";
 
   static final String colorblend_backgroundbg = "assets/colorblend/background_bg.jpg";
+
+  static final String login_facebook = "assets/login/facebook.png";
 }

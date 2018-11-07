@@ -535,6 +535,7 @@ flutter:
   - assets/burger/burger3.jpg
   - assets/burger/burger4.jpg
   - assets/colorblend/background_bg.jpg
+  - assets/login/facebook.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

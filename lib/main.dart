@@ -15,6 +15,7 @@ import 'package:flutter_sandbox/Screen/EatIdecideScreen.dart';
 import 'package:flutter_sandbox/Screen/FireStoreCRUD/FireStoreScreen.dart';
 import 'package:flutter_sandbox/Screen/FoodReceiptScreen.dart';
 import 'package:flutter_sandbox/Screen/HireTalent/HireTalentScreen.dart';
+import 'package:flutter_sandbox/Screen/Login/SignUpMinMainScreen.dart';
 import 'package:flutter_sandbox/Screen/NakedExchangeScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/Coffee.dart';
@@ -29,13 +30,10 @@ import 'package:flutter_sandbox/Screen/TimeOutScreen.dart';
 import 'package:flutter_sandbox/Screen/TravelScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
 import 'package:flutter_sandbox/Screen/ScreenExport.dart';
-import 'package:flutter_sandbox/Screen/SignUpScreen.dart';
 import 'package:flutter_sandbox/Screen/TestScreen.dart';
 import 'package:flutter_sandbox/Screen/UncoverScreen.dart';
 import 'package:flutter_sandbox/Styles/AppIcons.dart';
 import 'package:flutter_sandbox/Styles/AppTheme.dart';
-import 'package:flutter_sandbox/UnitConverter/CategoryRoute.dart';
-import 'package:flutter_sandbox/UnitConverter/UnitConverterApp.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 //Redux
@@ -67,7 +65,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new TestFirebaseSignInScreen(),
+      home: new SignUpMinMainScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
