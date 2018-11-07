@@ -5,17 +5,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/AuthFirebae/LoginMainScreen.dart';
 import 'package:flutter_sandbox/AuthFirebae/TestFirebaseSignInScreen.dart';
 import 'package:flutter_sandbox/JobsApp/JobMainScreen.dart';
+import 'package:flutter_sandbox/NewsApp/widgets/NewsAppMainScreen.dart';
 import 'package:flutter_sandbox/ReduxAppActions.dart';
 import 'package:flutter_sandbox/ReduxAppExample.dart';
 import 'package:flutter_sandbox/Screen/AboutScreen.dart';
 import 'package:flutter_sandbox/Screen/AddRemoveListWidgetScreen.dart';
 import 'package:flutter_sandbox/Screen/ArrowScreen.dart';
 import 'package:flutter_sandbox/Screen/BurgerTruckScreen.dart';
+import 'package:flutter_sandbox/Screen/CalculatorScreen.dart';
 import 'package:flutter_sandbox/Screen/ColorFilterScreen.dart';
 import 'package:flutter_sandbox/Screen/EatIdecideScreen.dart';
 import 'package:flutter_sandbox/Screen/FireStoreCRUD/FireStoreScreen.dart';
 import 'package:flutter_sandbox/Screen/FoodReceiptScreen.dart';
 import 'package:flutter_sandbox/Screen/HireTalent/HireTalentScreen.dart';
+import 'package:flutter_sandbox/Screen/ImageCarouselScreen.dart';
 import 'package:flutter_sandbox/Screen/Login/SignUpMinMainScreen.dart';
 import 'package:flutter_sandbox/Screen/NakedExchangeScreen.dart';
 import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
@@ -66,7 +69,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new JobMainScreen(),
+      home: new NewsAppMainScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
