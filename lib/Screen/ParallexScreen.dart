@@ -7,34 +7,30 @@ class ParallexScreen extends StatefulWidget {
   @override
   _ParallexScreenState createState() => new _ParallexScreenState();
 
-
-
   _cards(BuildContext context) {
-
-   return new SliverGrid(
-     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-       maxCrossAxisExtent: 200.0,
-       mainAxisSpacing: 10.0,
-       crossAxisSpacing: 10.0,
-       childAspectRatio: 4.0,
-     ),
-     delegate: SliverChildBuilderDelegate(
-           (BuildContext context, int index) {
-         return Container(
-           alignment: Alignment.center,
-           color: Colors.teal[100 * (index % 9)],
-           child: Text('grid item $index'),
-         );
-       },
-       childCount: 20,
-     ),
-   );
-
+    return new SliverGrid(
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 200.0,
+        mainAxisSpacing: 10.0,
+        crossAxisSpacing: 10.0,
+        childAspectRatio: 4.0,
+      ),
+      delegate: SliverChildBuilderDelegate(
+        (BuildContext context, int index) {
+          return Container(
+            alignment: Alignment.center,
+            color: Colors.teal[100 * (index % 9)],
+            child: Text('grid item $index'),
+          );
+        },
+        childCount: 20,
+      ),
+    );
   }
 }
 
 class _ParallexScreenState extends State<ParallexScreen> {
-  double top= 0.0;
+  double top = 0.0;
 
   @override
   Widget build(BuildContext context) {

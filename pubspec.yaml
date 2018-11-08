@@ -2,6 +2,13 @@ name: flutter_sandbox
 description: A new Flutter application.
 
 
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+
+
 dependencies:
   flutter:
     sdk: flutter
@@ -10,7 +17,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
 
   font_awesome_flutter:
-  cupertino_icons:
+  cupertino_icons: ^0.1.2
   http:
   intl:
   transparent_image:

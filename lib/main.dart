@@ -67,19 +67,18 @@ void main() {
 //  final store = new Store<int>(reducer, initialState: 0);
 //  runApp(ReduxAppExample(store: store));
   runApp(new MaterialApp(
-      debugShowMaterialGrid: false,
-      debugShowCheckedModeBanner: false,
-      title: "Block Manic Inc",
-      theme: defaultTargetPlatform == TargetPlatform.iOS
-          ? AppTheme.TinderTheme
-          : AppTheme.TinderTheme,
-      home: new ParallexScreen(),
-      //body: new mainTab()),
-      routes: <String, WidgetBuilder>{
-        '/mainTab': (BuildContext context) => new MainTab()
-      },
-    )
-  );
+    debugShowMaterialGrid: false,
+    debugShowCheckedModeBanner: false,
+    title: "Block Manic Inc",
+    theme: defaultTargetPlatform == TargetPlatform.iOS
+        ? AppTheme.TinderTheme
+        : AppTheme.TinderTheme,
+    home: new TestScreen(),
+    //body: new mainTab()),
+    routes: <String, WidgetBuilder>{
+      '/mainTab': (BuildContext context) => new MainTab()
+    },
+  ));
 }
 
 class MainTab extends StatefulWidget {
@@ -165,3 +164,4 @@ class _MainTabState extends State<MainTab> with SingleTickerProviderStateMixin {
         )); //End of IOSTab
   }
 }
+
