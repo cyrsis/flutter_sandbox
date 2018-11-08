@@ -46,6 +46,7 @@ dependencies:
   google_sign_in:
   flutter_circular_chart:
   share: "^0.5.2"
+  flutter_range_slider: ^0.0.4
 
 
 
