@@ -23,7 +23,7 @@ export 'package:flutter_sandbox/Screen/RowColScreen.dart';
 export 'package:flutter_sandbox/Screen/SilverAppBarScreen.dart';
 export 'package:flutter_sandbox/Screen/SplashScreen.dart';
 export 'package:flutter_sandbox/Screen/StackScreen.dart';
-export 'package:flutter_sandbox/Screen/StreamScreens.dart';
+export 'package:flutter_sandbox/Screen/StreamPhotoScreen.dart';
 export 'package:flutter_sandbox/Screen/SwipScreenTest.dart';
 export 'package:flutter_sandbox/Screen/TabTopScreen.dart';
 export 'package:flutter_sandbox/Screen/ChartScreen.dart';

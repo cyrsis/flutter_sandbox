@@ -32,6 +32,7 @@ import 'package:flutter_sandbox/Screen/PopUpMenuScreen.dart';
 import 'package:flutter_sandbox/Screen/ScanQrScreen.dart';
 import 'package:flutter_sandbox/Screen/SetStateScreen.dart';
 import 'package:flutter_sandbox/Screen/SliderAnimationScreen.dart';
+import 'package:flutter_sandbox/Screen/StreamWidgetScreen.dart';
 import 'package:flutter_sandbox/Screen/TimeOutScreen.dart';
 import 'package:flutter_sandbox/Screen/TravelScreen.dart';
 import 'package:flutter_sandbox/Screen/RouteScreen.dart';
@@ -71,7 +72,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new CloudFunctionScreen(),
+      home: new StreamWidgetScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()
