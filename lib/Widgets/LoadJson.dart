@@ -14,7 +14,7 @@ class LoadJson extends StatelessWidget {
                 .loadString('assets/data/sample.json'),
             builder: (context, snapshot) {
               // Decode the JSON
-              var new_data = JSON.decode(snapshot.data.toString());
+              var new_data = json.decode(snapshot.data.toString());
 
               return new ListView.builder(
                 // Build the ListView

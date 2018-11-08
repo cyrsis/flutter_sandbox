@@ -4,13 +4,13 @@ main() {
 
   String hello = "Hello world";
 
-  List ebytes = UTF8.encode("hello");
-  String encoded = BASE64.encode(ebytes);
+  List ebytes = utf8.encode("hello");
+  String encoded = base64.encode(ebytes);
 
   print("Encoded ${encoded}");
 
-  List debyte = BASE64.decode(encoded);
-  String decoded = UTF8.decode(debyte);
+  List debyte = base64.decode(encoded);
+  String decoded = utf8.decode(debyte);
 
   print("Decoded ${decoded}");
 

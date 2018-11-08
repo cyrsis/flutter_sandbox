@@ -35,7 +35,7 @@ int testCompress(var codec) {
 
   print('');
 
-  String decoded = UTF8.decode(decompressed);
+  String decoded = utf8.decode(decompressed);
   assert(data == decoded);
 
   return compressed.length;

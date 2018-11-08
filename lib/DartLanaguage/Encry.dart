@@ -9,10 +9,10 @@ main(List<String> arguments) {
 
   String value = 'Hello World';
 
-  Uint8List data = new Uint8List.fromList(UTF8.encode(value));
+  Uint8List data = new Uint8List.fromList(utf8.encode(value));
   Uint8List hash = digest.process(data);
 
   print(hash);
-  print(BASE64.encode(hash)); // ENCODING IS NOT ENCYPTION!!!!!
+  print(base64.encode(hash)); // ENCODING IS NOT ENCYPTION!!!!!
 
 }

@@ -5,30 +5,29 @@ description: A new Flutter application.
 dependencies:
   flutter:
     sdk: flutter
-  font_awesome_flutter: "^6.0.0"
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.0
-  http: "^0.11.3+16"
-  intl: "^0.15.6"
-  transparent_image: "^0.1.0"
-  cached_network_image: "^0.3.0"
-  rxdart: "^0.16.7"
-  url_launcher: "^3.0.0"
-  redux: "^3.0.0"
-  flutter_redux: "^0.5.2"
-  qr_flutter: "^1.0.0"
-  redux_epics: "^0.9.0"
-  fluttery: "^0.0.5"
-  flutter_webview_plugin: "^0.1.4"
-  carousel: "^0.1.0"
-  battery: "^0.2.0"
-  connectivity: "^0.3.0"
-  device_info: "^0.2.0"
-  hex: "^0.1.1"
-  flutter_stream_friends: 0.8.0
-  spritewidget: "^0.9.16"
-  fluttery_audio: 0.0.3
+
+  font_awesome_flutter:
+  cupertino_icons:
+  http:
+  intl:
+  transparent_image:
+  rxdart:
+  url_launcher:
+  redux:
+  flutter_redux:
+  qr_flutter:
+  redux_epics:
+  flutter_webview_plugin:
+  battery:
+  connectivity:
+  device_info:
+  hex:
+  flutter_stream_friends:
+  spritewidget:
+  fluttery_audio:
   image_picker:
   rx_command:
   font_awesome:
@@ -37,16 +36,17 @@ dependencies:
   barcode_scan:
   path_provider:
   flutter_masked_text:
-  firebase_auth: "0.5.20"
+  firebase_auth:
   cloud_firestore:
-  firebase_storage: "1.0.0"
+  firebase_storage:
   archive:
   pointycastle:
   sqljocky5:
   google_sign_in:
   flutter_circular_chart:
-  share: "^0.5.2"
-  flutter_range_slider: ^0.0.4
+  share:
+  flutter_range_slider:
+
 
 
 

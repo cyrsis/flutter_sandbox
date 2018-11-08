@@ -17,11 +17,11 @@ main(List<String> arguments) {
   display('Key value', key);
 }
 
-Uint8List createUint8ListFromString(String value) => new Uint8List.fromList(UTF8.encode(value));
+Uint8List createUint8ListFromString(String value) => new Uint8List.fromList(utf8.encode(value));
 
 void display(String title, Uint8List value) {
   print(title);
   print(value);
-  print(BASE64.encode(value));
+  print(base64.encode(value));
   print('');
 }

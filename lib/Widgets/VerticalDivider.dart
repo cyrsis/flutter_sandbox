@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-class VerticalDivider extends StatelessWidget {
+class CustomVerticalDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(

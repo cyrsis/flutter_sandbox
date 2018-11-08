@@ -24,14 +24,14 @@ main(List<String> arguments) {
   Uint8List decrypted_data = cipher.process(encrypted_data);
 
   Digest digest = new Digest("SHA-256");
-  assert(BASE64.encode(digest.process(plain_text)) == BASE64.encode(digest.process(decrypted_data)));
+  assert(base64.encode(digest.process(plain_text)) == base64.encode(digest.process(decrypted_data)));
 
   print('it works');
 
 }
 
 //From tutorial 2
-Uint8List createUint8ListFromString(String value) => new Uint8List.fromList(UTF8.encode(value));
+Uint8List createUint8ListFromString(String value) => new Uint8List.fromList(utf8.encode(value));
 
 
 //From Tutorial 3

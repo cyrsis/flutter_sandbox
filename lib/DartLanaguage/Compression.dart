@@ -10,7 +10,7 @@ main(List<String> arguments) {
   }
 
   //Original Data
-  List original = UTF8.encode(data);
+  List original = utf8.encode(data);
 
   //Compress data
   List compressed = GZIP.encode(original);
@@ -22,7 +22,7 @@ main(List<String> arguments) {
   print('Compressed ${compressed.length} bytes');
   print('Decompressed ${decompress.length} bytes');
 
-  String decoded = UTF8.decode(decompress);
+  String decoded = utf8.decode(decompress);
   assert(data ==  decoded);
 
   print(decoded);

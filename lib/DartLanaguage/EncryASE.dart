@@ -31,18 +31,18 @@ main(List<String> arguments) {
   Function eq = const ListEquality().equals;
   assert(eq(plain_data,decrypted_data));
 
-  print(UTF8.decode(decrypted_data).trim());
+  print(utf8.decode(decrypted_data).trim());
 
 }
 
 //From tutorial 2
-Uint8List createUint8ListFromString(String value) => new Uint8List.fromList(UTF8.encode(value));
+Uint8List createUint8ListFromString(String value) => new Uint8List.fromList(utf8.encode(value));
 
 //From tutorial 2
 void displayUint8List(String title, Uint8List value) {
   print(title);
   print(value);
-  print(BASE64.encode(value));
+  print(base64.encode(value));
   print('');
 }
 

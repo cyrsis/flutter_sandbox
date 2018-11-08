@@ -9,7 +9,7 @@ main(List<String> arguments) async {
 
   await for (var socket in serverSocket) {
     socket.listen((List values) {
-      print('${socket.remoteAddress}:${socket.remotePort} = ${UTF8.decode(values)}');
+      print('${socket.remoteAddress}:${socket.remotePort} = ${utf8.decode(values)}');
     });
   }
 

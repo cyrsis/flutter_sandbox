@@ -23,8 +23,8 @@ class _EggTimerDialKnobState extends State<EggTimerDialKnob> {
     return new Stack(
       children: [
         new Container(
-          width: double.INFINITY,
-          height: double.INFINITY,
+          width: double.infinity,
+          height: double.infinity,
           child: new CustomPaint(
             painter: new ArrowPainter(
               rotationPercent: widget.rotationPercent,
@@ -61,7 +61,7 @@ class _EggTimerDialKnobState extends State<EggTimerDialKnob> {
               ),
               child: new Center(
                 child: new Transform(
-                  transform: new Matrix4.rotationZ(2 * PI * widget.rotationPercent),
+                  transform: new Matrix4.rotationZ(2 * pi * widget.rotationPercent),
                   alignment: Alignment.center,
                   child: new Image.network(
                     'https://avatars3.githubusercontent.com/u/14101776?s=400&v=4',
@@ -96,7 +96,7 @@ class ArrowPainter extends CustomPainter {
 
     final radius = size.height / 2;
     canvas.translate(radius, radius);
-    canvas.rotate(2 * PI * rotationPercent);
+    canvas.rotate(2 * pi * rotationPercent);
 
     Path path = new Path();
     path.moveTo(0.0, -radius - 10.0);

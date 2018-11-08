@@ -234,7 +234,7 @@ class Epson {
     Socket.connect(ip, 9100).then((socket) {
       socket.write(data);
       print("Data send :");
-      print(UTF8.encode(data));
+      print(utf8.encode(data));
       socket.close();
     });
   }

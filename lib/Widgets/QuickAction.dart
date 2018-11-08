@@ -82,7 +82,7 @@ class QuickAction extends StatelessWidget {
               child: new Align(
                 alignment: Alignment.centerRight,
                 child: new Transform.rotate(
-                  angle: -PI / 4.8,
+                  angle: -pi / 4.8,
                   alignment: Alignment.centerRight,
                   child: new ClipPath(
                     clipper: new _BackgroundImageClipper(),

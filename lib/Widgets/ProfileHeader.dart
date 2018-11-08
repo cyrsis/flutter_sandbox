@@ -118,9 +118,9 @@ class ProfileHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         _buildFollowerStat("Followers", profile.numberOfFollowersString),
-        new VerticalDivider(),
+        new CustomVerticalDivider(),
         _buildFollowerStat("Following", profile.numberFollowingString),
-        new VerticalDivider(),
+        new CustomVerticalDivider(),
         _buildFollowerStat("Total Likes", profile.totalLikesString),
       ],
     );

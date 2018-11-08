@@ -7,8 +7,8 @@ main(List<String> arguments) {
 
   File file = new File(compressed);
   file.createSync();
-  file.writeAsBytesSync(GZIP.encode(UTF8.encode('Hello World')));
+  file.writeAsBytesSync(GZIP.encode(utf8.encode('Hello World')));
 
-  print(UTF8.decode(GZIP.decode(file.readAsBytesSync())));
+  print(utf8.decode(GZIP.decode(file.readAsBytesSync())));
 
 }
