@@ -24,7 +24,7 @@ String generateData() {
 int testCompress(var codec) {
   String data = generateData();
 
-  List original = UTF8.encode(data);
+  List original = utf8.encode(data);
   List compressed = codec.encode(original);
   List decompressed = codec.decode(compressed);
 

@@ -14,9 +14,9 @@ class Friend {
   final String email;
   final String location;
 
-  static List<Friend> allFromResponse(String json) {
-    return JSON
-        .decode(json)['results']
+  static List<Friend> allFromResponse(String jsondata) {
+    return json
+        .decode(jsondata)['results']
         .map((obj) => Friend.fromMap(obj))
         .toList();
   }

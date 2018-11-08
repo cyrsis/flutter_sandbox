@@ -6,12 +6,12 @@ main(List<String> arguments) {
   mycode.sayHello();
 
   String myvalue = 'Hello World';
-  List ebytes = UTF8.encode(myvalue);
-  String encoded = BASE64.encode(ebytes);
+  List ebytes = utf8.encode(myvalue);
+  String encoded = base64.encode(ebytes);
 
   print('Encoded: ${encoded}');
 
-  List dbytes = BASE64.decode(encoded);
-  String decoded = UTF8.decode(dbytes);
+  List dbytes = base64.decode(encoded);
+  String decoded = utf8.decode(dbytes);
   print('Decoded: ${decoded}');
 }

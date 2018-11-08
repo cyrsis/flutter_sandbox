@@ -27,6 +27,7 @@ import 'package:flutter_sandbox/Screen/AnimatedSizeScreen.dart';
 import 'package:flutter_sandbox/Screen/Coffee.dart';
 import 'package:flutter_sandbox/Screen/FlutterMapScreen.dart';
 import 'package:flutter_sandbox/Screen/ListCardsScreen.dart';
+import 'package:flutter_sandbox/Screen/ParallexScreen.dart';
 import 'package:flutter_sandbox/Screen/PaymentScreen.dart';
 import 'package:flutter_sandbox/Screen/PopUpMenuScreen.dart';
 import 'package:flutter_sandbox/Screen/ScanQrScreen.dart';
@@ -72,7 +73,7 @@ void main() {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? AppTheme.TinderTheme
           : AppTheme.TinderTheme,
-      home: new StreamWidgetScreen(),
+      home: new ParallexScreen(),
       //body: new mainTab()),
       routes: <String, WidgetBuilder>{
         '/mainTab': (BuildContext context) => new MainTab()

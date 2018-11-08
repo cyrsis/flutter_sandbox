@@ -172,8 +172,8 @@ class _DialTurnGestureDetectorState extends State<DialTurnGestureDetector> {
   _onRadialDragUpdate(PolarCoord coord) {
     if (startDragCoord != null) {
       var angleDiff = coord.angle - startDragCoord.angle;
-      angleDiff = angleDiff >= 0.0 ? angleDiff : angleDiff + (2 * PI);
-      final anglePercent = angleDiff / (2 * PI);
+      angleDiff = angleDiff >= 0.0 ? angleDiff : angleDiff + (2 * pi);
+      final anglePercent = angleDiff / (2 * pi);
       final timeDiffInSeconds = (anglePercent * widget.maxTime.inSeconds).round();
       selectedTime = new Duration(seconds: startDragTime.inSeconds + timeDiffInSeconds);
       print('New time: ${selectedTime.inMinutes}');
@@ -276,11 +276,11 @@ class TickPainter extends CustomPainter {
 
         switch (quadrant) {
           case 4:
-            canvas.rotate(-PI / 2);
+            canvas.rotate(-pi / 2);
             break;
           case 2:
           case 3:
-            canvas.rotate(PI / 2);
+            canvas.rotate(pi / 2);
             break;
         }
 
@@ -295,7 +295,7 @@ class TickPainter extends CustomPainter {
         canvas.restore();
       }
 
-      canvas.rotate(2 * PI / tickCount);
+      canvas.rotate(2 * pi / tickCount);
     }
 
     canvas.restore();
